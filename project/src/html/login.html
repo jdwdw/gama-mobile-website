@@ -15,12 +15,64 @@
   <meta http-equiv="Cache-Control" content="no-siteapp" />
   <link rel="shortcut icon" href="/favicon.ico">
   <link rel="stylesheet" type="text/css" href="../css/style-login.css" />
+  <link rel="stylesheet" href="//at.alicdn.com/t/font_015ldxy5b8x5hfr.css">
 </head>
 
-<body style="background-color:#F8F8F8" >
+<body>
   <!-- 引入公共头部  -->
   <% include common/header.html  %>
-   <div></div>
+   <div class="main">
+     <div class="logo"><%- img(65, 65, 'logo__img') %></div>
+     <form>
+       <div class="main-message">
+         <div class="login-message">
+         <div class="user">
+           <span >
+             <i class="icon icon-shouji"></i>
+           </span>
+           <input type="text" placeholder="帐号" class="input"/>
+         </div>
+         <div class="user">
+           <span >
+             <i class="icon icon-pwd"></i>
+           </span>
+           <input type="text" placeholder="密码" class="input"/>
+         </div>
+         <button type="button" name="button" class="button">登录</button>
+         <div class="tie">
+           <div class="f-fl">
+             <a href="#">快速注册</a>
+           </div>
+           <div class="f-fr" >
+             <a href="#">忘记密码</a>
+           </div>
+         </div>
+         </div>
+       </div>
+     </form>
+     <div class="third-party">
+				<div class="accounts">
+					<div class="accounts-title"><span>第三方帐号登录</span></div>
+				</div>
+				<div class="icon-image">
+					<ul>
+						<li>
+							<div><%- img(45, 45) %></div>
+  							<div>QQ</div>
+						</li>
+						<li class="weixin">
+							<div><%- img(45, 45) %></div>
+							<div>微信</div>
+						</li>
+						<li>
+							<div><%- img(45, 45) %></div>
+							<div>微博</div>
+						</li>
+					</ul>
+				</div>
+        <div class="clear"></div>
+			</div>
+    </div>
 
 
     <!-- 引入公共地步 -->
