@@ -1,13 +1,86 @@
-// 预定义的变量，例如颜色、字号、字体
-.pull-left {
-  float: left;
-}
-.m-page{
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  overflow: auto;
-  -webkit-overflow-scrolling: touch;
-}
+// 预定义的变量，例如颜色、字号、字体，功能样式
+
+/* variable */
+// 主色调： #fff
+// 使用场景：用于白色背景
+@style-default:#fff;
+
+@style-main:#e22127;
+// 主色调： #e22127
+// 使用场景：用于标签栏icon选中颜色以及按钮颜色和文本标签选中还有消息提醒；
+
+// 背景色：#f8f8f8
+// 用于页面的背景颜色；
+@style-bg:#f8f8f8;
+
+// 辅助色：#1ada73
+// 使用场景：用于部分操作完成或操作通过的按钮颜色；
+@style-active:#1ada73;
+
+
+// #333333
+// 使用场景：用于主要文字，标题性文字和文章详情；
+@style-black:#333333;
+
+// #999999
+// 使用场景：辅助性文字，用于时间地点等一些提示信息。
+@style-grey :#999999;
+
+// #cccccc
+// 使用场景：用于标签下的背景色以及按钮不可用的状态；
+@style-brc :#cccccc;
+
+// #efefef
+// 使用场景：用于标签下的背景色以及按钮不可用的状态；
+@style-brcg :#efefef;
+
+/* function */
+.f-cb:after,.f-cbli li:after{display:block;clear:both;visibility:hidden;height:0;overflow:hidden;content:".";}
+.f-cb,.f-cbli li{zoom:1;}
+.f-ib{display:inline-block;*display:inline;*zoom:1;}
+.f-dn{display:none;}
+.f-db{display:block;}
+.f-fl{float:left;}
+.f-fr{float:right;}
+.f-pr{position:relative;}
+.f-prz{position:relative;zoom:1;}
+.f-oh{overflow:hidden;}
+.f-ff0{font-family:arial}
+.f-ff1{font-family:"Microsoft YaHei"}
+.f-fs1{font-size:12px;}
+.f-fs2{font-size:14px;}
+.f-fwn{font-weight:normal;}
+.f-fwb{font-weight:bold;}
+.f-tal{text-align:left;}
+.f-tac{text-align:center;}
+.f-tar{text-align:right;}
+.f-taj{text-align:justify;text-justify:inter-ideograph;}
+.f-vam,.f-vama *{vertical-align:middle;}
+.f-wsn{word-wrap:normal;white-space:nowrap;}
+.f-pre{overflow:hidden;text-align:left;white-space:pre-wrap;word-wrap:break-word;word-break:break-all;}
+.f-wwb{white-space:normal;word-wrap:break-word;word-break:break-all;}
+.f-ti{overflow:hidden;text-indent:-30000px;}
+.f-ti2{text-indent:2em;}
+.f-lhn{line-height:normal;}
+.f-tdu,.f-tdu:hover{text-decoration:underline;}
+.f-tdn,.f-tdn:hover{text-decoration:none;}
+.f-toe{overflow:hidden;word-wrap:normal;white-space:nowrap;text-overflow:ellipsis;}
+.f-csp{cursor:pointer;}
+.f-csd{cursor:default;}
+.f-csh{cursor:help;}
+.f-csm{cursor:move;}
+.f-usn{-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;-o-user-select:none;user-select:none;}
+
+/*   Global  */
+body{ background-color: @style-bg; }
+
+.icon{
+  width: 1rem;
+  height: 1rem;
+  display: inline-block;
+  font-family:"iconfont" !important;
+  font-size:1rem;
+  color:@style-black;
+  font-style:normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;}
