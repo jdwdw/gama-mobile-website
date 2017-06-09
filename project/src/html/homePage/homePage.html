@@ -14,25 +14,23 @@
   <meta content="email=no" name="format-detection" />
   <meta http-equiv="Cache-Control" content="no-siteapp" />
   <link rel="shortcut icon" href="/favicon.ico">
-  <link rel="stylesheet" type="text/css" href="../css/style-index.css" />
+  <link rel="stylesheet" type="text/css" href="../../css/style-index.css" />
 </head>
 
 <body>
   <!-- 引入公共头部  -->
-  <% include common/header.html %>
+    <% include homePageCommon/homePageHeader.html %>
     <div class="m-page">
 
       3333
     </div>
-
-    <% var name="ttp" %>
-    <div>
-      Hello,<%-name %>
-    </div>
-    <span><%- text(10,3) %></span>
+    <!-- 图片1 -->
     <%- img(200, 400, 'block__img') %>
+    <div class="homePage-container">
+      <h4 class="homePage-container-title">我玩过的</h4>
+    </div>
     <!-- 引入公共地步 -->
-    <% include common/footer.html %>
+    <% include ../common/footer.html %>
 
 </body>
 
