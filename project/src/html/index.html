@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="UTF-8">
-  <title>登录</title>
+  <title>首页</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
   <meta name="keywords" content="" />
   <meta name="description" content="" />
@@ -14,13 +14,14 @@
   <meta content="email=no" name="format-detection" />
   <meta http-equiv="Cache-Control" content="no-siteapp" />
   <link rel="shortcut icon" href="/favicon.ico">
-  <link rel="stylesheet" type="text/css" href="../css/style-login.css" />
   <link rel="stylesheet" href="//at.alicdn.com/t/font_015ldxy5b8x5hfr.css">
+  <link rel="stylesheet" type="text/css" href="../css/style-index.css" />
+
 </head>
 
 <body>
   <!-- 引入公共头部  -->
-  <% include common/header.html %>
+  <% include common/index_header.html %>
     <div class="m-page">
 
       <br>
@@ -35,12 +36,6 @@
       <br>
     </div>
 
-    <% var name="ttp" %>
-    <div>
-      Hello,<%-name %>
-    </div>
-    <span><%- text(10,3) %></span>
-    <%- img(200, 400, 'block__img') %>
     <!-- 引入公共地步 -->
     <% include common/footer.html %>
 
