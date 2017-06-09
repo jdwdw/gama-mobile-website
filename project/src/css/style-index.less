@@ -17,3 +17,108 @@
 /* 引入 Less 依赖文件 */
 @import "mod-index_header";
 @import "mod-footer";
+
+// 导航
+.g-nav_box{
+  overflow: hidden;
+  padding: 0.25rem 0.75rem;
+  background-color: @style-default;
+  li{
+    float: left;
+    width: 16.666%;
+    text-align: center;
+    .name{
+      font-size: 0.55rem;
+      line-height: 1.5em;
+      color:@style-grey;
+    }
+    .cur{
+      .name,.icon{
+        color: @style-main;
+      }
+    }
+  }
+}
+
+
+.g-swiper{
+  width: 100%;
+  height: 7rem;
+  margin-bottom: 0.75rem;
+  img{
+    width: 100%;
+  }
+}
+
+.swiper-pagination-bullet-active{
+  background-color:  @style-main;
+}
+
+.g-game_item{
+  padding:0.75rem 0.25rem; background: @style-default; width: 100%; box-sizing: border-box; margin-bottom: 0.75rem; padding-bottom: 0; overflow: hidden;
+  .header{
+    text-align: center;
+    margin-bottom:0.75rem;
+    h2{
+      font-size: 0.75rem;
+      color: @style-black;
+      font-weight: 400;
+      line-height: 1.5em;
+      .icon{
+        color:  @style-main;
+        position: relative; top: 0.11rem;
+      }
+    }
+  }
+  ul{
+    overflow: hidden;
+    li{
+      width: 50%; float: left; padding: 0 0.5rem; box-sizing: border-box; margin-bottom: 1rem; position: relative;
+      img{
+        width: 100%;
+        margin-bottom: 0.5rem;
+      }
+      .con{
+        line-height: 1.5em;
+        p{
+          font-size: 0.7rem;
+          color: @style-black;
+        }
+        span{
+          font-size: 0.55rem;
+          color: @style-brc;
+        }
+
+        .item-handle{
+          position: absolute;
+          right: 0.5rem; bottom: 0.25rem;
+          .btn{
+            background-color:  @style-main;
+          }
+        }
+      }
+    }
+  }
+  .more{
+    margin-right: 0.5rem;  margin-bottom: 1rem; overflow: hidden;
+    a{
+      color: @style-black ;
+      .icon{
+        position: relative; top: 0.13rem;
+      }
+    }
+  }
+}
+
+.g-swiper-wrapper{
+  overflow-x: scroll;
+  .m-swiper-wrapper{
+   overflow: hidden; width:11.5*6rem;
+    background-color: #fff;
+ }
+  .m-swiper-slide{ float: left; width: 10.5rem; margin-right:1rem;
+  img{
+    width: 100%;
+  }
+  }
+}
