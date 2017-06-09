@@ -14,21 +14,62 @@
   <meta content="email=no" name="format-detection" />
   <meta http-equiv="Cache-Control" content="no-siteapp" />
   <link rel="shortcut icon" href="/favicon.ico">
-  <link rel="stylesheet" type="text/css" href="../../css/style-index.css" />
+  <link rel="stylesheet" href="//at.alicdn.com/t/font_015ldxy5b8x5hfr.css">
+  <link rel="stylesheet" type="text/css" href="../../css/style-homePage.css" />
 </head>
 
 <body>
   <!-- 引入公共头部  -->
     <% include homePageCommon/homePageHeader.html %>
+    <% include homePageCommon/homePageNavBar.html %>
     <div class="m-page">
 
       3333
     </div>
     <!-- 图片1 -->
-    <%- img(200, 400, 'block__img') %>
-    <div class="homePage-container">
-      <h4 class="homePage-container-title">我玩过的</h4>
+    <%- img(200, 400) %>
+    <div class="m-ct">
+      <h2 class="u-tt">我玩过的</h2>
+      <% for(var index=0;index<4;index++){%>
+        <% include homePageCommon/home_page_index_item.html %>
+      <%}%>
+      <% include homePageCommon/home_page_index_container_bottom.html %>
     </div>
+    <div class="m-ct">
+      <h2 class="u-tt">精品推荐</h2>
+      <% for(var index=0;index<4;index++){%>
+        <% include homePageCommon/home_page_index_item.html %>
+      <%}%>
+      <% include homePageCommon/home_page_index_container_bottom.html %>
+    </div>
+    <!-- 图片2 -->
+    <%- img(200, 400) %>
+    <div class="m-ct">
+      <h2 class="u-tt">热门游戏</h2>
+      <% for(var index=0;index<4;index++){%>
+        <% include homePageCommon/home_page_index_item.html %>
+      <%}%>
+      <% include homePageCommon/home_page_index_container_bottom.html %>
+    </div>
+    <!-- 图片3 -->
+    <%- img(200, 400) %>
+    <div class="m-ct">
+      <h2 class="u-tt">经典游戏</h2>
+      <% for(var index=0;index<4;index++){%>
+        <% include homePageCommon/home_page_index_item.html %>
+      <%}%>
+      <% include homePageCommon/home_page_index_container_bottom.html %>
+    </div>
+    <div class="m-ct">
+      <h2 class="u-tt">最新专题</h2>
+       <div class="u-banner">
+         <% include homePageCommon/home_page_index_container_banner.html %>
+       </div>
+
+      <% include homePageCommon/home_page_index_container_bottom.html %>
+    </div>
+    <!-- 到顶部的按钮 -->
+    <% include homePageCommon/home_page_index_container_toTop.html %>
     <!-- 引入公共地步 -->
     <% include ../common/footer.html %>
 
