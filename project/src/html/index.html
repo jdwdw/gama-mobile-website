@@ -14,31 +14,252 @@
   <meta content="email=no" name="format-detection" />
   <meta http-equiv="Cache-Control" content="no-siteapp" />
   <link rel="shortcut icon" href="/favicon.ico">
-  <link rel="stylesheet" href="//at.alicdn.com/t/font_015ldxy5b8x5hfr.css">
-  <link rel="stylesheet" type="text/css" href="../css/style-index.css" />
-
+  <% include common/iconfont.html %>
+    <link href="https://cdn.bootcss.com/Swiper/3.4.2/css/swiper.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="../css/style-index.css" />
+    <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
 </head>
 
 <body>
   <!-- 引入公共头部  -->
   <% include common/index_header.html %>
     <div class="m-page">
+      <!-- 导航区域  -->
+      <div class="g-nav">
+        <ul class="g-nav_box">
+          <li><a href="#" class="cur"><i class="icon icon-home"> </i><div class="name">首页</div></a></li>
+          <li><a href="#"><i class="icon icon-online-game1"> </i><div class="name">网游</div></a></li>
+          <li><a href="#"><i class="icon icon-game"> </i><div class="name">单机</div></a></li>
+          <li><a href="#"><i class="icon icon-game"> </i><div class="name">活动</div></a></li>
+          <li><a href="#"><i class="icon icon-news"> </i><div class="name">资讯</div></a></li>
+          <li><a href="#"><i class="icon icon-game"> </i><div class="name">礼包</div></a></li>
+        </ul>
+      </div>
+      <!-- 导航区域 end  -->
+      <!-- Swiper -->
+      <div class="g-swiper">
+        <div class="swiper-container swiper-container1">
+          <div class="swiper-wrapper">
+            <% for(var i = 0; i < 3; i++) {%>
+              <div class="swiper-slide">
+                <a href="#">
+                  <%- img(750, 280) %>
+                </a>
+              </div>
+              <% } %>
+          </div>
+          <!-- Add Pagination -->
+          <div class="swiper-pagination swiper-pagination1"></div>
+        </div>
+      </div>
 
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
+      <!-- Swiper end -->
+
+      <!-- 我玩过的  -->
+      <div class="g-game_item">
+        <header class="header">
+          <h2><i class="icon icon-biaoti_left"></i>我玩过的<i class="icon icon-biaoti_right"></i></h2>
+        </header>
+        <ul>
+          <% for(var i = 0; i < 4; i++) {%>
+            <li class="item">
+              <a href="#">
+                <%- img(325, 180) %>
+                  <div class="con">
+                    <div>
+                      <p>保卫萝卜2</p>
+                      <span>休闲，益智</span>
+                    </div>
+                    <div class="item-handle">
+                      <a href="#" class="btn btn-start">开始</a>
+                    </div>
+                  </div>
+              </a>
+            </li>
+            <% } %>
+
+        </ul>
+        <div class="more">
+          <a class="f-fr" href="#">更多 <i class="icon icon-more"></i></a>
+        </div>
+      </div>
+      <!-- 我玩过的 end  -->
+
+
+      <!-- 精品推荐  -->
+      <div class="g-game_item">
+        <header class="header">
+          <h2><i class="icon icon-biaoti_left"></i>精品推荐<i class="icon icon-biaoti_right"></i></h2>
+        </header>
+        <ul>
+          <% for(var i = 0; i < 4; i++) {%>
+            <li class="item">
+              <a href="#">
+                <%- img(325, 180) %>
+                  <div class="con">
+                    <div>
+                      <p>保卫萝卜2</p>
+                      <span>休闲，益智</span>
+                    </div>
+                    <div class="item-handle">
+                      <a href="#" class="btn btn-start">开始</a>
+                    </div>
+                  </div>
+              </a>
+            </li>
+            <% } %>
+
+        </ul>
+      </div>
+      <!-- 精品推荐 end  -->
+      <!-- Swiper -->
+      <div class="g-swiper">
+        <div class="swiper-container swiper-container2">
+          <div class="swiper-wrapper">
+            <% for(var i = 0; i < 3; i++) {%>
+              <div class="swiper-slide">
+                <a href="#">
+                  <%- img(750, 280) %>
+                </a>
+              </div>
+              <% } %>
+          </div>
+          <!-- Add Pagination -->
+          <div class="swiper-pagination swiper-pagination2"></div>
+        </div>
+      </div>
+
+      <!-- Swiper end -->
+
+      <!-- 热门游戏  -->
+      <div class="g-game_item">
+        <header class="header">
+          <h2><i class="icon icon-biaoti_left"></i>热门游戏<i class="icon icon-biaoti_right"></i></h2>
+        </header>
+        <ul>
+          <% for(var i = 0; i < 4; i++) {%>
+            <li class="item">
+              <a href="#">
+                <%- img(325, 180) %>
+                  <div class="con">
+                    <div>
+                      <p>保卫萝卜2</p>
+                      <span>休闲，益智</span>
+                    </div>
+                    <div class="item-handle">
+                      <a href="#" class="btn btn-start">开始</a>
+                    </div>
+                  </div>
+              </a>
+            </li>
+            <% } %>
+
+        </ul>
+        <div class="more">
+          <a class="f-fr" href="#">更多 <i class="icon icon-more"></i></a>
+        </div>
+      </div>
+      <!-- 热门游戏 end  -->
+      <!-- Swiper -->
+      <div class="g-swiper">
+        <div class="swiper-container swiper-container3">
+          <div class="swiper-wrapper">
+            <% for(var i = 0; i < 3; i++) {%>
+              <div class="swiper-slide">
+                <a href="#">
+                  <%- img(750, 280) %>
+                </a>
+              </div>
+              <% } %>
+          </div>
+          <!-- Add Pagination -->
+          <div class="swiper-pagination swiper-pagination3"></div>
+        </div>
+      </div>
+
+      <!-- Swiper end -->
+
+      <!-- 经典游戏  -->
+      <div class="g-game_item">
+        <header class="header">
+          <h2><i class="icon icon-biaoti_left"></i>经典游戏<i class="icon icon-biaoti_right"></i></h2>
+        </header>
+        <ul>
+          <% for(var i = 0; i < 4; i++) {%>
+            <li class="item">
+              <a href="#">
+                <%- img(325, 180) %>
+                  <div class="con">
+                    <div>
+                      <p>保卫萝卜2</p>
+                      <span>休闲，益智</span>
+                    </div>
+                    <div class="item-handle">
+                      <a href="#" class="btn btn-start">开始</a>
+                    </div>
+                  </div>
+              </a>
+            </li>
+            <% } %>
+
+        </ul>
+        <div class="more">
+          <a class="f-fr" href="#">更多 <i class="icon icon-more"></i></a>
+        </div>
+      </div>
+      <!-- 经典游戏 end  -->
+
+      <!-- 最新专题  -->
+      <div class="g-game_item">
+        <header class="header">
+          <h2><i class="icon icon-biaoti_left"></i>最新专题<i class="icon icon-biaoti_right"></i></h2>
+        </header>
+
+        <div class="g-swiper-wrapper">
+
+          <div class="m-swiper-wrapper">
+            <% for(var i = 0; i < 6; i++) {%>
+              <div class="m-swiper-slide">
+                <a href="#">
+                  <%- img(420, 220) %>
+                </a>
+              </div>
+              <% } %>
+
+          </div>
+        </div>
+
+        <div class="more">
+          <a class="f-fr" href="#">更多 <i class="icon icon-more"></i></a>
+        </div>
+      </div>
+      <!-- 最新专题 end  -->
+
+      <!-- 点击返回顶部 -->
+      <% include common/m-gotop.html %>
+
     </div>
 
     <!-- 引入公共地步 -->
     <% include common/footer.html %>
 
+
+      <script src="https://cdn.bootcss.com/Swiper/3.4.2/js/swiper.jquery.min.js"></script>
+      <script>
+        var swiper = new Swiper('.swiper-container1', {
+          pagination: '.swiper-pagination1',
+          paginationClickable: true
+        });
+
+        var swiper2 = new Swiper('.swiper-container2', {
+          pagination: '.swiper-pagination2',
+          paginationClickable: true
+        });
+        var swiper3 = new Swiper('.swiper-container3', {
+          pagination: '.swiper-pagination3 ',
+          paginationClickable: true
+        });
+      </script>
 </body>
 
 </html>
