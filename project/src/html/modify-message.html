@@ -1,0 +1,89 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN" data-rem="375">
+
+<head>
+  <meta charset="UTF-8">
+  <title>修改信息</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+  <meta name="keywords" content="" />
+  <meta name="description" content="" />
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta content="telephone=no" name="format-detection" />
+  <meta content="email=no" name="format-detection" />
+  <meta http-equiv="Cache-Control" content="no-siteapp" />
+  <link rel="shortcut icon" href="/favicon.ico">
+  <!-- 引入字体图标 -->
+  <link rel="stylesheet" href="//at.alicdn.com/t/font_380qkkfm7o7axlxr.css">
+  <link rel="stylesheet" type="text/css" href="../css/style-modifyMessage.css" />
+</head>
+
+<body>
+  <div class="m-header">
+    <header class="bar bar-nav">
+      <a class="f-fl" href="#">
+        <i class="icon icon-back"> </i>
+      </a>
+      <h1 class="title">修改信息</h1>
+    </header>
+  </div>
+  <div class="modify-message">
+    <form action="form_action.asp" method="get">
+      <div class="modify-head-image">
+        <label for="head-image-file-upload">
+          <img src="" alt="">
+          <span class="touxiang">头像</span>
+          <span class="limit">点击上传头像(最大限制为2M)</span>
+        </label>
+        <input type="file" name="head-image-file" id="head-image-file-upload">
+      </div>
+      <div class="modify-nickname modify-item">
+        <p><span>昵称：</span><input type="text" name="nickname" spellcheck="false" value="Jack Spaluo"  /></p>
+      </div>
+      <div class="modify-uid modify-item">
+        <p><span>UID：</span><input type="text" name="uid" spellcheck="false" value="13800138000"  /></p>
+      </div>
+      <div class="modify-sex modify-item">
+        <p>
+          <span>性别：</span>
+          <span>
+            <label for="male">male</label>
+            <input type="radio" name="sex" spellcheck="false" id="male" value="male"  />
+            <label for="female">female</label>
+            <input type="radio" name="sex" spellcheck="false" id="female" value="female"  />
+          </span>
+        </p>
+      </div>
+      <div class="modify-phone modify-item">
+        <p>
+          <span>手机：</span>
+          <input type="text" name="phone" spellcheck="false" value="13866622333"  />
+        </p>
+      </div>
+      <div class="modify-email modify-item">
+        <p><span>邮箱：</span><input type="text" name="email" spellcheck="false" value="jimugame@game.com"  /></p>
+      </div>
+      <div class="last-login">
+        <span>最后登录时间</span>
+        <span>2017-06-01 18:12</span>
+      </div>
+      <div class="register-time">
+        <span>注册时间</span>
+        <span>2017-05-16 15:46</span>
+      </div>
+      <div class="confirm-submit">
+        <input type="submit" value="确认修改" />
+      </div>
+    </form>
+  </div>
+  <div class="blank">
+
+  </div>
+
+    <!-- 引入公共地步 -->
+    <% include common/footer.html %>
+
+</body>
+
+</html>

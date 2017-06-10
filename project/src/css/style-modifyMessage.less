@@ -1,0 +1,138 @@
+/* 引入库文件 */
+@import "./lib/lib-reset";
+@import "./lib/lib-mixins";
+@import "./lib/lib-base";
+@import "./lib/lib-ui";
+
+// 引入 REM 解决方案依赖
+// 调用示例 <html data-rem="375">
+@import "./lib/lib-rem";
+
+/* 引入 Less 依赖文件 */
+@import "mod-header";
+@import "mod-footer";
+
+@root:40rem;
+body {
+  background-color: @style-bg;
+}
+.modify-message {
+  box-sizing: border-box;
+  width: 100%;
+  height: 917 / @root;
+  background-color: @style-default;
+  padding-left: 31 / @root;
+  padding-right: 31 / @root;
+  margin-top: 22 / @root;
+  .modify-head-image {
+    border-bottom: 1px solid #CCCCCC;
+    box-sizing: border-box;
+    padding: 30 / @root;
+    width: 100%;
+    height: 180 / @root;
+    input {
+      display: none;
+    }
+    img {
+      float: left;
+      width: 121 / @root;
+      height:  121 / @root;
+    }
+    span {
+      display: inline-block;
+      float: left;
+      width: 400 / @root;
+      text-align: left;
+      margin-left: 24 / @root;
+    }
+    span.touxiang {
+      font-weight: bold;
+      margin-top: 25 / @root;
+      font-size: 32 / @root;
+      line-height: 29 / @root;
+    }
+    span.limit {
+      color: @style-grey;
+      margin-top: 20 / @root;
+      font-size: 22 / @root;
+      line-height: 20 / @root;
+    }
+  }
+  .modify-item {
+    position: relative;
+    width: 100%;
+    height: 96 / @root;
+    line-height: 96 / @root;
+    vertical-align: middle;
+    font-size: 32 / @root;
+    font-weight: bold;
+    border-bottom: 1px solid #CCCCCC;
+    input {
+      float: right;
+      margin-top: 31 / @root;
+      border: 0px;
+      font-size: 32 / @root;
+      vertical-align: middle;
+      text-align: right;
+      text-decoration: none;
+      color:  @style-grey;
+    }
+  }
+  .modify-sex {
+    input {
+      display: none;
+    }
+    span:nth-child(2) {
+      float: right;
+    }
+  }
+  .last-login {
+    margin-top: 51 / @root;
+  }
+  .register-time {
+    margin-top: 30 / @root;
+  }
+  .last-login, .register-time {
+    width: 100%;
+    height: 28 / @root;
+    span {
+      line-height: 26 / @root;
+      font-size: 28 / @root;
+      color: @style-grey;
+    }
+    span:nth-child(1) {
+      float: left;
+    }
+    span:nth-child(2) {
+      float: right;
+    }
+  }
+  .confirm-submit {
+    margin-top: 60 / @root;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 31 / @root;
+    width: 320 / @root;
+    height: 56 / @root;
+    text-align: center;
+    input {
+      display: inline-block;
+      width: 100%;
+      height: 100%;
+      line-height: 56 / @root;
+      vertical-align: middle;
+      text-align: center;
+      font-size: 28 / @root;
+      color: @style-default;
+      background-color: #E22127;
+      border: none;
+      border-radius: 4 / @root;
+    }
+  }
+}
+.blank {
+  width: 100%;
+  height: 31 / @root;
+  background-color: @style-default;
+  margin-bottom: 107 / @root;
+}
