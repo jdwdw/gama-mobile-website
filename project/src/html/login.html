@@ -20,27 +20,70 @@
 
 <body>
   <!-- 引入公共头部  -->
-  <% include common/header.html %>
-    <div class="m-page">
-
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
+  <% include common/header.html  %>
+   <div class="main">
+     <div class="logo"><img src="../img/login_logo.png" alt=""></div>
+     <form>
+       <div class="main-message">
+         <div class="login-message">
+         <div class="user">
+           <span >
+             <i class="icon icon-shouji"></i>
+           </span>
+           <input type="text" placeholder="帐号" class="input"/>
+         </div>
+         <div class="user">
+           <span >
+             <i class="icon icon-pwd"></i>
+           </span>
+           <input type="text" placeholder="密码" class="input"/>
+         </div>
+         <button type="button" name="button" class="button">登录</button>
+         <div class="tie">
+           <div class="f-fl">
+             <a href="register.html">快速注册</a>
+           </div>
+           <div class="f-fr" >
+             <a href="retrieve-password.html">忘记密码</a>
+           </div>
+         </div>
+         </div>
+       </div>
+     </form>
+     <div class="third-party">
+				<div class="accounts">
+					<div class="accounts-title"><span>第三方帐号登录</span></div>
+				</div>
+				<div class="icon-image">
+					<ul class="ul-center">
+						<li>
+							<div><img src="../img/icon_qq.png" alt=""></div>
+  						<div class="margin">QQ</div>
+						</li>
+						<li class="weixin">
+							<div><img src="../img/icon_wechat.png" alt=""></div>
+							<div class="margin">微信</div>
+						</li>
+						<li>
+							<div><img src="../img/icon_weibo.png" alt=""></div>
+							<div class="margin">微博</div>
+						</li>
+					</ul>
+				</div>
+        <div class="clear"></div>
+			</div>
     </div>
 
+<<<<<<< HEAD
     <% var name="ttp" %>
     <div>
       Hello,<%-name %>
     </div>
     <span><%- text(10,3) %></span>
     <%- img(200, 400, 'block__img') %>
+=======
+
+>>>>>>> d44047503a863b78a603764abec2ae6315a6f3f4
     <!-- 引入公共地步 -->
     <% include common/footer.html %>
 

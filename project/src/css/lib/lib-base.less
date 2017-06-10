@@ -32,7 +32,7 @@
 @style-brc :#cccccc;
 
 // #efefef
-// 使用场景：用于标签下的背景色以及按钮不可用的状态；
+// 使用场景：用于边框；
 @style-brcg :#efefef;
 
 // #e6e6e6
@@ -91,3 +91,16 @@ body{ background-color: @style-bg; }
   font-style:normal;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;}
+
+  .button{
+    width: 100%;
+    height: 1.75rem;
+    background:@style-main;
+    border: none;
+    border-radius: 3px;
+    color: @style-default;
+    font-size: 0.8rem;
+  }
+  .clear{
+    clear:both;
+  }
