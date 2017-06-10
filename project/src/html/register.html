@@ -14,14 +14,61 @@
   <meta content="email=no" name="format-detection" />
   <meta http-equiv="Cache-Control" content="no-siteapp" />
   <link rel="shortcut icon" href="/favicon.ico">
-  <link rel="stylesheet" type="text/css" href="../css/style-login.css" />
-  <link rel="stylesheet" href="//at.alicdn.com/t/font_015ldxy5b8x5hfr.css">
+  <% include common/iconfont.html %>
+  <link rel="stylesheet" type="text/css" href="../css/style-register.css" />
 </head>
 
 <body>
   <!-- 引入公共头部  -->
   <% include common/header.html  %>
+  <div class="main register-main">
+    <form>
+      <div class="main-message">
+        <div class="login-message" style="margin-top:0;">
+        <div class="user">
+          <span >
+            <i class="icon icon-shouji"></i>
+          </span>
+          <input type="text" placeholder="手机号码" class="input"/>
+        </div>
+        <div class="user">
+          <span >
+            <i class="icon icon-pwd"></i>
+          </span>
+          <input type="text" placeholder="密码" class="input"/>
+        </div>
+        <div class="user">
+          <span >
+            <i class="icon icon-pwd"></i>
+          </span>
+          <input type="text" placeholder="再次输入密码" class="input"/>
+        </div>
+        <div class="verification">
+        <div class="user input-box">
+          <span >
+            <i class="icon icon-code"></i>
+          </span>
+          <input type="text" placeholder="输入验证码" class="input"/>
+        </div>
+        <button type="button" name="button" class="button verification-button">获取验证码</button>
+        </div>
+        <div class="clear"></div>
+        <div class="tie gender">
+          <div class="f-fl">
+            <a href="#">性别:</a>
+          </div>
+          <div class="f-fr" >
+            <div id="boy" class="sex f-fl"><img src="../img/icon_sex_boy.png"/></div>
+            <div id="girl" class="sex f-fl"><img src="../img/icon_sex_girl_pre.png"/></div>
+          </div>
+          <div class="clear"></div>
+        </div>
 
+        <button type="button" name="button" class="button">立即注册</button>
+        </div>
+      </div>
+    </form>
+   </div>
 
 
     <!-- 引入公共地步 -->
