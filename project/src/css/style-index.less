@@ -16,29 +16,9 @@
 
 /* 引入 Less 依赖文件 */
 @import "mod-index_header";
+@import "mod-index_nav";
 @import "mod-footer";
 
-// 导航
-.g-nav_box{
-  overflow: hidden;
-  padding: 0.25rem 0.75rem;
-  background-color: @style-default;
-  li{
-    float: left;
-    width: 16.666%;
-    text-align: center;
-    .name{
-      font-size: 0.55rem;
-      line-height: 1.5em;
-      color:@style-grey;
-    }
-    .cur{
-      .name,.icon{
-        color: @style-main;
-      }
-    }
-  }
-}
 
 
 .g-swiper{
@@ -100,11 +80,11 @@
     }
   }
   .more{
-    margin-right: 0.5rem;  margin-bottom: 1rem; overflow: hidden;
+    margin-left: 0.5rem; margin-right: 0.5rem;  margin-bottom: 1rem; overflow: hidden;
     a{
       color: @style-black ;
       .icon{
-        position: relative; top: 0.13rem;
+        position: relative; top: 0.13rem;   color: @style-brc ;
       }
     }
   }
