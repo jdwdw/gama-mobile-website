@@ -17,7 +17,7 @@
 /* 引入 Less 依赖文件 */
 @import "mod-index_header";
 @import "mod-index_nav";
-@import "mod-index_gameSubNav";
+@import "mod-index_twoTapSubNav";
 @import "mod-footer";
 
 @style-yellow:#ffbb59;
@@ -43,11 +43,14 @@
         line-height: 1.5em;
         width: 550/@root;
         .content{
-          width: 430/@root;
+          width: 400/@root;
+          .progress{
+            margin-top:26/@root;
+          }
         }
         p{
-          font-size: 32/@root;
-          line-height: 30/@root;
+          font-size: 30/@root;
+          line-height: 32/@root;
           vertical-align: middle;
           color: @style-black;
         }
@@ -57,25 +60,15 @@
           vertical-align: middle;
           color: @style-brc;
         }
-        .star{
-          margin-top: 15/@root;
-          .icon{
-            width: 30/@root;
-            color:  @style-brc;
-            font-size: 30/@root;
-            line-height: 30/@root;
-            vertical-align: middle;
-          }
-          .iconActive{
-            color:  @style-yellow;
-          }
-        }
-
 
         .item-handle{
           margin-top: 30/@root;
           .btn{
             background-color:  @style-main;
+            vertical-align: middle;
+          }
+          .btnDisactive{
+            background-color:  @style-brc;
             vertical-align: middle;
           }
 
@@ -84,4 +77,37 @@
     }
   }
 
+}
+
+.graph {
+float:left;
+margin:5/@root;
+background-color:#e6e6e6;
+position:relative;
+width:250/@root;
+padding:0;
+border-radius: 20px;
+margin-right: 30/@root;
+}
+
+.graph .bar {
+border-radius: 20px;
+display:block;
+position:relative;
+// background-image:url(images/bargraph.gif);
+background-color: #53c5b6;
+background-position:right center;
+background-repeat:repeat-x;
+border-right:#53c5b6 1px solid;
+text-align:center;
+color:#fff;
+height:20/@root;
+font-family:Arial, Helvetica, sans-serif;
+font-size:12px;
+line-height:1.9em
+}
+
+.graph .bar span {
+position:absolute;
+left:1em
 }

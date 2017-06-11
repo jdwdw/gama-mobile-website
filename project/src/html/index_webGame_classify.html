@@ -48,9 +48,10 @@
       <!-- 游戏分类表格  -->
       <div class="g-gameClassifyTable">
         <ul>
+          <% for(var i = 0; i < 17; i++) {%>
             <li class="item">
               <a href="#">
-                <i class="icon icon-tiyulei f-fl"></i>
+                <i class="icon icon-tiyulei1 icon-green f-fl"></i>
                 <div class="con f-fl">
                   <div>
                     <p>体育类</p>
@@ -59,17 +60,7 @@
                 </div>
               </a>
             </li>
-            <li class="item">
-              <a href="#">
-                <i class="icon icon-tiyulei1 f-fl"></i>
-                <div class="con f-fl">
-                  <div>
-                    <p>动作类</p>
-                    <span>共20款</span>
-                  </div>
-                </div>
-              </a>
-            </li>
+            <% } %>
         </ul>
       </div>
       <!-- 游戏分类表格结束  -->
