@@ -15,7 +15,7 @@
   <meta http-equiv="Cache-Control" content="no-siteapp" />
   <link rel="shortcut icon" href="/favicon.ico">
   <!-- 引入字体图标 -->
-  <link rel="stylesheet" href="//at.alicdn.com/t/font_380qkkfm7o7axlxr.css">
+    <% include common/iconfont.html %>
   <link rel="stylesheet" type="text/css" href="../css/style-modifyMessage.css" />
 </head>
 
@@ -48,9 +48,9 @@
         <p>
           <span>性别：</span>
           <span>
-            <label for="male">male</label>
+            <label for="male"><i id="male-icon" class="icon icon-xingbie_nan active"> </i></label>
             <input type="radio" name="sex" spellcheck="false" id="male" value="male"  />
-            <label for="female">female</label>
+            <label for="female"><i  id="female-icon"  class="icon icon-xingbie_nv"> </i></label>
             <input type="radio" name="sex" spellcheck="false" id="female" value="female"  />
           </span>
         </p>
@@ -73,7 +73,7 @@
         <span>2017-05-16 15:46</span>
       </div>
       <div class="confirm-submit">
-        <input type="submit" value="确认修改" />
+        <input id="confirm-button" type="submit" value="确认修改" />
       </div>
     </form>
   </div>
@@ -85,5 +85,29 @@
     <% include common/footer.html %>
 
 </body>
-
+  <script type="text/javascript">
+    const male = document.getElementById('male-icon');
+    const female = document.getElementById('female-icon');
+    male.onclick = function () {
+      const contains = male.classList.contains('active')
+      if(!contains) {
+        male.classList.add('active');
+        female.classList.remove('active');
+      }
+    }
+    female.onclick = function () {
+      const contains = female.classList.contains('active')
+      if(!contains) {
+        female.classList.add('active');
+        male.classList.remove('active');
+      }
+    }
+    const submit = document.getElementById('confirm-button');
+    const form = document.querySelector('form');
+    submit.onclick = function (event) {
+      event.preventDefault();
+      console.log(form);
+    }
+    console.log(submit);
+  </script>
 </html>
