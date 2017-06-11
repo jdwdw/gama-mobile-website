@@ -1,5 +1,6 @@
 // 预定义的变量，例如颜色、字号、字体，功能样式
 
+@root:40rem;
 /* variable */
 // 主色调： #fff
 // 使用场景：用于白色背景
@@ -31,8 +32,12 @@
 @style-brc :#cccccc;
 
 // #efefef
-// 使用场景：用于标签下的背景色以及按钮不可用的状态；
+// 使用场景：用于边框；
 @style-brcg :#efefef;
+
+// #e6e6e6
+// 使用场景itme下的边框
+@style-itmeBorder :#e6e6e6;
 
 /* function */
 .f-cb:after,.f-cbli li:after{display:block;clear:both;visibility:hidden;height:0;overflow:hidden;content:".";}
@@ -86,3 +91,16 @@ body{ background-color: @style-bg; }
   font-style:normal;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;}
+
+  .button{
+    width: 100%;
+    height: 1.75rem;
+    background:@style-main;
+    border: none;
+    border-radius: 3px;
+    color: @style-default;
+    font-size: 0.8rem;
+  }
+  .clear{
+    clear:both;
+  }

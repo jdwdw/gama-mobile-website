@@ -1,0 +1,49 @@
+/**
+ * @name: tmt-workflow example
+ * @description: Examples for tmt-workflow
+ * @author: weixin
+ */
+
+/* 引入库文件 */
+@import "./lib/lib-reset";
+@import "./lib/lib-mixins";
+@import "./lib/lib-base";
+@import "./lib/lib-ui";
+
+// 引入 REM 解决方案依赖
+// 调用示例 <html data-rem="375">
+@import "./lib/lib-rem";
+
+/* 引入 Less 依赖文件 */
+@import "mod-header";
+@import "mod-search-header";
+@import "mod-footer";
+
+
+@root:40rem;
+
+.search-main{
+  width: 100%;
+  margin-top: 18/@root;
+  .hot-search{
+    width: 100%;
+    padding: 0 30/@root;
+    box-sizing: border-box;
+    background: @style-default;
+    .hot-title{
+      width: 100%;
+      height: 88/@root;
+      padding: 30/@root 0;
+      box-sizing: border-box;
+      font-size: 28/@root;
+
+    }
+  }
+}
+.diamonds{
+  width: 4/@root;
+  height: 28/@root;
+  background: @style-main;
+  float: left;
+  margin-right: 10/@root;
+}

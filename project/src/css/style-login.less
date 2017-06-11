@@ -17,3 +17,124 @@
 /* 引入 Less 依赖文件 */
 @import "mod-header";
 @import "mod-footer";
+
+
+
+@root:40rem;
+.ul-center{
+  display:table;
+  margin-left:auto;
+  margin-right:auto;
+}
+
+/* login */
+.main{
+  width: 100%;
+  margin-top: 0.55rem;
+  background: @style-default;
+  padding-bottom: 30/@root;
+  margin-bottom: 112/@root;
+}
+.logo{
+  padding: 0.75rem 0 0 0;
+  margin: 0 auto;
+  width: 3rem;
+  height: 3rem;
+  img{
+    width: 100%;
+    height: auto;
+  }
+}
+.main-message{
+  width: 13rem;
+  margin: 0 auto;
+}
+.login-message{
+  margin-top: 2rem;
+  font-size: 0.7rem;
+}
+.user{
+  width: 100%;
+  height: 1.725rem;
+  border: 1px solid @style-brcg;
+  border-radius: 2px;
+  line-height: 1.725rem;
+  margin-bottom: 0.75rem;
+  .icon{
+    color: @style-grey;
+    margin-left: 0.25rem;
+    line-height: 1.725rem;
+  }
+  span{
+    float: left;
+    margin-right: 0.675rem;
+  }
+  .input{
+    border: none;
+    width: 80%;
+    font-size: 0.7rem;
+  }
+}
+.tie{
+ //  display: -webkit-flex;
+ // -webkit-justify-content: space-between;
+ //  display: flex;
+ //  justify-content: space-between;
+  margin-top: 0.75rem;
+  a{
+    color:@style-main;
+  }
+}
+
+
+.third-party {
+    padding: 0 3.65rem;
+    width: 13rem;
+    margin: 3rem auto 0;
+}
+
+.accounts {
+	width: 100%;
+	height: 1px;
+	border-top: 1px solid #D4D4D4;
+	// display: flex;
+	// justify-content: center;
+	// display: -webkit-flex;
+	// /* Safari */
+	// -webkit-justify-content: center;
+	margin-bottom: 50/@root;
+}
+.margin{
+  margin-top: 20/@root;
+}
+.accounts-title {
+	background: #ECECEC;
+	line-height: 1px;
+	font-size: 0.6rem;
+  text-align: center;
+  span{
+    // width: 5rem;
+    // height: 30/@root;
+    background: @style-default
+  }
+}
+
+.weixin{
+  margin-left: 100/@root;
+  margin-right: 100/@root;
+}
+.icon-image ul li {
+  width: 18%;
+	font-size:30/@root;
+	color:@style-black;
+	float: left;
+	text-align: center;
+}
+
+.icon-image ul {
+	width: 100%;
+}
+
+.icon-image ul li img {
+	width: 100%;
+}
