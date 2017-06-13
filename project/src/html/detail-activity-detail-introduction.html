@@ -1,0 +1,80 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN" data-rem="375">
+
+<head>
+  <meta charset="UTF-8">
+  <title>活动详情</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+  <meta name="keywords" content="" />
+  <meta name="description" content="" />
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta content="telephone=no" name="format-detection" />
+  <meta content="email=no" name="format-detection" />
+  <meta http-equiv="Cache-Control" content="no-siteapp" />
+  <link rel="shortcut icon" href="/favicon.ico">
+  <!-- 引入字体图标 -->
+    <% include common/iconfont.html %>
+  <link rel="stylesheet" type="text/css" href="../css/style-acitvityDetailIntroduction.css" />
+</head>
+
+<body>
+  <div class="m-header">
+    <header class="bar bar-nav">
+      <a class="f-fl" href="#">
+        <i class="icon icon-back"> </i>
+      </a>
+      <h1 class="title">活动详情</h1>
+    </header>
+  </div>
+  <div class="activity-content">
+    <div class="activity-image">
+      <%- img(750, 350, 'block__img') %>
+    </div>
+    <div class="activity-title">
+      愿原力与你同在
+    </div>
+    <div class="activity-time">
+      <span class="start-time">2017.5.27</span>-<span class="end-time">2017.6.1</span>
+    </div>
+  </div>
+  <div class="nav-bar">
+    <div class="nav-bar-game">
+      简介
+    </div>
+    <div class="nav-bar-paper">
+      评论
+    </div>
+  </div>
+  <div class="activity-introduction-container">
+    <div class="activity-introduction">
+      活动一：吃粽子
+  活动内容：
+  （1）活动期间，玩家可至活动页面吃粽子，粽子品质分为低级粽子、中级粽子和高级粽子
+  ，吃的等级越高获得饱食度越高；
+  （2）活动期间，吃粽子次数和饱食度达到一定额度即可开启宝箱；
+  （3）活动期间，可以参加吃粽子小游戏获得额外的饱食度：点击屏幕吃粽子，点击越快，获得的饱食度越高；
+  （4）活动期间，每天有限制的吃粽子次数，根据vip等级可以购买额外次数，饱食度和次数每日0点重置。
+
+  活动二：充值送“粽”礼
+  活动内容：
+  （1）活动期间，充值：
+  6元：粽子代金券、特戒袋、元宝红包、豪华宝石箱；
+  30元：粽子代金券、羽毛、天神抽奖券、元宝红包、元神大礼包；
+  98元：粽子代金券、天神抽奖券、元宝红包、魔力卷轴、元宝红包 。
+    </div>
+  </div>
+  <div class="confirm-button">
+    <button type="button" name="button">我要评论</button>
+  </div>
+
+  <div class="back-to-top">
+    <a href="#top">点击返回顶部</a>
+  </div>
+    <!-- 引入公共地步 -->
+    <% include common/footer.html %>
+
+</body>
+
+</html>
