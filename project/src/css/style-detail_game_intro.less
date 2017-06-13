@@ -20,16 +20,24 @@
 @import "mod-footer";
 
 @style-yellow:#ffbb59;
+@style-green:#0cd29c;
 .g-gameList{
-  padding:30/@root 10/@root; background: @style-default; width: 100%; box-sizing: border-box; margin-top:30/@root; padding-bottom: 0; overflow: hidden;
+  padding:25/@root 10/@root;
+  background: @style-default;
+  width: 100%;
+  box-sizing: border-box;
+  overflow: hidden;
 
     .gameItem{
-      width: 100%; float: left; padding: 0 0.5rem; box-sizing: border-box; margin-bottom: 1rem; position: relative;border-bottom: 1px solid @style-itmeBorder;
+      width: 100%;
+      float: left;
+      padding: 0 0.5rem;
+      box-sizing: border-box;
+      position: relative;
       .gameImg{
         display: inline-block;
         width: 120/@root;
         height: 120/@root;
-        padding-bottom: 20/@root;
           img{
             width: 100%;
             border-radius: 15%;
@@ -79,5 +87,126 @@
 
         }
       }
+
     }
+
+    .contenTitle{
+      font-size: 30/@root;
+      line-height: 32/@root;
+      vertical-align: middle;
+      margin-left: 30/@root;
+      padding-left: 10/@root;
+
+    }
+    .titleActive{
+      border-left:3px solid @style-green;
+    }
+    .titleDisactive{
+      border-left:3px solid #e22127;
+    }
+    .contentText{
+      padding: 0 30/@root;
+      font-size: 26/@root;
+      line-height: 44/@root;
+      vertical-align: middle;
+      color: @style-black;
+      margin-top: 30/@root;
+    }
+
+    .contentTextCenter{
+      padding: 0 30/@root;
+      font-size: 24/@root;
+      line-height: 44/@root;
+      vertical-align: middle;
+      text-align: center;
+      color: @style-brc;
+      margin-top: 30/@root;
+    }
+
+    .content{
+      overflow: hidden;
+      .item{
+        margin-left: 30/@root;
+        float: left;
+        padding: 0 0.5rem;
+        box-sizing: border-box;
+        margin-top: 30/@root;
+        position: relative;
+        border: 1px solid @style-itmeBorder;
+        color: @style-brc;
+        font-size: 26/@root;
+        line-height: 46/@root;
+        vertical-align: middle;
+      }
+    }
+
+    .strategy-item{
+      width: 100%;
+      float: left;
+      padding: 0 0.5rem;
+      box-sizing: border-box;
+      margin-top: 30/@root;
+      position: relative;
+      .gameImg{
+        display: inline-block;
+        width: 160/@root;
+        height: 140/@root;
+        padding-bottom: 20/@root;
+        margin-bottom: 30/@root;
+          img{
+            width: 100%;
+          }
+      }
+      .con{
+        display: inline-block;
+        vertical-align: middle;
+        line-height: 1.5em;
+        width: 510/@root;
+        p{
+          font-size: 30/@root;
+          line-height: 40/@root;
+          vertical-align: middle;
+          color: @style-black;
+          margin-bottom: 40/@root;
+        }
+        .date{
+          font-size: 22/@root;
+          line-height: 20/@root;
+          vertical-align: middle;
+          color: @style-brc;
+        }
+        .strategyFlag{
+          border: 1px solid #92cff9 ;
+          height: 20/@root;
+          width: 42/@root;
+          font-size: 22/@root;
+          line-height: 20/@root;
+          vertical-align: middle;
+          color: #92cff9;
+        }
+
+      }
+    }
+
+}
+
+
+.g-gameList-margin-top{
+  margin-top:30/@root;
+}
+.g-gameList-border-bottom-line{
+  border-bottom: 1px solid @style-itmeBorder;
+}
+
+.g-swiper-wrapper{
+  overflow-x: scroll;
+  .m-swiper-wrapper{
+   overflow: hidden; width:11.5*6rem;
+    background-color: #fff;
+ }
+  .m-swiper-slide{ float: left; width: 10.5rem; margin-right:30/@root;
+  img{
+    width: 100%;
+  }
+  }
 }

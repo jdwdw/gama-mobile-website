@@ -15,7 +15,9 @@
   <meta http-equiv="Cache-Control" content="no-siteapp" />
   <link rel="shortcut icon" href="/favicon.ico">
   <% include common/iconfont.html %>
+    <link href="https://cdn.bootcss.com/Swiper/3.4.2/css/swiper.min.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="../css/style-detail_game_intro.css" />
+    <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
 </head>
 
 <body>
@@ -35,7 +37,7 @@
 
 
       <!-- 游戏列表区域  -->
-      <div class="g-gameList">
+      <div class="g-gameList g-gameList-margin-top">
         <div class="gameItem">
           <a href="#">
             <div class="gameImg f-fl">
@@ -61,19 +63,148 @@
 
       </div>
       <!-- 游戏列表区域 end  -->
-      <!-- 游戏二级导航区域  -->
-      <div class="g-twoSubNav">
-        <ul class="g-twoTapSubNav_box">
-          <li><a href="#"><div class="name">系统消息</div></a></li>
-          <li><a href="#" class="cur"><div class="name">评论消息</div></a></li>
-        </ul>
-      </div>
-      <!-- 二级导航区域 end  -->
+      <div class="g-gameList">
+      <!-- banner1 -->
+        <div class="g-swiper-wrapper">
 
+          <div class="m-swiper-wrapper">
+            <% for(var i = 0; i < 6; i++) {%>
+              <div class="m-swiper-slide">
+                <a href="#">
+                  <%- img(308, 516) %>
+                </a>
+              </div>
+              <% } %>
+
+          </div>
+        </div>
+      </div>
+    <!-- banner1 end -->
+
+    <!-- 游戏二级导航区域  -->
+      <div class="g-gameList">
+        <div class="g-twoSubNav">
+          <ul class="g-twoTapSubNav_box">
+            <li><a href="#" class="cur"><div class="name">简介</div></a></li>
+            <li><a href="#"><div class="name">评论</div></a></li>
+          </ul>
+        </div>
+      </div>
+    <!-- 游戏二级导航区域 end  -->
+
+
+    <!-- 游戏说明区域  -->
+      <div class="g-gameList g-gameList-border-bottom-line">
+          <div class="contenTitle titleDisactive">
+            游戏说明
+          </div>
+            <p class="contentText">
+              据阿桑德拉和弗拉恢复了哈罗德和法律的哈市妇联哈喽电话费拉黑立法会拉黑法拉赫莱佛哈喽电话费拉黑礼服
+            </p>
+      </div>
+    <!-- 游戏说明区域 end  -->
+
+    <!-- 游戏说明区域  -->
+      <div class="g-gameList g-gameList-border-bottom-line">
+          <div class="contenTitle titleDisactive">
+            游戏标签
+          </div>
+          <div class="content">
+            <div class="item"><strong>三生三世十里桃花</strong></div>
+            <% for(var i = 0; i < 4; i++) {%>
+              <div class="item"><strong>十里桃花</strong></div>
+            <% } %>
+          </div>
+      </div>
+    <!-- 游戏说明区域 end  -->
+
+
+    <!-- 游戏说明区域  -->
+      <div class="g-gameList g-gameList-border-bottom-line">
+          <div class="contenTitle titleDisactive">
+            游戏动态
+          </div>
+            <p class="contentTextCenter">
+              暂无游戏动态
+            </p>
+      </div>
+    <!-- 游戏说明区域 end  -->
+
+    <!-- 游戏说明区域  -->
+      <div class="g-gameList g-gameList-border-bottom-line">
+          <div class="contenTitle titleDisactive">
+            游戏攻略
+          </div>
+          <div class="strategy-item">
+            <a href="#">
+              <div class="gameImg f-fr">
+                <%- img(160, 140) %>
+              </div>
+              <div class="con f-fl">
+                <div class="f-fl">
+                  <p>只要998，吕布貂蝉带回家-《御天传奇》良心福利攻略&nbsp;&nbsp;<span class="strategyFlag">攻略</span></p>
+                  <span class="date">2017.4.22</span>
+                </div>
+              </div>
+            </a>
+          </div>
+      </div>
+    <!-- 游戏说明区域 end  -->
+    <!-- 游戏说明区域  -->
+      <div class="g-gameList g-gameList-border-bottom-line">
+          <div class="contenTitle titleDisactive">
+            相关游戏
+          </div>
+            <p class="contentText">
+              暂无游戏动态
+            </p>
+      </div>
+    <!-- 游戏说明区域 end  -->
+    <!-- 游戏说明区域  -->
+      <div class="g-gameList">
+          <div class="contenTitle titleDisactive">
+            最新专题
+          </div>
+          <div class="g-swiper-wrapper g-gameList-margin-top">
+
+            <div class="m-swiper-wrapper">
+              <% for(var i = 0; i < 6; i++) {%>
+                <div class="m-swiper-slide">
+                  <a href="#">
+                    <%- img(420, 220) %>
+                  </a>
+                </div>
+                <% } %>
+
+            </div>
+          </div>
+      </div>
+    <!-- 游戏说明区域 end  -->
     </div>
+
+    <!-- 点击返回顶部 -->
+    <% include common/m-gotop.html %>
 
     <!-- 引入公共地步 -->
     <% include common/footer.html %>
+
+
+          <script src="https://cdn.bootcss.com/Swiper/3.4.2/js/swiper.jquery.min.js"></script>
+          <script>
+            var swiper = new Swiper('.swiper-container1', {
+              pagination: '.swiper-pagination1',
+              paginationClickable: true
+            });
+
+            var swiper2 = new Swiper('.swiper-container2', {
+              pagination: '.swiper-pagination2',
+              paginationClickable: true
+            });
+            var swiper3 = new Swiper('.swiper-container3', {
+              pagination: '.swiper-pagination3 ',
+              paginationClickable: true
+            });
+          </script>
 
 </body>
 
