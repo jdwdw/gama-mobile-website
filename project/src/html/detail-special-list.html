@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="UTF-8">
-  <title>我的卡箱</title>
+  <title>充值中心</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
   <meta name="keywords" content="" />
   <meta name="description" content="" />
@@ -16,7 +16,7 @@
   <link rel="shortcut icon" href="/favicon.ico">
   <!-- 引入字体图标 -->
     <% include common/iconfont.html %>
-  <link rel="stylesheet" type="text/css" href="../css/style-mycard.css" />
+  <link rel="stylesheet" type="text/css" href="../css/style-specialList.css" />
 </head>
 
 <body>
@@ -25,31 +25,18 @@
       <a class="f-fl" href="#">
         <i class="icon icon-back"> </i>
       </a>
-      <h1 class="title">我的卡箱</h1>
+      <h1 class="title">列表</h1>
     </header>
   </div>
-  <div class="game-content-container">
-    <% for(var i = 0; i < 4; i++) {%>
-      <div class="game-content">
-        <div class="game-content-image">
-          <img src="" alt="">
-        </div>
-        <div class="game-content-message">
-          <div class="game-content-message-detail">
-            <div class="game-content-name">
-              保卫萝卜
-            </div>
-            <div class="game-content-type">
-              <span>策略类&nbsp;&nbsp;</span>
-              <span>人气：<span>230116</span></span>
-            </div>
-          </div>
-        </div>
-        <div class="game-start-button">
-          <button type="button" name="button">复制</button>
-        </div>
+  <div class="game-list-container">
+    <% for(var i = 0; i < 6; i++) {%>
+      <div class="game-collection">
+        <a href="#"><%- img(750, 240, 'block__img') %></a>
       </div>
-    <% } %>
+      <% } %>
+  </div>
+  <div class="back-to-top">
+    <a href="#top">点击返回顶部</a>
   </div>
     <!-- 引入公共地步 -->
     <% include common/footer.html %>

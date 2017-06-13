@@ -1,0 +1,94 @@
+/* 引入库文件 */
+@import "./lib/lib-reset";
+@import "./lib/lib-mixins";
+@import "./lib/lib-base";
+@import "./lib/lib-ui";
+
+// 引入 REM 解决方案依赖
+// 调用示例 <html data-rem="375">
+@import "./lib/lib-rem";
+
+/* 引入 Less 依赖文件 */
+@import "mod-header";
+@import "mod-footer";
+
+@root:40rem;
+body {
+  background-color: @style-bg;
+}
+.recharge-success-container {
+  width: 100%;
+  padding-left:  30 / @root;
+  padding-right: 30 / @root;
+  box-sizing: border-box;
+  background-color: @style-default;
+  margin-top: 20 / @root;
+  margin-bottom: 475/@root;
+  .recharge-success-image {
+    width: 100%;
+    height: 120 / @root;
+    padding-top: 32 / @root;
+    text-align: center;
+    i {
+      display: inline-block;
+      position: relative;
+      font-size: 3.3rem;
+      top: 36 / @root;
+      left: -42 / @root;
+      color: #DF9F06;
+    }
+  }
+  .recharge-success-title {
+    width: 100%;
+    height: 70 / @root;
+    text-align: center;
+    font-size: 42 / @root;
+    margin-top: 30 / @root;
+  }
+  .recharge-success-tips {
+    width: 100%;
+    height: 29 / @root;
+    padding-top: 100 / @root;
+    padding-bottom: 30 / @root;
+    border-bottom: 1/@root solid #CCCCCC;
+    .recharge-success-tips-titile {
+      font-size: 32 / @root;
+      height: 29/@root;
+      line-height: 29/@root;
+      float: left;
+    }
+    .recharge-success-tips-number {
+      font-size: 32 / @root;
+      height: 29/@root;
+      line-height: 29/@root;
+      float: right;
+      color: #DF9F06;
+    }
+  }
+  .back-to-previous-level {
+    margin-top: 31 / @root;
+    margin-left: auto;
+    margin-right: auto;
+    width: 300 / @root;
+    height: 56 / @root;
+    line-height: 56 / @root;
+    vertical-align: middle;
+    text-align: center;
+    background-color: #DF9F06;
+    color: @style-default;
+    font-size: 30 / @root;
+    border-radius: 3 / @root;
+  }
+  .another-recharge {
+    margin: 0 auto;
+    width: 300 / @root;
+    height: 87 / @root;
+    line-height: 87 / @root;
+    vertical-align: middle;
+    text-align: center;
+    font-size: 30 / @root;
+    a:link, a:hover, a:active, a:visited {
+      color: #DF9F06;
+    }
+  }
+}
