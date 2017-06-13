@@ -15,23 +15,24 @@
 @import "./lib/lib-rem";
 
 /* 引入 Less 依赖文件 */
-@import "mod-index_header";
-@import "mod-index_nav";
-@import "mod-index_gameSubNav";
+@import "mod-header";
+@import "mod-detail_nav";
 @import "mod-footer";
 
 @style-yellow:#ffbb59;
-.g-activity_list{
+.g-gameList{
   padding:30/@root 10/@root; background: @style-default; width: 100%; box-sizing: border-box; margin-top:30/@root; padding-bottom: 0; overflow: hidden;
-  ul{
-    overflow: hidden;
-    li{
+
+    .gameItem{
       width: 100%; float: left; padding: 0 0.5rem; box-sizing: border-box; margin-bottom: 1rem; position: relative;border-bottom: 1px solid @style-itmeBorder;
       .gameImg{
-        width: 100%;
+        display: inline-block;
+        width: 120/@root;
+        height: 120/@root;
         padding-bottom: 20/@root;
           img{
             width: 100%;
+            border-radius: 15%;
           }
       }
       .con{
@@ -39,14 +40,14 @@
         vertical-align: middle;
         line-height: 1.5em;
         width: 550/@root;
-        margin-bottom: 30/@root;
-        margin-top: 10/@root;
+        .content{
+          width: 430/@root;
+        }
         p{
-          font-size: 30/@root;
+          font-size: 32/@root;
           line-height: 30/@root;
           vertical-align: middle;
           color: @style-black;
-          margin-bottom: 20/@root;
         }
         span{
           font-size: 22/@root;
@@ -54,11 +55,23 @@
           vertical-align: middle;
           color: @style-brc;
         }
+        .star{
+          margin-top: 15/@root;
+          .icon{
+            width: 30/@root;
+            color:  @style-brc;
+            font-size: 30/@root;
+            line-height: 30/@root;
+            vertical-align: middle;
+          }
+          .iconActive{
+            color:  @style-yellow;
+          }
+        }
+
 
         .item-handle{
-          // margin-top: 30/@root;
-          position: absolute;
-          right: 20/@root; bottom: 60/@root;;
+          margin-top: 30/@root;
           .btn{
             background-color:  @style-main;
             vertical-align: middle;
@@ -67,6 +80,4 @@
         }
       }
     }
-  }
-
 }

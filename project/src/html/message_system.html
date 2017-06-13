@@ -1,0 +1,75 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN" data-rem="375">
+
+<head>
+  <meta charset="UTF-8">
+  <title>首页</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+  <meta name="keywords" content="" />
+  <meta name="description" content="" />
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta content="telephone=no" name="format-detection" />
+  <meta content="email=no" name="format-detection" />
+  <meta http-equiv="Cache-Control" content="no-siteapp" />
+  <link rel="shortcut icon" href="/favicon.ico">
+  <% include common/iconfont.html %>
+    <link rel="stylesheet" type="text/css" href="../css/style-message_system.css" />
+</head>
+
+<body>
+  <!-- 引入公共头部  -->
+  <div class="m-header">
+    <header class="bar bar-nav">
+      <a class="f-fl" href="#">
+        <i class="icon icon-back"> </i>
+      </a>
+      <h1 class="title">我的消息</h1>
+    </header>
+  </div>
+    <div class="m-page">
+
+      <!-- 游戏二级导航区域  -->
+      <div class="g-twoSubNav">
+        <ul class="g-twoTapSubNav_box">
+          <li><a href="#" class="cur"><div class="name">系统消息</div></a></li>
+          <li><a href="#"><div class="name">评论消息</div></a></li>
+        </ul>
+      </div>
+      <!-- 二级导航区域 end  -->
+
+      <!-- 游戏列表区域  -->
+      <div class="g-gameList">
+        <ul>
+          <% for(var i = 0; i < 10; i++) {%>
+              <li class="item">
+                <a href="#">
+                  <div class="gameImg f-fl">
+                    <%- img(100, 100) %>
+                  </div>
+                  <div class="con f-fr">
+                    <div class="f-fl">
+                      <p class="contentTitle">系统公告</p>
+                      <p class="contentText">只要998，吕布貂蝉带回家-御天传奇良心福利攻略dddddddddd</p>
+                      <div class="date-text">
+                        <span class="date">2017.4.22</span>
+                      </div>
+                    </div>
+                  </div>
+                </a>
+              </li>
+
+          <% } %>
+        </ul>
+      </div>
+      <!-- 游戏列表区域 end  -->
+
+    </div>
+
+    <!-- 引入公共地步 -->
+    <% include common/footer.html %>
+
+</body>
+
+</html>

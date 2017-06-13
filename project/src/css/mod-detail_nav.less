@@ -1,0 +1,25 @@
+// 两个Tap的子导航栏
+.g-twoTapSubNav_box{
+  overflow: hidden;
+
+  padding: 0/@root 30/@root;
+  background-color: @style-default;
+  li{
+    float: left;
+    width: 100/2%;
+    text-align: center;
+    .name{
+      font-size: 30/@root;
+      height: 70/@root;
+      line-height: 70/@root;
+      color:@style-grey;
+      vertical-align: middle;
+    }
+    .cur{
+      .name,.icon{
+        color: @style-main;
+        border-bottom: 4/@root solid @style-main;
+      }
+    }
+  }
+}
