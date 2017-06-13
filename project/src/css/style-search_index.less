@@ -1,0 +1,85 @@
+/**
+ * @name: tmt-workflow example
+ * @description: Examples for tmt-workflow
+ * @author: weixin
+ */
+
+/* 引入库文件 */
+@import "./lib/lib-reset";
+@import "./lib/lib-mixins";
+@import "./lib/lib-base";
+@import "./lib/lib-ui";
+
+// 引入 REM 解决方案依赖
+// 调用示例 <html data-rem="375">
+@import "./lib/lib-rem";
+
+/* 引入 Less 依赖文件 */
+@import "mod-search_header";
+@import "mod-index_gameSubNav";
+@import "mod-footer";
+
+@style-yellow:#ffbb59;
+@style-green:#0cd29c;
+
+.g-gameList{
+  padding:30/@root 10/@root; background: @style-default; width: 100%; box-sizing: border-box; margin-top:30/@root; padding-bottom: 0; overflow: hidden;
+  .title{
+    font-size: 30/@root;
+    line-height: 32/@root;
+    vertical-align: middle;
+    margin-left: 30/@root;
+    padding-left: 10/@root;
+  }
+  .titleActive{
+    border-left:3px solid @style-green;
+  }
+  .titleDisactive{
+    border-left:3px solid #e22127;
+  }
+  .content{
+    overflow: hidden;
+    .item{
+      margin-left: 30/@root;
+      float: left;
+      padding: 0 0.5rem;
+      box-sizing: border-box;
+      margin-top: 40/@root;
+      position: relative;
+      border: 1px solid @style-itmeBorder;
+      color: @style-brc;
+      font-size: 26/@root;
+      line-height: 46/@root;
+      vertical-align: middle;
+    }
+  }
+
+  .contentHistory{
+    .con{
+      box-sizing: border-box;
+      display: inline-block;
+      vertical-align: middle;
+      line-height: 1.5em;
+      width: 100%;
+      padding: 0 30/@root;
+
+      p{
+        font-size: 30/@root;
+        line-height: 90/@root;
+        vertical-align: middle;
+        color: @style-black;
+        border-bottom: 1px solid @style-itmeBorder;
+      }
+    }
+  }
+
+  .clean{
+    font-size: 30/@root;
+    line-height: 90/@root;
+    vertical-align: middle;
+    text-align: center;
+    color: @style-main;
+  }
+
+
+}
