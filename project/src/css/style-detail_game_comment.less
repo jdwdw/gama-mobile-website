@@ -1,0 +1,269 @@
+/**
+ * @name: tmt-workflow example
+ * @description: Examples for tmt-workflow
+ * @author: weixin
+ */
+
+/* 引入库文件 */
+@import "./lib/lib-reset";
+@import "./lib/lib-mixins";
+@import "./lib/lib-base";
+@import "./lib/lib-ui";
+
+// 引入 REM 解决方案依赖
+// 调用示例 <html data-rem="375">
+@import "./lib/lib-rem";
+
+/* 引入 Less 依赖文件 */
+@import "mod-header";
+@import "mod-detail_nav";
+@import "mod-footer";
+
+@style-yellow:#ffbb59;
+@style-green:#0cd29c;
+.g-gameList{
+  padding:25/@root 10/@root;
+  background: @style-default;
+  width: 100%;
+  box-sizing: border-box;
+  overflow: hidden;
+
+    .gameItem{
+      width: 100%;
+      float: left;
+      padding: 0 0.5rem;
+      box-sizing: border-box;
+      position: relative;
+      .gameImg{
+        display: inline-block;
+        width: 120/@root;
+        height: 120/@root;
+          img{
+            width: 100%;
+            border-radius: 15%;
+          }
+      }
+      .con{
+        display: inline-block;
+        vertical-align: middle;
+        line-height: 1.5em;
+        width: 550/@root;
+        .content{
+          width: 430/@root;
+        }
+        p{
+          font-size: 32/@root;
+          line-height: 30/@root;
+          vertical-align: middle;
+          color: @style-black;
+        }
+        span{
+          font-size: 22/@root;
+          line-height: 20/@root;
+          vertical-align: middle;
+          color: @style-brc;
+        }
+        .star{
+          margin-top: 15/@root;
+          .icon{
+            width: 30/@root;
+            color:  @style-brc;
+            font-size: 30/@root;
+            line-height: 30/@root;
+            vertical-align: middle;
+          }
+          .iconActive{
+            color:  @style-yellow;
+          }
+        }
+
+
+        .item-handle{
+          margin-top: 30/@root;
+          .btn{
+            background-color:  @style-main;
+            vertical-align: middle;
+          }
+
+        }
+      }
+
+    }
+
+    .contenTitle{
+      font-size: 30/@root;
+      line-height: 32/@root;
+      vertical-align: middle;
+      margin-left: 30/@root;
+      padding-left: 10/@root;
+
+    }
+    .titleActive{
+      border-left:3px solid @style-green;
+    }
+    .titleDisactive{
+      border-left:3px solid #e22127;
+    }
+    .contentText{
+      padding: 0 30/@root;
+      font-size: 26/@root;
+      line-height: 44/@root;
+      vertical-align: middle;
+      color: @style-black;
+      margin-top: 30/@root;
+    }
+
+    .contentTextCenter{
+      padding: 0 30/@root;
+      font-size: 24/@root;
+      line-height: 44/@root;
+      vertical-align: middle;
+      text-align: center;
+      color: @style-brc;
+      margin-top: 30/@root;
+    }
+
+    .content{
+      overflow: hidden;
+      .item{
+        margin-left: 30/@root;
+        float: left;
+        padding: 0 0.5rem;
+        box-sizing: border-box;
+        margin-top: 30/@root;
+        position: relative;
+        border: 1px solid @style-itmeBorder;
+        color: @style-brc;
+        font-size: 26/@root;
+        line-height: 46/@root;
+        vertical-align: middle;
+      }
+    }
+
+    .comment{
+      overflow: hidden;
+      li{
+        width: 100%; float: left; padding: 0 0.5rem; box-sizing: border-box; margin-bottom: 1rem; position: relative;border-bottom: 1px solid @style-itmeBorder;
+        .gameImg{
+          display: inline-block;
+          width: 100/@root;
+          height: 100/@root;
+            img{
+              width: 100%;
+              border-radius: 50%;
+            }
+        }
+        .con{
+          display: inline-block;
+          vertical-align: middle;
+          line-height: 1.5em;
+          width: 570/@root;
+          .contentTitle{
+            font-size: 30/@root;
+            line-height: 60/@root;
+            vertical-align: middle;
+            color: @style-black;
+          }
+          .contentText{
+            font-size: 26/@root;
+            line-height: 46/@root;
+            vertical-align: middle;
+            color: @style-black;
+          }
+          .date-text{
+            margin-bottom: 20/@root;
+            .date{
+              font-size: 22/@root;
+              line-height: 32/@root;
+              vertical-align: middle;
+              color: @style-brc;
+            }
+          .icon{
+            width: 40/@root;
+            font-size: 40/@root;
+            color: @style-brc;
+          }
+          }
+
+          .strategyFlag{
+            border: 1px solid #92cff9 ;
+            height: 20/@root;
+            width: 42/@root;
+            font-size: 22/@root;
+            line-height: 20/@root;
+            vertical-align: middle;
+            color: #92cff9;
+          }
+
+        }
+      }
+    }
+
+    .comment-box {
+      background-color: @style-default;
+      width: 100%;
+      padding-left: 20/@root;
+      padding-right: 20/@root;
+      padding-top: 30/@root;
+      box-sizing: border-box;
+      .comment-box-textarea {
+        width: 100%;
+        height: 120/@root;
+        textarea {
+          display: inline-block;
+          box-sizing: border-box;
+          padding: 12/@root;
+          border-radius: 10 /@root;
+          width: 100%;
+          height: 100%;
+          background-color:@style-bg;
+          font-size: 24/@root;
+          color: @style-grey;
+        }
+      }
+    }
+
+    .confirm-button {
+      background-color: @style-default;
+      padding-left: 20 / @root;
+      padding-right: 20 / @root;
+      padding-top: 22 / @root;
+      .handel {
+        width: 100%;
+        padding-bottom: 30/@root;
+        border-bottom: 1/@root solid #CCCCCC;
+        text-align: right;
+        .buttonHandUp {
+          display: inline-block;
+          width: 100 / @root;
+          height: 48 / @root;
+          background-color: #13E1A0;
+          color: @style-default;
+          border: none;
+          border-radius: 3/@root;
+        }
+      }
+    }
+
+}
+
+
+.g-gameList-margin-top{
+  margin-top:30/@root;
+}
+.g-gameList-border-bottom-line{
+  border-bottom: 1px solid @style-itmeBorder;
+}
+
+.g-swiper-wrapper{
+  overflow-x: scroll;
+  .m-swiper-wrapper{
+   overflow: hidden; width:11.5*6rem;
+    background-color: #fff;
+ }
+  .m-swiper-slide{ float: left; width: 10.5rem; margin-right:30/@root;
+  img{
+    width: 100%;
+  }
+  }
+}
