@@ -16,7 +16,7 @@
   <link rel="shortcut icon" href="/favicon.ico">
   <!-- 引入字体图标 -->
     <% include common/iconfont.html %>
-  <link rel="stylesheet" type="text/css" href="../css/style-myKeepGame.css" />
+  <link rel="stylesheet" type="text/css" href="../css/style-specialDetail.css" />
 </head>
 
 <body>
@@ -25,15 +25,15 @@
       <a class="f-fl" href="#">
         <i class="icon icon-back"> </i>
       </a>
-      <h1 class="title">我的收藏</h1>
+      <h1 class="title">专题详情</h1>
     </header>
   </div>
-  <div class="nav-bar">
-    <div class="nav-bar-game">
-      游戏
-    </div>
-    <div class="nav-bar-paper">
-      文章
+  <div class="game-collection">
+    <%- img(750, 240, 'block__img') %>
+  </div>
+  <div class="game-introduction-container">
+    <div class="game-introduction">
+      《御天传奇H5》是一款由腾讯正版授权，蝴蝶互动倾力打造并发行以三国时期为背景的ARPG游戏产品.真实还原三国古战场的血腥征战，下线后自动挂机，升级刷装备，上线后自动pk，还能自动完成任务，简直是懒人必备啊！
     </div>
   </div>
   <div class="game-content-container">
@@ -48,6 +48,7 @@
               保卫萝卜
             </div>
             <div class="game-content-star">
+              <i class="icon icon-score1"></i>
               <i class="icon icon-score1"></i>
             </div>
             <div class="game-content-type">
