@@ -1,0 +1,215 @@
+/* 引入库文件 */
+@import "./lib/lib-reset";
+@import "./lib/lib-mixins";
+@import "./lib/lib-base";
+@import "./lib/lib-ui";
+
+// 引入 REM 解决方案依赖
+// 调用示例 <html data-rem="375">
+@import "./lib/lib-rem";
+
+/* 引入 Less 依赖文件 */
+@import "mod-header";
+@import "mod-footer";
+
+@root:40rem;
+body {
+  background-color: @style-bg;
+}
+.activity-content {
+  background-color: @style-default;
+  width: 100%;
+  .activity-image {
+    width: 100%;
+    height: 350 / @root;
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+  .activity-title {
+    width: 100%;
+    padding-left: 20 / @root;
+    padding-right: 20 / @root;
+    padding-top: 20 / @root;
+    font-size: 30 / @root;
+    line-height: 28 / @root;
+    box-sizing: border-box;
+  }
+  .activity-time {
+    width: 100%;
+    margin-top: 20 / @root;
+    font-size: 22 / @root;
+    line-height: 16 / @root;
+    padding-left: 20 / @root;
+    padding-right: 20/@root;
+    width: 100%;
+    box-sizing: border-box;
+  }
+}
+.comment-box {
+  background-color: @style-default;
+  width: 100%;
+  padding-left: 20/@root;
+  padding-right: 20/@root;
+  padding-top: 30/@root;
+  box-sizing: border-box;
+  .comment-box-textarea {
+    width: 100%;
+    height: 120/@root;
+    textarea {
+      display: inline-block;
+      box-sizing: border-box;
+      padding: 12/@root;
+      border-radius: 10 /@root;
+      width: 100%;
+      height: 100%;
+      background-color:@style-bg;
+      font-size: 24/@root;
+      color: @style-grey;
+    }
+  }
+}
+.confirm-button {
+  background-color: @style-default;
+  padding-left: 20 / @root;
+  padding-right: 20 / @root;
+  padding-top: 22 / @root;
+  div {
+    width: 100%;
+    padding-bottom: 30/@root;
+    border-bottom: 1/@root solid #CCCCCC;
+    text-align: right;
+    button {
+      display: inline-block;
+      width: 100 / @root;
+      height: 48 / @root;
+      background-color: #13E1A0;
+      color: @style-default;
+      border: none;
+      border-radius: 3/@root;
+    }
+  }
+}
+.player-comment {
+  width: 100%;
+  background-color: @style-default;
+  box-sizing: border-box;;
+  padding-left: 30/@root;
+  padding-top: 31/@root;
+  span {
+    display: inline-block;
+    font-size: 28/@root;
+    line-height: 26/@root;
+    border-left: 5/@root solid red;
+    padding-left: 14/@root;
+  }
+}
+.nav-bar {
+  padding-top: 50/@root;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  height: 68 / @root;
+  background-color: @style-default;
+  .nav-bar-game {
+    float: left;
+    margin-left: 187 / @root;
+    height: 68 / @root;
+    line-height: 68 / @root;
+    vertical-align: middle;
+    font-size: 30 / @root;
+    box-sizing: border-box;
+  }
+  .nav-bar-paper {
+    float: left;
+    margin-left: 202 / @root;
+    height: 68 / @root;
+    line-height: 68 / @root;
+    vertical-align: middle;
+    font-size: 30 / @root;
+    box-sizing: border-box;
+    border-bottom: 3/@root solid red;
+  }
+}
+
+@style-yellow:#ffbb59;
+.g-gameList{
+  padding:30/@root 10/@root; background: @style-default; width: 100%; box-sizing: border-box;padding-bottom: 0; overflow: hidden;
+  ul{
+    overflow: hidden;
+    li{
+      width: 100%; float: left; padding: 0 0.5rem; box-sizing: border-box; margin-bottom: 1rem; position: relative;border-bottom: 1px solid @style-itmeBorder;
+      .gameImg{
+        display: inline-block;
+        width: 100/@root;
+        height: 100/@root;
+          img{
+            width: 100%;
+            border-radius: 50%;
+          }
+      }
+      .con{
+        display: inline-block;
+        vertical-align: middle;
+        line-height: 1.5em;
+        width: 570/@root;
+        .contentTitle{
+          font-size: 30/@root;
+          line-height: 60/@root;
+          vertical-align: middle;
+          color: @style-black;
+        }
+        .contentText{
+          font-size: 26/@root;
+          line-height: 46/@root;
+          vertical-align: middle;
+          color: @style-black;
+        }
+        .date-text{
+          margin-bottom: 20/@root;
+          .date{
+            font-size: 22/@root;
+            line-height: 32/@root;
+            vertical-align: middle;
+            color: @style-brc;
+          }
+        .icon{
+          width: 40/@root;
+          font-size: 40/@root;
+          color: @style-brc;
+        }
+        }
+
+        .strategyFlag{
+          border: 1px solid #92cff9 ;
+          height: 20/@root;
+          width: 42/@root;
+          font-size: 22/@root;
+          line-height: 20/@root;
+          vertical-align: middle;
+          color: #92cff9;
+        }
+
+      }
+    }
+    li:last-child {
+      margin-bottom: 0;
+      border-bottom: none;
+    }
+  }
+
+}
+.back-to-top {
+  width: 100%;
+  height: 102 /@root;
+  line-height: 102 /@root;
+  vertical-align: middle;
+  text-align: center;
+  a:link, a:visited, a:hover, a:active {
+    font-size: 22 / @root;
+    text-decoration: none;
+    color: @style-grey;
+  }
+}
+// 评论列表
