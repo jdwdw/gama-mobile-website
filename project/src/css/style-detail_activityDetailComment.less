@@ -29,25 +29,27 @@ body {
   }
   .activity-title {
     width: 100%;
-    padding: 20/@root 20/@root 0;
+    padding: 20/@root 30/@root 0;
     font-size: 30 / @root;
     line-height: 28 / @root;
     box-sizing: border-box;
+    color: #333333;
   }
   .activity-time {
     width: 100%;
     margin-top: 20 / @root;
     font-size: 22 / @root;
     line-height: 16 / @root;
-    padding: 0 20/@root;
+    padding: 0 30/@root;
     width: 100%;
     box-sizing: border-box;
+    color: #999999;
   }
 }
 .comment-box {
   background-color: @style-default;
   width: 100%;
-  padding: 30/@root 20/@root 0;
+  padding: 30/@root 30/@root 0;
   box-sizing: border-box;
   .comment-box-textarea {
     width: 100%;
@@ -67,7 +69,7 @@ body {
 }
 .confirm-button {
   background-color: @style-default;
-  padding: 22/@root 20/@root 0;
+  padding: 22/@root 30/@root 0;
   div {
     width: 100%;
     padding-bottom: 30/@root;
@@ -94,7 +96,7 @@ body {
     display: inline-block;
     font-size: 28/@root;
     line-height: 26/@root;
-    border-left: 5/@root solid red;
+    border-left: 5/@root solid #E22127;
     padding-left: 14/@root;
   }
 }
@@ -121,13 +123,13 @@ body {
     vertical-align: middle;
     font-size: 30 / @root;
     box-sizing: border-box;
-    border-bottom: 3/@root solid red;
+    border-bottom: 3/@root solid #E22127;
   }
 }
 
 @style-yellow:#ffbb59;
 .g-gameList{
-  padding:30/@root 10/@root 0; background: @style-default; width: 100%; box-sizing: border-box; overflow: hidden;
+  padding:30/@root 30/@root 0; background: @style-default; width: 100%; box-sizing: border-box; overflow: hidden;
   ul{
     overflow: hidden;
     li{
@@ -144,7 +146,7 @@ body {
         display: inline-block;
         vertical-align: middle;
         line-height: 1.5em;
-        width: 570/@root;
+        width: 535/@root;
         .contentTitle{
           font-size: 30/@root;
           line-height: 60/@root;
@@ -165,10 +167,13 @@ body {
             vertical-align: middle;
             color: @style-brc;
           }
+          i {
+            float: right;
+          }
         .icon{
           width: 40/@root;
-          font-size: 40/@root;
-          color: @style-brc;
+          font-size: 30/@root;
+          color: #999999;
         }
         }
 
