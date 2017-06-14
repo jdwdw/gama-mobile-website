@@ -1,0 +1,27 @@
+/**
+ * @name: tmt-workflow example
+ * @description: Examples for tmt-workflow
+ * @author: weixin
+ */
+
+/* 引入库文件 */
+@import "./lib/lib-reset";
+@import "./lib/lib-mixins";
+@import "./lib/lib-base";
+@import "./lib/lib-ui";
+
+// 引入 REM 解决方案依赖
+// 调用示例 <html data-rem="375">
+@import "./lib/lib-rem";
+
+@import "mod-footer";
+@import "mod-header";
+
+@root:40rem;
+
+
+
+.main{
+  margin-top: 30/@root;
+  background: @style-default
+}

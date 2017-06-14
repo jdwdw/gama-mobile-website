@@ -16,7 +16,7 @@
   <link rel="shortcut icon" href="/favicon.ico">
   <% include common/iconfont.html %>
     <link href="https://cdn.bootcss.com/Swiper/3.4.2/css/swiper.min.css" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="../css/style-detail_game_intro.css" />
+    <link rel="stylesheet" type="text/css" href="../css/style-detail_game_comment.css" />
     <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
 </head>
 
@@ -85,118 +85,68 @@
       <div class="g-gameList">
         <div class="g-twoSubNav">
           <ul class="g-twoTapSubNav_box">
-            <li><a href="#" class="cur"><div class="name">简介</div></a></li>
-            <li><a href="#"><div class="name">评论</div></a></li>
+            <li><a href="#"><div class="name">简介</div></a></li>
+            <li><a href="#" class="cur"><div class="name">评论</div></a></li>
           </ul>
+        </div>
+      </div>
+    <!-- 游戏二级导航区域 end  -->
+    <!-- 游戏二级导航区域  -->
+      <div class="g-gameList">
+        <div class="comment-box">
+          <div class="comment-box-textarea">
+            <textarea name="name" rows="8" cols="80"></textarea>
+          </div>
+        </div>
+        <div class="confirm-button">
+          <div class="handel">
+            <div class="star f-fl">
+              <% for(var index = 0; index < 5; index++) {%>
+                <i class="icon icon-score1 f-fl"></i>
+              <% } %>
+            </div>
+            <button class="buttonHandUp">提交</button>
+          </div>
+
         </div>
       </div>
     <!-- 游戏二级导航区域 end  -->
 
 
-    <!-- 游戏说明区域  -->
-      <div class="g-gameList g-gameList-border-bottom-line">
-          <div class="contenTitle titleDisactive">
-            游戏说明
-          </div>
-            <p class="contentText">
-              据阿桑德拉和弗拉恢复了哈罗德和法律的哈市妇联哈喽电话费拉黑立法会拉黑法拉赫莱佛哈喽电话费拉黑礼服
-            </p>
-      </div>
-    <!-- 游戏说明区域 end  -->
 
-    <!-- 游戏说明区域  -->
-      <div class="g-gameList g-gameList-border-bottom-line">
-          <div class="contenTitle titleDisactive">
-            游戏标签
-          </div>
-          <div class="content">
-            <div class="item"><strong>三生三世十里桃花</strong></div>
-            <% for(var i = 0; i < 4; i++) {%>
-              <div class="item"><strong>十里桃花</strong></div>
-            <% } %>
-          </div>
-      </div>
-    <!-- 游戏说明区域 end  -->
-
-
-    <!-- 游戏说明区域  -->
-      <div class="g-gameList g-gameList-border-bottom-line">
-          <div class="contenTitle titleDisactive">
-            游戏动态
-          </div>
-            <p class="contentTextCenter">
-              暂无游戏动态
-            </p>
-      </div>
-    <!-- 游戏说明区域 end  -->
-
-    <!-- 游戏说明区域  -->
-      <div class="g-gameList g-gameList-border-bottom-line">
-          <div class="contenTitle titleDisactive">
-            游戏攻略
-          </div>
-          <div class="strategy-item">
-            <a href="#">
-              <div class="gameImg f-fr">
-                <%- img(160, 140) %>
-              </div>
-              <div class="con f-fl">
-                <div class="f-fl">
-                  <p>只要998，吕布貂蝉带回家-《御天传奇》良心福利攻略&nbsp;&nbsp;<span class="strategyFlag">攻略</span></p>
-                  <span class="date">2017.4.22</span>
-                </div>
-              </div>
-            </a>
-          </div>
-      </div>
-    <!-- 游戏说明区域 end  -->
-    <!-- 游戏说明区域  -->
-      <div class="g-gameList g-gameList-border-bottom-line">
-          <div class="contenTitle titleDisactive">
-            相关游戏
-          </div>
-          <div class="relatived-game-link">
-            <div class="link-item">
-              <%- img(120, 120, 'block__img') %>
-              <div class="link-title">
-                乱弹诸神
-              </div>
-            </div>
-            <div class="link-item">
-              <%- img(120, 120, 'block__img') %>
-              <div class="link-title">
-                皇室战争
-              </div>
-            </div>
-            <div class="link-item">
-              <%- img(120, 120, 'block__img') %>
-              <div class="link-title">
-                仙剑奇侠传
-              </div>
-            </div>
-          </div>
-      </div>
-    <!-- 游戏说明区域 end  -->
     <!-- 游戏说明区域  -->
       <div class="g-gameList">
           <div class="contenTitle titleDisactive">
-            最新专题
+            游戏动态
           </div>
-          <div class="g-swiper-wrapper g-gameList-margin-top">
+            <ul class="comment g-gameList-margin-top">
+              <% for(var i = 0; i < 10; i++) {%>
+                  <li class="item">
+                    <a href="#">
+                      <div class="gameImg f-fl">
+                        <%- img(100, 100) %>
+                      </div>
+                      <div class="con f-fr">
+                        <div class="f-fl">
+                          <p class="contentTitle">DEMO</p>
+                          <p class="contentText">只要998，吕布貂蝉带回家-御天传奇良心福利攻略dddddddddd</p>
+                          <div class="date-text">
+                            <i class="icon icon-pinglun f-fr"> </i>
+                            <span class="date">2017.4.22</span>
+                          </div>
 
-            <div class="m-swiper-wrapper">
-              <% for(var i = 0; i < 6; i++) {%>
-                <div class="m-swiper-slide">
-                  <a href="#">
-                    <%- img(420, 220) %>
-                  </a>
-                </div>
-                <% } %>
+                        </div>
+                      </div>
+                    </a>
+                  </li>
 
-            </div>
-          </div>
+              <% } %>
+            </ul>
+          <!-- 游戏列表区域 end  -->
       </div>
     <!-- 游戏说明区域 end  -->
+
+
     </div>
 
     <!-- 点击返回顶部 -->

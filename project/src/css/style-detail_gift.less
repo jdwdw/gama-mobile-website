@@ -28,16 +28,15 @@
   box-sizing: border-box;
   overflow: hidden;
 
-    .gameItem{
-      width: 100%;
-      float: left;
-      padding: 0 0.5rem;
-      box-sizing: border-box;
-      position: relative;
+  ul{
+    overflow: hidden;
+    li{
+      width: 100%; float: left; padding: 0 0.5rem; box-sizing: border-box; margin-bottom: 1rem; position: relative;border-bottom: 1px solid @style-itmeBorder;
       .gameImg{
         display: inline-block;
         width: 120/@root;
         height: 120/@root;
+        padding-bottom: 20/@root;
           img{
             width: 100%;
             border-radius: 15%;
@@ -49,11 +48,14 @@
         line-height: 1.5em;
         width: 550/@root;
         .content{
-          width: 430/@root;
+          width: 400/@root;
+          .progress{
+            margin-top:26/@root;
+          }
         }
         p{
-          font-size: 32/@root;
-          line-height: 30/@root;
+          font-size: 30/@root;
+          line-height: 32/@root;
           vertical-align: middle;
           color: @style-black;
         }
@@ -63,20 +65,6 @@
           vertical-align: middle;
           color: @style-brc;
         }
-        .star{
-          margin-top: 15/@root;
-          .icon{
-            width: 30/@root;
-            color:  @style-brc;
-            font-size: 30/@root;
-            line-height: 30/@root;
-            vertical-align: middle;
-          }
-          .iconActive{
-            color:  @style-yellow;
-          }
-        }
-
 
         .item-handle{
           margin-top: 30/@root;
@@ -84,11 +72,16 @@
             background-color:  @style-main;
             vertical-align: middle;
           }
+          .btnDisactive{
+            background-color:  @style-brc;
+            vertical-align: middle;
+          }
 
         }
       }
-
     }
+  }
+
 
     .contenTitle{
       font-size: 30/@root;
@@ -140,53 +133,6 @@
       }
     }
 
-    .strategy-item{
-      width: 100%;
-      float: left;
-      padding: 0 0.5rem;
-      box-sizing: border-box;
-      margin-top: 30/@root;
-      position: relative;
-      .gameImg{
-        display: inline-block;
-        width: 160/@root;
-        height: 140/@root;
-        padding-bottom: 20/@root;
-        margin-bottom: 30/@root;
-          img{
-            width: 100%;
-          }
-      }
-      .con{
-        display: inline-block;
-        vertical-align: middle;
-        line-height: 1.5em;
-        width: 510/@root;
-        p{
-          font-size: 30/@root;
-          line-height: 40/@root;
-          vertical-align: middle;
-          color: @style-black;
-          margin-bottom: 40/@root;
-        }
-        .date{
-          font-size: 22/@root;
-          line-height: 20/@root;
-          vertical-align: middle;
-          color: @style-brc;
-        }
-        .strategyFlag{
-          border: 1px solid #92cff9 ;
-          height: 20/@root;
-          width: 42/@root;
-          font-size: 22/@root;
-          line-height: 20/@root;
-          vertical-align: middle;
-          color: #92cff9;
-        }
-
-      }
-    }
 
     .relatived-game-link {
       margin-top:30/@root;
@@ -230,15 +176,36 @@
   border-bottom: 1px solid @style-itmeBorder;
 }
 
-.g-swiper-wrapper{
-  overflow-x: scroll;
-  .m-swiper-wrapper{
-   overflow: hidden; width:11.5*6rem;
-    background-color: #fff;
- }
-  .m-swiper-slide{ float: left; width: 10.5rem; margin-right:30/@root;
-  img{
-    width: 100%;
-  }
-  }
+
+.graph {
+float:left;
+margin:5/@root;
+background-color:#e6e6e6;
+position:relative;
+width:250/@root;
+padding:0;
+border-radius: 20px;
+margin-right: 30/@root;
+}
+
+.graph .bar {
+border-radius: 20px;
+display:block;
+position:relative;
+// background-image:url(images/bargraph.gif);
+background-color: #53c5b6;
+background-position:right center;
+background-repeat:repeat-x;
+border-right:#53c5b6 1px solid;
+text-align:center;
+color:#fff;
+height:20/@root;
+font-family:Arial, Helvetica, sans-serif;
+font-size:12px;
+line-height:1.9em
+}
+
+.graph .bar span {
+position:absolute;
+left:1em
 }

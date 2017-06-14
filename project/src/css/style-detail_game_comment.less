@@ -140,83 +140,108 @@
       }
     }
 
-    .strategy-item{
-      width: 100%;
-      float: left;
-      padding: 0 0.5rem;
-      box-sizing: border-box;
-      margin-top: 30/@root;
-      position: relative;
-      .gameImg{
-        display: inline-block;
-        width: 160/@root;
-        height: 140/@root;
-        padding-bottom: 20/@root;
-        margin-bottom: 30/@root;
-          img{
-            width: 100%;
+    .comment{
+      overflow: hidden;
+      li{
+        width: 100%; float: left; padding: 0 0.5rem; box-sizing: border-box; margin-bottom: 1rem; position: relative;border-bottom: 1px solid @style-itmeBorder;
+        .gameImg{
+          display: inline-block;
+          width: 100/@root;
+          height: 100/@root;
+            img{
+              width: 100%;
+              border-radius: 50%;
+            }
+        }
+        .con{
+          display: inline-block;
+          vertical-align: middle;
+          line-height: 1.5em;
+          width: 570/@root;
+          .contentTitle{
+            font-size: 30/@root;
+            line-height: 60/@root;
+            vertical-align: middle;
+            color: @style-black;
           }
-      }
-      .con{
-        display: inline-block;
-        vertical-align: middle;
-        line-height: 1.5em;
-        width: 510/@root;
-        p{
-          font-size: 30/@root;
-          line-height: 40/@root;
-          vertical-align: middle;
-          color: @style-black;
-          margin-bottom: 40/@root;
-        }
-        .date{
-          font-size: 22/@root;
-          line-height: 20/@root;
-          vertical-align: middle;
-          color: @style-brc;
-        }
-        .strategyFlag{
-          border: 1px solid #92cff9 ;
-          height: 20/@root;
-          width: 42/@root;
-          font-size: 22/@root;
-          line-height: 20/@root;
-          vertical-align: middle;
-          color: #92cff9;
-        }
+          .contentText{
+            font-size: 26/@root;
+            line-height: 46/@root;
+            vertical-align: middle;
+            color: @style-black;
+          }
+          .date-text{
+            margin-bottom: 20/@root;
+            .date{
+              font-size: 22/@root;
+              line-height: 32/@root;
+              vertical-align: middle;
+              color: @style-brc;
+            }
+          .icon{
+            width: 40/@root;
+            font-size: 40/@root;
+            color: @style-brc;
+          }
+          }
 
+          .strategyFlag{
+            border: 1px solid #92cff9 ;
+            height: 20/@root;
+            width: 42/@root;
+            font-size: 22/@root;
+            line-height: 20/@root;
+            vertical-align: middle;
+            color: #92cff9;
+          }
+
+        }
       }
     }
 
-    .relatived-game-link {
-      margin-top:30/@root;
+    .comment-box {
+      background-color: @style-default;
       width: 100%;
-      height: 197 / @root;
+      padding-left: 20/@root;
+      padding-right: 20/@root;
+      padding-top: 30/@root;
       box-sizing: border-box;
-      padding: 0 0.5rem;
-      .link-item {
-        display: inline-block;
-        width: 150 / @root;
-        text-align: center;
-        img {
-          width: 120 / @root;
-          height: 120 / @root;
-          border-radius: 15%;
-
-        }
-        .link-title {
+      .comment-box-textarea {
+        width: 100%;
+        height: 120/@root;
+        textarea {
+          display: inline-block;
+          box-sizing: border-box;
+          padding: 12/@root;
+          border-radius: 10 /@root;
           width: 100%;
-          text-align: center;
-          line-height: 80 / @root;
-          font-size: 30 / @root;
-
+          height: 100%;
+          background-color:@style-bg;
+          font-size: 24/@root;
+          color: @style-grey;
         }
       }
-      .link-item:nth-child(2) {
-        margin-left: 100 /@root;
-      }
-      .link-item:nth-child(3) {
-        margin-left: 100 / @root;
+    }
+
+    .confirm-button {
+      background-color: @style-default;
+      padding-left: 20 / @root;
+      padding-right: 20 / @root;
+      padding-top: 22 / @root;
+      .handel {
+        width: 100%;
+        padding-bottom: 30/@root;
+        border-bottom: 1/@root solid #CCCCCC;
+        text-align: right;
+        .buttonHandUp {
+          display: inline-block;
+          width: 100 / @root;
+          height: 48 / @root;
+          background-color: #13E1A0;
+          color: @style-default;
+          border: none;
+          border-radius: 3/@root;
+        }
       }
     }
 
