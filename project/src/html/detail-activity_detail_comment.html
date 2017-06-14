@@ -16,7 +16,7 @@
   <link rel="shortcut icon" href="/favicon.ico">
   <!-- 引入字体图标 -->
     <% include common/iconfont.html %>
-  <link rel="stylesheet" type="text/css" href="../css/style-acitvityDetailIntroduction.css" />
+  <link rel="stylesheet" type="text/css" href="../css/style-detail_activityDetailComment.css" />
 </head>
 
 <body>
@@ -47,26 +47,42 @@
       评论
     </div>
   </div>
-  <div class="activity-introduction-container">
-    <div class="activity-introduction">
-      活动一：吃粽子
-  活动内容：
-  （1）活动期间，玩家可至活动页面吃粽子，粽子品质分为低级粽子、中级粽子和高级粽子
-  ，吃的等级越高获得饱食度越高；
-  （2）活动期间，吃粽子次数和饱食度达到一定额度即可开启宝箱；
-  （3）活动期间，可以参加吃粽子小游戏获得额外的饱食度：点击屏幕吃粽子，点击越快，获得的饱食度越高；
-  （4）活动期间，每天有限制的吃粽子次数，根据vip等级可以购买额外次数，饱食度和次数每日0点重置。
-
-  活动二：充值送“粽”礼
-  活动内容：
-  （1）活动期间，充值：
-  6元：粽子代金券、特戒袋、元宝红包、豪华宝石箱；
-  30元：粽子代金券、羽毛、天神抽奖券、元宝红包、元神大礼包；
-  98元：粽子代金券、天神抽奖券、元宝红包、魔力卷轴、元宝红包 。
+  <div class="comment-box">
+    <div class="comment-box-textarea">
+      <textarea name="name" rows="8" cols="80"></textarea>
     </div>
   </div>
   <div class="confirm-button">
-    <button type="button" name="button">我要评论</button>
+    <div class="">
+      <button type="button" name="confirm">提交</button>
+    </div>
+  </div>
+  <div class="player-comment">
+    <span>玩家评论</span>
+  </div>
+  <div class="g-gameList">
+    <ul>
+      <% for(var i = 0; i < 10; i++) {%>
+          <li class="item">
+            <a href="#">
+              <div class="gameImg f-fl">
+                <%- img(100, 100) %>
+              </div>
+              <div class="con f-fr">
+                <div class="f-fl">
+                  <p class="contentTitle">DEMO</p>
+                  <p class="contentText">只要998，吕布貂蝉带回家-御天传奇良心福利攻略dddddddddd</p>
+                  <div class="date-text">
+                    <span class="date">2017.4.22</span>
+                  </div>
+
+                </div>
+              </div>
+            </a>
+          </li>
+
+      <% } %>
+    </ul>
   </div>
 
   <div class="back-to-top">

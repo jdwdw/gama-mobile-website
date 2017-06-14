@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="UTF-8">
-  <title>荒芜之地</title>
+  <title>我的卡箱</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
   <meta name="keywords" content="" />
   <meta name="description" content="" />
@@ -16,7 +16,7 @@
   <link rel="shortcut icon" href="/favicon.ico">
   <!-- 引入字体图标 -->
     <% include common/iconfont.html %>
-  <link rel="stylesheet" type="text/css" href="../css/style-noContent.css" />
+  <link rel="stylesheet" type="text/css" href="../css/style-messageHint_rechargeFail.css" />
 </head>
 
 <body>
@@ -25,14 +25,30 @@
       <a class="f-fl" href="#">
         <i class="icon icon-back"> </i>
       </a>
-      <h1 class="title">XXXX</h1>
+      <h1 class="title">充值结果</h1>
     </header>
   </div>
-  <div class="no-Content-image">
-    <img src="../img/error@3x.png" alt="">
-  </div>
-  <div class="no-Content-character">
-    暂无内容，请返回
+  <div class="recharge-success-container">
+    <div class="recharge-success-image">
+      <i class="icon icon-chongzhishibai"></i>
+    </div>
+    <div class="recharge-success-title">
+      充值失败
+    </div>
+    <div class="recharge-success-tips">
+      <div class="recharge-success-tips-titile">
+        账户余额
+      </div>
+      <div class="recharge-success-tips-number">
+        +00
+      </div>
+    </div>
+    <div class="back-to-previous-level">
+      重试
+    </div>
+    <div class="another-recharge">
+      <a href="#">返回上一级</a>
+    </div>
   </div>
     <!-- 引入公共地步 -->
     <% include common/footer.html %>
