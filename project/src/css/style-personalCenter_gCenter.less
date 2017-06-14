@@ -19,8 +19,7 @@ body {
 .g-center-rest {
   width: 100%;
   height: 231 / @root;
-  margin-top: 20 / @root;
-  margin-bottom: 20 / @root;
+  margin: 20/@root 0;
   background: -webkit-linear-gradient(#F89A32, #FDC224); /* Safari 5.1 - 6.0 */
   background: -o-linear-gradient(#F89A32, #FDC224); /* Opera 11.1 - 12.0 */
   background: -moz-linear-gradient(#F89A32, #FDC224); /* Firefox 3.6 - 15 */
@@ -38,12 +37,19 @@ body {
     line-height: 46 / @root;
     text-align: center;
     vertical-align: middle;
-    margin-top: 60 / @root;
-    margin-left: auto;
-    margin-right: auto;
+    margin: 60/@root auto 0;
     font-size: 26 / @root;
     border: 3/@root solid @style-default;
-    border-radius: 22 / @root;
+    .rounded(22/@root);
+    a {
+      width: 100%;
+      height: 100%;
+      display: inline-block;
+    }
+    a:link, a:hover, a:active, a:visited {
+      color: @style-default;
+      text-decoration: none;
+    }
   }
 }
 .g-center-message {
@@ -51,9 +57,7 @@ body {
   box-sizing: border-box;
   margin-bottom: 98 / @root;
   width: 100%;
-  padding-left: 30 / @root;
-  padding-right: 30 / @root;
-  padding-top: 32 / @root;
+  padding: 32/@root 30/@root 0;
   .g-center-message-head {
     position: relative;
     padding-left: 14 / @root;
@@ -63,7 +67,6 @@ body {
     span:nth-child(1) {
       float: left;
       font-size: 28 / @root;
-      font-weight: bold;
       line-height: 28 / @root;
     }
     span:nth-child(2) {
@@ -119,7 +122,6 @@ body {
         margin-top: 30 / @root;
         line-height: 32 / @root;
         font-size: 30 / @root;
-        font-weight: bold;
       }
       .detail-content-time {
         margin-top: 20 / @root;
@@ -140,7 +142,6 @@ body {
       vertical-align: middle;
       text-align: right;
       font-size: 38 / @root;
-      font-weight: bold;
     }
   }
   .g-center-message-detail:last-child {

@@ -22,7 +22,7 @@
 
 @style-yellow:#ffbb59;
 .g-activity_list{
-  padding:30/@root 10/@root; background: @style-default; width: 100%; box-sizing: border-box; margin-top:30/@root; padding-bottom: 0; overflow: hidden;
+  padding:30/@root 10/@root 0;background: @style-default; width: 100%; box-sizing: border-box; margin-top:30/@root; overflow: hidden;
   ul{
     overflow: hidden;
     li{
@@ -39,8 +39,7 @@
         vertical-align: middle;
         line-height: 1.5em;
         width: 550/@root;
-        margin-bottom: 30/@root;
-        margin-top: 10/@root;
+        margin: 10/@root 0 30/@root;
         p{
           font-size: 30/@root;
           line-height: 30/@root;
@@ -56,7 +55,6 @@
         }
 
         .item-handle{
-          // margin-top: 30/@root;
           position: absolute;
           right: 20/@root; bottom: 60/@root;;
           .btn{
