@@ -29,9 +29,7 @@ body {
   }
   .activity-title {
     width: 100%;
-    padding-left: 20 / @root;
-    padding-right: 20 / @root;
-    padding-top: 20 / @root;
+    padding: 20/@root 20/@root 0;
     font-size: 30 / @root;
     line-height: 28 / @root;
     box-sizing: border-box;
@@ -41,8 +39,7 @@ body {
     margin-top: 20 / @root;
     font-size: 22 / @root;
     line-height: 16 / @root;
-    padding-left: 20 / @root;
-    padding-right: 20/@root;
+    padding: 0 20/@root;
     width: 100%;
     box-sizing: border-box;
   }
@@ -50,9 +47,7 @@ body {
 .comment-box {
   background-color: @style-default;
   width: 100%;
-  padding-left: 20/@root;
-  padding-right: 20/@root;
-  padding-top: 30/@root;
+  padding: 30/@root 20/@root 0;
   box-sizing: border-box;
   .comment-box-textarea {
     width: 100%;
@@ -72,9 +67,7 @@ body {
 }
 .confirm-button {
   background-color: @style-default;
-  padding-left: 20 / @root;
-  padding-right: 20 / @root;
-  padding-top: 22 / @root;
+  padding: 22/@root 20/@root 0;
   div {
     width: 100%;
     padding-bottom: 30/@root;
@@ -87,7 +80,7 @@ body {
       background-color: #13E1A0;
       color: @style-default;
       border: none;
-      border-radius: 3/@root;
+      .rounded(3/@root);
     }
   }
 }
@@ -107,8 +100,7 @@ body {
 }
 .nav-bar {
   padding-top: 50/@root;
-  margin-left: auto;
-  margin-right: auto;
+  margin: 0 auto;
   width: 100%;
   height: 68 / @root;
   background-color: @style-default;
@@ -135,7 +127,7 @@ body {
 
 @style-yellow:#ffbb59;
 .g-gameList{
-  padding:30/@root 10/@root; background: @style-default; width: 100%; box-sizing: border-box;padding-bottom: 0; overflow: hidden;
+  padding:30/@root 10/@root 0; background: @style-default; width: 100%; box-sizing: border-box; overflow: hidden;
   ul{
     overflow: hidden;
     li{
@@ -146,7 +138,6 @@ body {
         height: 100/@root;
           img{
             width: 100%;
-            border-radius: 50%;
           }
       }
       .con{
