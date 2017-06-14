@@ -1,0 +1,46 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN" data-rem="375">
+
+<head>
+  <meta charset="UTF-8">
+  <title>充值中心</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+  <meta name="keywords" content="" />
+  <meta name="description" content="" />
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta content="telephone=no" name="format-detection" />
+  <meta content="email=no" name="format-detection" />
+  <meta http-equiv="Cache-Control" content="no-siteapp" />
+  <link rel="shortcut icon" href="/favicon.ico">
+  <!-- 引入字体图标 -->
+    <% include common/iconfont.html %>
+  <link rel="stylesheet" type="text/css" href="../css/style-specialList.css" />
+</head>
+
+<body>
+  <div class="m-header">
+    <header class="bar bar-nav">
+      <a class="f-fl" href="#">
+        <i class="icon icon-back"> </i>
+      </a>
+      <h1 class="title">列表</h1>
+    </header>
+  </div>
+  <div class="game-list-container">
+    <% for(var i = 0; i < 6; i++) {%>
+      <div class="game-collection">
+        <a href="#"><%- img(750, 240, 'block__img') %></a>
+      </div>
+      <% } %>
+  </div>
+  <div class="back-to-top">
+    <a href="#top">点击返回顶部</a>
+  </div>
+    <!-- 引入公共地步 -->
+    <% include common/footer.html %>
+
+</body>
+
+</html>

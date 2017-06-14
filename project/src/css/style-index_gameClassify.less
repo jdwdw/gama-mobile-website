@@ -1,0 +1,81 @@
+/**
+ * @name: tmt-workflow example
+ * @description: Examples for tmt-workflow
+ * @author: weixin
+ */
+
+/* 引入库文件 */
+@import "./lib/lib-reset";
+@import "./lib/lib-mixins";
+@import "./lib/lib-base";
+@import "./lib/lib-ui";
+
+// 引入 REM 解决方案依赖
+// 调用示例 <html data-rem="375">
+@import "./lib/lib-rem";
+
+/* 引入 Less 依赖文件 */
+@import "mod-index_header";
+@import "mod-index_nav";
+@import "mod-index_gameSubNav";
+@import "mod-footer";
+
+@style-yellow:#f6cf1b;
+@style-green:#15e0c1;
+@style-blue:#18aaf5;
+@style-orange:#f9822b;
+@style-red:#fa5864;
+@style-bluishViolet:#5490fd;
+.g-gameClassifyTable{
+  padding:30/@root 10/@root; background: @style-default; width: 100%; box-sizing: border-box; margin-top:30/@root; padding-bottom: 0; overflow: hidden;
+  ul{
+    overflow: hidden;
+    li{
+      width: 325/@root; float: left; padding: 0 0.5rem; box-sizing: border-box; margin-bottom: 1rem; position: relative;border: 1px solid @style-itmeBorder;margin: 20/@root;
+      .icon{
+        position: relative;
+        top: 30/@root;
+        width: 80/@root;
+        height: 80/@root;
+        font-size: 80/@root;
+      }
+      .icon-green{
+        color: @style-green;
+      }
+      .icon-yellow{
+        color: @style-yellow;
+      }
+      .icon-blue{
+        color: @style-blue;
+      }
+      .icon-orange{
+        color:@style-orange;
+      }
+      .icon-bluishViolet{
+        color: @style-bluishViolet;
+      }
+      .con{
+        vertical-align: middle;
+        line-height: 1.5em;
+        margin-left: 20/@root;
+        margin-top: 20/@root;
+        margin-bottom: 20/@root;
+        p{
+          font-size: 30/@root;
+          line-height: 28/@root;
+          vertical-align: middle;
+          color: @style-black;
+          margin-bottom: 20/@root;
+        }
+        span{
+          font-size: 22/@root;
+          line-height: 20/@root;
+          vertical-align: middle;
+          color: @style-brc;
+        }
+
+      }
+    }
+  }
+
+}

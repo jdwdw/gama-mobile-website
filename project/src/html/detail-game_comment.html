@@ -1,0 +1,178 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN" data-rem="375">
+
+<head>
+  <meta charset="UTF-8">
+  <title>首页</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+  <meta name="keywords" content="" />
+  <meta name="description" content="" />
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta content="telephone=no" name="format-detection" />
+  <meta content="email=no" name="format-detection" />
+  <meta http-equiv="Cache-Control" content="no-siteapp" />
+  <link rel="shortcut icon" href="/favicon.ico">
+  <% include common/iconfont.html %>
+    <link href="https://cdn.bootcss.com/Swiper/3.4.2/css/swiper.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="../css/style-detail_game_comment.css" />
+    <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+</head>
+
+<body>
+  <!-- 引入公共头部  -->
+  <div class="m-header">
+    <header class="bar bar-nav">
+      <a class="f-fl" href="#">
+        <i class="icon icon-back"> </i>
+      </a>
+      <h1 class="title">保卫萝卜</h1>
+    </header>
+  </div>
+
+    <div class="m-page">
+
+
+
+
+      <!-- 游戏列表区域  -->
+      <div class="g-gameList g-gameList-margin-top">
+        <div class="gameItem">
+          <a href="#">
+            <div class="gameImg f-fl">
+              <%- img(120, 120) %>
+            </div>
+            <div class="con f-fr">
+              <div class="content f-fl">
+                <p>保卫萝卜2</p>
+                <div class="star">
+                  <% for(var index = 0; index < 4; index++) {%>
+                    <i class="icon iconActive icon-score1"></i>
+                  <% } %>
+                  <i class="icon icon-score1"></i>
+                </div>
+                <span>策略类</span>&nbsp;&nbsp;&nbsp;&nbsp;<span>人气:&nbsp;230116</span>
+              </div>
+              <div class="item-handle f-fr">
+                <a href="#" class="btn btn-start">开始</a>
+              </div>
+            </div>
+          </a>
+        </div>
+
+      </div>
+      <!-- 游戏列表区域 end  -->
+      <div class="g-gameList">
+      <!-- banner1 -->
+        <div class="g-swiper-wrapper">
+
+          <div class="m-swiper-wrapper">
+            <% for(var i = 0; i < 6; i++) {%>
+              <div class="m-swiper-slide">
+                <a href="#">
+                  <%- img(308, 516) %>
+                </a>
+              </div>
+              <% } %>
+
+          </div>
+        </div>
+      </div>
+    <!-- banner1 end -->
+
+    <!-- 游戏二级导航区域  -->
+      <div class="g-gameList">
+        <div class="g-twoSubNav">
+          <ul class="g-twoTapSubNav_box">
+            <li><a href="#"><div class="name">简介</div></a></li>
+            <li><a href="#" class="cur"><div class="name">评论</div></a></li>
+          </ul>
+        </div>
+      </div>
+    <!-- 游戏二级导航区域 end  -->
+    <!-- 游戏二级导航区域  -->
+      <div class="g-gameList">
+        <div class="comment-box">
+          <div class="comment-box-textarea">
+            <textarea name="name" rows="8" cols="80"></textarea>
+          </div>
+        </div>
+        <div class="confirm-button">
+          <div class="handel">
+            <div class="star f-fl">
+              <% for(var index = 0; index < 5; index++) {%>
+                <i class="icon icon-score1 f-fl"></i>
+              <% } %>
+            </div>
+            <button class="buttonHandUp">提交</button>
+          </div>
+
+        </div>
+      </div>
+    <!-- 游戏二级导航区域 end  -->
+
+
+
+    <!-- 游戏说明区域  -->
+      <div class="g-gameList">
+          <div class="contenTitle titleDisactive">
+            游戏动态
+          </div>
+            <ul class="comment g-gameList-margin-top">
+              <% for(var i = 0; i < 10; i++) {%>
+                  <li class="item">
+                    <a href="#">
+                      <div class="gameImg f-fl">
+                        <%- img(100, 100) %>
+                      </div>
+                      <div class="con f-fr">
+                        <div class="f-fl">
+                          <p class="contentTitle">DEMO</p>
+                          <p class="contentText">只要998，吕布貂蝉带回家-御天传奇良心福利攻略dddddddddd</p>
+                          <div class="date-text">
+                            <i class="icon icon-pinglun f-fr"> </i>
+                            <span class="date">2017.4.22</span>
+                          </div>
+
+                        </div>
+                      </div>
+                    </a>
+                  </li>
+
+              <% } %>
+            </ul>
+          <!-- 游戏列表区域 end  -->
+      </div>
+    <!-- 游戏说明区域 end  -->
+
+
+    </div>
+
+    <!-- 点击返回顶部 -->
+    <% include common/m-gotop.html %>
+
+    <!-- 引入公共地步 -->
+    <% include common/footer.html %>
+
+
+          <script src="https://cdn.bootcss.com/Swiper/3.4.2/js/swiper.jquery.min.js"></script>
+          <script>
+            var swiper = new Swiper('.swiper-container1', {
+              pagination: '.swiper-pagination1',
+              paginationClickable: true
+            });
+
+            var swiper2 = new Swiper('.swiper-container2', {
+              pagination: '.swiper-pagination2',
+              paginationClickable: true
+            });
+            var swiper3 = new Swiper('.swiper-container3', {
+              pagination: '.swiper-pagination3 ',
+              paginationClickable: true
+            });
+          </script>
+
+</body>
+
+</html>

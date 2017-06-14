@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="UTF-8">
-  <title>搜索系统</title>
+  <title>荒芜之地</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
   <meta name="keywords" content="" />
   <meta name="description" content="" />
@@ -14,26 +14,26 @@
   <meta content="email=no" name="format-detection" />
   <meta http-equiv="Cache-Control" content="no-siteapp" />
   <link rel="shortcut icon" href="/favicon.ico">
-  <% include common/iconfont.html %>
-  <link rel="stylesheet" type="text/css" href="../css/style-search.css" />
+  <!-- 引入字体图标 -->
+    <% include common/iconfont.html %>
+  <link rel="stylesheet" type="text/css" href="../css/style-noContent.css" />
 </head>
 
 <body>
-  <!-- 引入公共头部  -->
-  <% include common/search-header.html  %>
-    <div class="search-main">
-      <div class="hot-search">
-        <div class="hot-title">
-          <span class="diamonds"></span>
-          <span>热门搜索</span>
-        </div>
-        <div class="hot-content">
-
-        </div>
-      </div>
-    </div>
-
-
+  <div class="m-header">
+    <header class="bar bar-nav">
+      <a class="f-fl" href="#">
+        <i class="icon icon-back"> </i>
+      </a>
+      <h1 class="title">XXXX</h1>
+    </header>
+  </div>
+  <div class="no-Content-image">
+    <img src="../img/error@3x.png" alt="">
+  </div>
+  <div class="no-Content-character">
+    暂无内容，请返回
+  </div>
     <!-- 引入公共地步 -->
     <% include common/footer.html %>
 

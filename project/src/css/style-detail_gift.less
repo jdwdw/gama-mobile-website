@@ -1,0 +1,211 @@
+/**
+ * @name: tmt-workflow example
+ * @description: Examples for tmt-workflow
+ * @author: weixin
+ */
+
+/* 引入库文件 */
+@import "./lib/lib-reset";
+@import "./lib/lib-mixins";
+@import "./lib/lib-base";
+@import "./lib/lib-ui";
+
+// 引入 REM 解决方案依赖
+// 调用示例 <html data-rem="375">
+@import "./lib/lib-rem";
+
+/* 引入 Less 依赖文件 */
+@import "mod-header";
+@import "mod-detail_nav";
+@import "mod-footer";
+
+@style-yellow:#ffbb59;
+@style-green:#0cd29c;
+.g-gameList{
+  padding:25/@root 10/@root;
+  background: @style-default;
+  width: 100%;
+  box-sizing: border-box;
+  overflow: hidden;
+
+  ul{
+    overflow: hidden;
+    li{
+      width: 100%; float: left; padding: 0 0.5rem; box-sizing: border-box; margin-bottom: 1rem; position: relative;border-bottom: 1px solid @style-itmeBorder;
+      .gameImg{
+        display: inline-block;
+        width: 120/@root;
+        height: 120/@root;
+        padding-bottom: 20/@root;
+          img{
+            width: 100%;
+            border-radius: 15%;
+          }
+      }
+      .con{
+        display: inline-block;
+        vertical-align: middle;
+        line-height: 1.5em;
+        width: 550/@root;
+        .content{
+          width: 400/@root;
+          .progress{
+            margin-top:26/@root;
+          }
+        }
+        p{
+          font-size: 30/@root;
+          line-height: 32/@root;
+          vertical-align: middle;
+          color: @style-black;
+        }
+        span{
+          font-size: 22/@root;
+          line-height: 20/@root;
+          vertical-align: middle;
+          color: @style-brc;
+        }
+
+        .item-handle{
+          margin-top: 30/@root;
+          .btn{
+            background-color:  @style-main;
+            vertical-align: middle;
+          }
+          .btnDisactive{
+            background-color:  @style-brc;
+            vertical-align: middle;
+          }
+
+        }
+      }
+    }
+  }
+
+
+    .contenTitle{
+      font-size: 30/@root;
+      line-height: 32/@root;
+      vertical-align: middle;
+      margin-left: 30/@root;
+      padding-left: 10/@root;
+
+    }
+    .titleActive{
+      border-left:3px solid @style-green;
+    }
+    .titleDisactive{
+      border-left:3px solid #e22127;
+    }
+    .contentText{
+      padding: 0 30/@root;
+      font-size: 26/@root;
+      line-height: 44/@root;
+      vertical-align: middle;
+      color: @style-black;
+      margin-top: 30/@root;
+    }
+
+    .contentTextCenter{
+      padding: 0 30/@root;
+      font-size: 24/@root;
+      line-height: 44/@root;
+      vertical-align: middle;
+      text-align: center;
+      color: @style-brc;
+      margin-top: 30/@root;
+    }
+
+    .content{
+      overflow: hidden;
+      .item{
+        margin-left: 30/@root;
+        float: left;
+        padding: 0 0.5rem;
+        box-sizing: border-box;
+        margin-top: 30/@root;
+        position: relative;
+        border: 1px solid @style-itmeBorder;
+        color: @style-brc;
+        font-size: 26/@root;
+        line-height: 46/@root;
+        vertical-align: middle;
+      }
+    }
+
+
+    .relatived-game-link {
+      margin-top:30/@root;
+      width: 100%;
+      height: 197 / @root;
+      box-sizing: border-box;
+      padding: 0 0.5rem;
+      .link-item {
+        display: inline-block;
+        width: 150 / @root;
+        text-align: center;
+        img {
+          width: 120 / @root;
+          height: 120 / @root;
+          border-radius: 15%;
+
+        }
+        .link-title {
+          width: 100%;
+          text-align: center;
+          line-height: 80 / @root;
+          font-size: 30 / @root;
+
+        }
+      }
+      .link-item:nth-child(2) {
+        margin-left: 100 /@root;
+      }
+      .link-item:nth-child(3) {
+        margin-left: 100 / @root;
+      }
+    }
+
+}
+
+
+.g-gameList-margin-top{
+  margin-top:30/@root;
+}
+.g-gameList-border-bottom-line{
+  border-bottom: 1px solid @style-itmeBorder;
+}
+
+
+.graph {
+float:left;
+margin:5/@root;
+background-color:#e6e6e6;
+position:relative;
+width:250/@root;
+padding:0;
+border-radius: 20px;
+margin-right: 30/@root;
+}
+
+.graph .bar {
+border-radius: 20px;
+display:block;
+position:relative;
+// background-image:url(images/bargraph.gif);
+background-color: #53c5b6;
+background-position:right center;
+background-repeat:repeat-x;
+border-right:#53c5b6 1px solid;
+text-align:center;
+color:#fff;
+height:20/@root;
+font-family:Arial, Helvetica, sans-serif;
+font-size:12px;
+line-height:1.9em
+}
+
+.graph .bar span {
+position:absolute;
+left:1em
+}

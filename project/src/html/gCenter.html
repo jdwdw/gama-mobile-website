@@ -1,0 +1,139 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN" data-rem="375">
+
+<head>
+  <meta charset="UTF-8">
+  <title>G币中心</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+  <meta name="keywords" content="" />
+  <meta name="description" content="" />
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta content="telephone=no" name="format-detection" />
+  <meta content="email=no" name="format-detection" />
+  <meta http-equiv="Cache-Control" content="no-siteapp" />
+  <link rel="shortcut icon" href="/favicon.ico">
+  <!-- 引入字体图标 -->
+    <% include common/iconfont.html %>
+  <link rel="stylesheet" type="text/css" href="../css/style-gCenter.css" />
+</head>
+
+<body>
+  <div class="m-header">
+    <header class="bar bar-nav">
+      <a class="f-fl" href="#">
+        <i class="icon icon-back"> </i>
+      </a>
+      <h1 class="title">G币中心</h1>
+    </header>
+  </div>
+  <div class="g-center-rest">
+    <div class="g-center-rest-number">
+      233
+    </div>
+    <div class="g-center-rest-recharge">
+      充值
+    </div>
+  </div>
+  <div class="g-center-message">
+    <div class="g-center-message-head">
+      <span>交易明细</span>
+      <span>
+        <i class="icon icon-back"></i>
+      </span>
+      <div class="g-center-message-selector">
+        <div class="show-all">
+          查看全部
+        </div>
+        <div class="show-recharge">
+          只看充值
+        </div>
+        <div class="show-consume">
+          只看消费
+        </div>
+      </div>
+    </div>
+    <% for(var i = 0; i < 4; i++) {%>
+      <div class="g-center-message-detail consume">
+        <div class="detail-image">
+          <i class="icon icon-Gbizhongxin"></i>
+        </div>
+        <div class="detail-content">
+          <p class="detail-content-title"><span>[机械迷城]</span><span>游戏消费</span></p>
+          <p class="detail-content-time"><span>2017.05.28</span><span>18:30</span></p>
+        </div>
+        <div class="detaile-number">
+          -26
+        </div>
+      </div>
+    <% } %>
+    <div class="g-center-message-detail recharge">
+      <div class="detail-image">
+        <i class="icon icon-Gbizhongxin"></i>
+      </div>
+      <div class="detail-content">
+        <p class="detail-content-title"><span>平台充值</span><span></span></p>
+        <p class="detail-content-time"><span>2017.05.28</span><span>18:30</span></p>
+      </div>
+      <div class="detaile-number">
+        -26
+      </div>
+    </div>
+  </div>
+    <!-- 引入公共地步 -->
+    <% include common/footer.html %>
+
+</body>
+<script type="text/javascript">
+  const arrow = document.querySelector("span:nth-child(2)");
+  const message = document.querySelectorAll(".g-center-message-detail ");
+  const recharge = document.querySelectorAll(".recharge");
+  const consume = document.querySelectorAll(".consume");
+  const selector = document.querySelector(".g-center-message-selector");
+  const showAll = document.querySelector(".show-all");
+  const showRecharge = document.querySelector(".show-recharge");
+  const showConsume = document.querySelector(".show-consume");
+  console.log(arrow);
+  arrow.onclick = function () {
+    selector.style.display = 'block';
+  }
+  showAll.onclick = function () {
+    for (let i = 0; i < message.length; i++) {
+      message[i].style.display = "block";
+    }
+    selector.style.display = 'none';
+    showAll.style.color = "black"
+    showRecharge.style.color = "black"
+    showConsume.style.color = "black"
+    this.style.color = "#E22127";
+  }
+  showRecharge.onclick = function () {
+    for (let i = 0; i < message.length; i++) {
+      message[i].style.display = "none";
+    }
+    for (let i = 0; i < recharge.length; i++) {
+      recharge[i].style.display = "block";
+    }
+    selector.style.display = 'none';
+    showAll.style.color = "black"
+    showRecharge.style.color = "black"
+    showConsume.style.color = "black"
+    this.style.color = "#E22127";
+  }
+  showConsume.onclick = function () {
+    for (let i = 0; i < message.length; i++) {
+      message[i].style.display = "none";
+    }
+    for (let i = 0; i < consume.length; i++) {
+      consume[i].style.display = "block";
+    }
+    selector.style.display = 'none';
+    showAll.style.color = "black"
+    showRecharge.style.color = "black"
+    showConsume.style.color = "black"
+    this.style.color = "#E22127";
+  }
+
+</script>
+</html>
