@@ -22,16 +22,82 @@
 @style-yellow:#ffbb59;
 @style-green:#0cd29c;
 .g-gameList{
-  padding:25/@root 10/@root;
+
+  padding:50/@root 10/@root 0;
   background: @style-default;
   width: 100%;
   box-sizing: border-box;
   overflow: hidden;
 
+
+  .item{
+    width: 100%; float: left; padding: 0 0.5rem; box-sizing: border-box; position: relative;
+    .gameImg{
+      display: inline-block;
+      width: 120/@root;
+      height: 120/@root;
+      padding-bottom: 20/@root;
+        img{
+          width: 100%;
+        }
+    }
+    .con{
+      display: inline-block;
+      vertical-align: middle;
+      line-height: 1.5em;
+      width: 550/@root;
+      .content{
+        width: 400/@root;
+        .progress{
+          margin-top:26/@root;
+        }
+      }
+      p{
+        font-size: 30/@root;
+        line-height: 32/@root;
+        vertical-align: middle;
+        color: @style-black;
+      }
+      span{
+        font-size: 22/@root;
+        line-height: 20/@root;
+        vertical-align: middle;
+        color: @style-brc;
+      }
+
+      .item-handle{
+        margin-top: 30/@root;
+
+        .item-btn{
+          background: #ccc;
+          .rounded();
+          color: #fff;
+          font-size: 0.65rem;
+          line-height:48/@root;
+          text-align: center;
+          display: inline-block;
+          background-color:  @style-main;
+          vertical-align: middle;
+          width:100/@root;
+          height: 48/@root;
+          display: inline-block;
+          text-align: center;
+          word-break:keep-all;/* 不换行 */
+          white-space:nowrap;/* 不换行 */
+        }
+        .btnDisactive{
+          background-color:  @style-brc;
+          vertical-align: middle;
+        }
+
+      }
+    }
+  }
+
   ul{
     overflow: hidden;
     li{
-      width: 100%; float: left; padding: 0 0.5rem; box-sizing: border-box; margin-bottom: 1rem; position: relative;border-bottom: 1px solid @style-itmeBorder;
+      width: 100%; float: left; padding: 0 0.5rem; box-sizing: border-box; margin-top: 1rem; position: relative;border-bottom: 1px solid @style-itmeBorder;
       .gameImg{
         display: inline-block;
         width: 120/@root;
@@ -67,9 +133,23 @@
 
         .item-handle{
           margin-top: 30/@root;
-          .btn{
+
+          .item-btn{
+            background: #ccc;
+            .rounded();
+            color: #fff;
+            font-size: 0.65rem;
+            line-height:48/@root;
+            text-align: center;
+            display: inline-block;
             background-color:  @style-main;
             vertical-align: middle;
+            width:100/@root;
+            height: 48/@root;
+            display: inline-block;
+            text-align: center;
+            word-break:keep-all;/* 不换行 */
+            white-space:nowrap;/* 不换行 */
           }
           .btnDisactive{
             background-color:  @style-brc;
@@ -138,6 +218,7 @@
 .g-gameList-margin-top{
   margin-top:30/@root;
 }
+
 .g-gameList-border-bottom-line{
   border-bottom: 1px solid @style-itmeBorder;
 }
@@ -145,7 +226,7 @@
 
 .graph {
 float:left;
-margin:5/@root;
+margin:10/@root 5/@root 5/@root;
 background-color:#e6e6e6;
 position:relative;
 width:250/@root;

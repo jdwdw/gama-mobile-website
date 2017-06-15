@@ -36,8 +36,7 @@
 
       <!-- 游戏列表区域  -->
       <div class="g-gameList g-gameList-margin-top">
-        <ul >
-          <li class="item">
+          <div class="item">
             <a href="#">
               <div class="gameImg f-fl fifteen_radius">
                 <%- img(120, 120) %>
@@ -53,13 +52,11 @@
                 </div>
                 </div>
                 <div class="item-handle f-fr">
-                  <a href="#" class="btn btn-start">领取</a>
+                  <a href="#" class="item-btn btn-start">领取</a>
                 </div>
               </div>
             </a>
-          </li>
-        </ul>
-
+          </div>
       </div>
 
 
@@ -77,22 +74,11 @@
 
 
     <!-- 游戏说明区域  -->
-      <div class="g-gameList g-gameList-border-bottom-line">
-          <div class="contenTitle titleDisactive">
-            注意事项
-          </div>
-            <p class="contentText">
-              据阿桑德拉和弗拉恢复了哈罗德和法律的哈市妇联哈喽电话费拉黑立法会拉黑法拉赫莱佛哈喽电话费拉黑礼服
-            </p>
-      </div>
-    <!-- 游戏说明区域 end  -->
-
-    <!-- 游戏说明区域  -->
-      <div class="g-gameList g-gameList-border-bottom-line">
+      <div class="g-gameList">
           <div class="contenTitle titleDisactive">
             游戏动态
           </div>
-          <ul class="g-gameList-margin-top">
+          <ul>
             <% for(var i = 0; i < 2; i++) {%>
                 <li class="item">
                   <a href="#">
@@ -110,7 +96,7 @@
                       </div>
                       </div>
                       <div class="item-handle f-fr">
-                        <a href="#" class="btn btn-start">领取</a>
+                        <a href="#" class="item-btn btn-start">领取</a>
                       </div>
                     </div>
                   </a>
@@ -133,7 +119,7 @@
                   </div>
                   </div>
                   <div class="item-handle f-fr">
-                    <a href="#" class="btn btn-start btnDisactive">已领取</a>
+                    <a href="#" class="item-btn btn-start btnDisactive">已领取</a>
                   </div>
                 </div>
               </a>

@@ -61,9 +61,22 @@
 
         .item-handle{
           margin-top: 30/@root;
-          .btn{
+          .item-btn{
+            background: #ccc;
+            .rounded();
+            color: #fff;
+            font-size: 0.65rem;
+            line-height:48/@root;
+            text-align: center;
+            display: inline-block;
             background-color:  @style-main;
             vertical-align: middle;
+            width:100/@root;
+            height: 48/@root;
+            display: inline-block;
+            text-align: center;
+            word-break:keep-all;/* 不换行 */
+            white-space:nowrap;/* 不换行 */
           }
           .btnDisactive{
             background-color:  @style-brc;
@@ -79,7 +92,7 @@
 
 .graph {
 float:left;
-margin:5/@root;
+margin:10/@root 5/@root 5/@root;
 background-color:#e6e6e6;
 position:relative;
 width:250/@root;
