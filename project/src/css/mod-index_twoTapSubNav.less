@@ -6,6 +6,7 @@
   margin-top: 30/@root;
   padding: 0/@root 30/@root;
   background-color: @style-default;
+  border: 1px solid @style-itmeBorder;
   li{
     float: left;
     width: 100/2%;
@@ -32,6 +33,24 @@
         top: 60/@root;
         left: 50%;
         margin-left: -25/@root;
+      }
+    }
+    .warn {
+      .name {
+        position: relative;
+      }
+      .name::after {
+        content: '';
+        width: 4/@root;
+        height: 4/@root;
+        background-color: @style-main;
+        border: 2/@root solid @style-main;
+        border-radius: 50%;
+        display: inline-block;
+        position: absolute;
+        top: 50%;
+        margin-top: -3/@root;
+        left: 75%;
       }
     }
   }
