@@ -21,6 +21,7 @@ body {
   width: 690 / @root;
   height: 68 / @root;
   background-color: @style-default;
+  border: 1/@root solid @style-itmeBorder;
   .nav-bar-game {
     float: left;
     margin-left: 187 / @root;
@@ -38,7 +39,17 @@ body {
     vertical-align: middle;
     font-size: 30 / @root;
     box-sizing: border-box;
-    border-bottom: 3/@root solid red;
+    // border-bottom: 3/@root solid red;
+  }
+  .cur {
+    position: relative;
+  }
+  .cur::after {
+    content: '';
+    width: 60/@root;
+    display: inline-block;
+    position: absolute;
+    border-bottom: 4/@root solid @style-main;
   }
 }
 
