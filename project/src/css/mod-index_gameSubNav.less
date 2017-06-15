@@ -6,32 +6,39 @@
   background-color: @style-default;
   li{
     float: left;
-    // width: 100/3%;
+    width: 100/3%;
     text-align: center;
-    margin-right: 150/@root;
+    // margin-right: 150/@root;
     .name{
       font-size: 30/@root;
       height: 70/@root;
       line-height: 70/@root;
       color: @style-black;
       vertical-align: middle;
+      width: 100%;
     }
     .cur{
       .name,.icon{
         color: @style-main;
         // border-bottom: 4/@root solid @style-main;
+        position: relative;
       }
       .name::after {
         content: '';
         width: 50/@root;
-        border: 4/@root solid @style-main;
+        border-bottom: 4/@root solid @style-main;
+        display: inline-block;
+        position: absolute;
+        top: 60/@root;
+        left: 50%;
+        margin-left: -25/@root;
       }
     }
   }
-  li:last-child {
-    margin-right: 0;
-  }
-  li:first-child {
-    margin-left: 60/@root;
-  }
+  // li:last-child {
+  //   margin-right: 0;
+  // }
+  // li:first-child {
+  //   margin-left: 60/@root;
+  // }
 }
