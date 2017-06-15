@@ -52,8 +52,8 @@
          </div>
          </div>
          <div class="rememberPassWord">
-           <div class="f-fl radio">
-             <label><input name="Fruit" type="radio" value="" /> </label>
+           <div class="f-fl radio" id="radio" onclick="radiochang()">
+             <label><input name="Fruit" type="radio" value="" checked='checked'/> </label>
            </div>
          <div class="f-fl">
            记住密码
@@ -104,21 +104,9 @@
 </html>
 <script type="text/javascript" src="../js/login.js"></script>
 <script type="text/javascript">
-
-
-
-
-
-// var userName = document.getElementById('userName').value;
-// var passWord= document.getElementById('passWord').value;
-// var button = document.getElementById('button');
-//
-// if(!userName){
-//   button.disabled = true;
-//   button.style.background = '#cccccc';
-// }else{
-//   button.disabled = false;
-//   button.style.background = '#e22127';
-// }
+  function radiochang(){
+    document.getElementById('radio').style.background = 'url(../img/changbackground.png) no-repeat';
+    document.getElementById('radio').style.backgroundSize = 'cover';
+  }
 
 </script>
