@@ -23,7 +23,7 @@
 @style-green:#0cd29c;
 .g-gameList{
 
-  padding:50/@root 10/@root 0;
+  padding:30/@root 10/@root 0;
   background: @style-default;
   width: 100%;
   box-sizing: border-box;
@@ -31,7 +31,7 @@
 
 
   .item{
-    width: 100%; float: left; padding: 0 0.5rem; box-sizing: border-box; position: relative;
+    width: 100%; float: left; padding: 0 0.5rem; box-sizing: border-box; position: relative;border-bottom: 1px solid @style-itmeBorder;
     .gameImg{
       display: inline-block;
       width: 120/@root;
@@ -47,7 +47,7 @@
       line-height: 1.5em;
       width: 550/@root;
       .content{
-        width: 400/@root;
+        width: 450/@root;
         .progress{
           margin-top:26/@root;
         }
@@ -97,7 +97,7 @@
   ul{
     overflow: hidden;
     li{
-      width: 100%; float: left; padding: 0 0.5rem; box-sizing: border-box; margin-top: 1rem; position: relative;border-bottom: 1px solid @style-itmeBorder;
+      width: 100%; float: left; padding: 0 0.5rem; box-sizing: border-box; margin-top: 1rem; position: relative;
       .gameImg{
         display: inline-block;
         width: 120/@root;
@@ -113,7 +113,7 @@
         line-height: 1.5em;
         width: 550/@root;
         .content{
-          width: 400/@root;
+          width: 450/@root;
           .progress{
             margin-top:26/@root;
           }
@@ -177,12 +177,11 @@
       border-left:3px solid #e22127;
     }
     .contentText{
-      padding: 0 30/@root;
+      padding: 30/@root 30/@root;
       font-size: 26/@root;
       line-height: 44/@root;
       vertical-align: middle;
       color: @style-black;
-      margin-top: 30/@root;
     }
 
     .contentTextCenter{
