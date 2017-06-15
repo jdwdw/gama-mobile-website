@@ -22,8 +22,7 @@ body {
   }
   box-sizing: border-box;
   background-color: @style-default;
-  margin-bottom: 22 / @root;
-  margin-top: 20 / @root;
+  margin: 20/@root 0 22/@root;
   width: 100%;
   height: 395 / @root;
   padding: 30 / @root;
@@ -48,7 +47,6 @@ body {
         margin-top: 33/@root;
         width: 100%;
         font-size:  30/@root;
-        font-weight: bold;
       }
       .head-and-tool-head-message-number {
         width: 100%;
@@ -59,7 +57,6 @@ body {
     .head-and-tool-head-arrow {
       width: 14 /@root;
       float: left;
-      // margin-top: 44 / @root;
       position: relative;
       text-align: center;
       line-height: 120 / @root;
@@ -97,7 +94,6 @@ body {
         margin-top: 12 / @root;
         font-size: 22 / @root;
         line-height: 20 /@root;
-        font-weight: bold;
       }
       .tool-item-number {
         text-align: center;
@@ -113,8 +109,7 @@ body {
   width: 100%;
   height: 130 / @root;
   background-color: @style-default;
-  padding-left: 30 /@root;
-  padding-right: 30 / @root;
+  padding: 0 30/@root;
   div {
     box-sizing: border-box;
   }
@@ -138,7 +133,6 @@ body {
     width: 517 /@root;
     height: 130 / @root;
     .signature-everyday {
-      font-weight: bold;
       font-size: 28 / @root;
       line-height: 26 / @root;
     }
@@ -164,16 +158,14 @@ body {
       line-height: 48 /@root;
       vertical-align: middle;
       font-size: 22 / @root;
-      border-radius: 21 / @root;
-      font-weight: bold;
+      .rounded(21/@root);
     }
   }
 }
 .message-password-consult {
   width: 100%;
   height: 391 / @root;
-  padding-left: 31 / @root;
-  padding-right: 31 / @root;
+  padding: 0 31/@root;
   margin-top: 20 / @root;
   box-sizing: border-box;
   background-color: @style-default;
@@ -205,7 +197,6 @@ body {
       }
     }
     .message-password-consult-name {
-      font-weight: bold;
       float: left;
       padding-left: 14 / @root;
       box-sizing: border-box;
@@ -242,11 +233,12 @@ body {
   font-size: 22 / @root;
   color: #E22127;
   background-color: @style-default;
-  font-weight: bold;
+  a:link, a:hover, a:active, a:visited {
+    color: #E22127; 
+  }
 }
 .personal-back-to-top {
-  margin-top: 58 / @root;
-  margin-bottom: 29 / @root;
+  margin: 58/@root 0 29/@root;
   text-align: center;
   a:link, a:visited, a:hover, a:active {
     color: @style-grey;

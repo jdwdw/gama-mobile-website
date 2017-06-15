@@ -29,30 +29,27 @@ body {
   }
   .activity-title {
     width: 100%;
-    padding-left: 20 / @root;
-    padding-right: 20 / @root;
-    padding-top: 20 / @root;
+    padding: 20/@root 30/@root 0;
     font-size: 30 / @root;
     line-height: 28 / @root;
     box-sizing: border-box;
+    color: #333333;
   }
   .activity-time {
     width: 100%;
     margin-top: 20 / @root;
     font-size: 22 / @root;
     line-height: 16 / @root;
-    padding-left: 20 / @root;
-    padding-right: 20/@root;
+    padding: 0 30/@root;
     width: 100%;
     box-sizing: border-box;
+    color: #999999;
   }
 }
 .comment-box {
   background-color: @style-default;
   width: 100%;
-  padding-left: 20/@root;
-  padding-right: 20/@root;
-  padding-top: 30/@root;
+  padding: 30/@root 30/@root 0;
   box-sizing: border-box;
   .comment-box-textarea {
     width: 100%;
@@ -61,7 +58,7 @@ body {
       display: inline-block;
       box-sizing: border-box;
       padding: 12/@root;
-      border-radius: 10 /@root;
+      .rounded(10/@root);
       width: 100%;
       height: 100%;
       background-color:@style-bg;
@@ -72,9 +69,7 @@ body {
 }
 .confirm-button {
   background-color: @style-default;
-  padding-left: 20 / @root;
-  padding-right: 20 / @root;
-  padding-top: 22 / @root;
+  padding: 22/@root 30/@root 0;
   div {
     width: 100%;
     padding-bottom: 30/@root;
@@ -87,7 +82,7 @@ body {
       background-color: #13E1A0;
       color: @style-default;
       border: none;
-      border-radius: 3/@root;
+      .rounded(3/@root);
     }
   }
 }
@@ -101,14 +96,13 @@ body {
     display: inline-block;
     font-size: 28/@root;
     line-height: 26/@root;
-    border-left: 5/@root solid red;
+    border-left: 5/@root solid #E22127;
     padding-left: 14/@root;
   }
 }
 .nav-bar {
   padding-top: 50/@root;
-  margin-left: auto;
-  margin-right: auto;
+  margin: 0 auto;
   width: 100%;
   height: 68 / @root;
   background-color: @style-default;
@@ -129,13 +123,13 @@ body {
     vertical-align: middle;
     font-size: 30 / @root;
     box-sizing: border-box;
-    border-bottom: 3/@root solid red;
+    border-bottom: 3/@root solid #E22127;
   }
 }
 
 @style-yellow:#ffbb59;
 .g-gameList{
-  padding:30/@root 10/@root; background: @style-default; width: 100%; box-sizing: border-box;padding-bottom: 0; overflow: hidden;
+  padding:30/@root 30/@root 0; background: @style-default; width: 100%; box-sizing: border-box; overflow: hidden;
   ul{
     overflow: hidden;
     li{
@@ -146,14 +140,13 @@ body {
         height: 100/@root;
           img{
             width: 100%;
-            border-radius: 50%;
           }
       }
       .con{
         display: inline-block;
         vertical-align: middle;
         line-height: 1.5em;
-        width: 570/@root;
+        width: 535/@root;
         .contentTitle{
           font-size: 30/@root;
           line-height: 60/@root;
@@ -174,10 +167,13 @@ body {
             vertical-align: middle;
             color: @style-brc;
           }
+          i {
+            float: right;
+          }
         .icon{
           width: 40/@root;
-          font-size: 40/@root;
-          color: @style-brc;
+          font-size: 30/@root;
+          color: #999999;
         }
         }
 

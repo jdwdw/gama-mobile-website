@@ -40,7 +40,6 @@
         height: 120/@root;
           img{
             width: 100%;
-            border-radius: 15%;
           }
       }
       .con{
@@ -133,7 +132,8 @@
         margin-top: 30/@root;
         position: relative;
         border: 1px solid @style-itmeBorder;
-        color: @style-brc;
+        background-color: @style-brc;
+        color: @style-default;
         font-size: 26/@root;
         line-height: 46/@root;
         vertical-align: middle;
@@ -194,30 +194,36 @@
       height: 197 / @root;
       box-sizing: border-box;
       padding: 0 0.5rem;
-      .link-item {
+      a {
         display: inline-block;
-        width: 150 / @root;
-        text-align: center;
-        img {
-          width: 120 / @root;
-          height: 120 / @root;
-          border-radius: 15%;
-
-        }
-        .link-title {
-          width: 100%;
+        .link-item {
+          display: inline-block;
+          width: 150 / @root;
           text-align: center;
-          line-height: 80 / @root;
-          font-size: 30 / @root;
+          img {
+            width: 120 / @root;
+            height: 120 / @root;
+          }
+          .link-title {
+            width: 100%;
+            text-align: center;
+            line-height: 80 / @root;
+            font-size: 30 / @root;
 
+          }
         }
       }
-      .link-item:nth-child(2) {
+      a:nth-child(2) {
         margin-left: 100 /@root;
       }
-      .link-item:nth-child(3) {
+      a:nth-child(3) {
         margin-left: 100 / @root;
       }
+      a:link, a:hover, a:active, a:visited {
+        color: black;
+        text-decoration: none;
+      }
+
     }
 
 }

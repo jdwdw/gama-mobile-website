@@ -19,15 +19,13 @@ body {
 .game-content-container {
   margin-top: 20/@root;
   width: 100%;
-  padding-left:  30 / @root;
-  padding-right: 30 / @root;
+  padding: 0 30/@root;
   box-sizing: border-box;
   background-color: @style-default;
 }
 .game-content {
   box-sizing: border-box;
-  padding-top: 30 / @root;
-  padding-bottom: 30 / @root;
+  padding: 30/@root 0;
   width: 100%;
   height: 180 / @root;
   background-color: @style-default;
@@ -79,16 +77,14 @@ body {
     height: 50 / @root;
     background-color: #E22127;
     border: none;
-    border-radius: 4 / @root;
+    .rounded(4/@root);
     color: @style-default;
   }
 }
 .information-paper {
   width: 100%;
   box-sizing: border-box;
-  padding-left: 30 / @root;
-  padding-right: 30 / @root;
-  padding-top: 20 / @root;
+  padding: 20/@root 30/@root 0;
   background-color: @style-default;
   .information-paper-title {
     font-size: 30 / @root;
@@ -198,26 +194,33 @@ body {
     height: 197 / @root;
     box-sizing: border-box;
     padding-top: 30 / @root;
-    .link-item {
+    a {
       display: inline-block;
-      width: 150 / @root;
-      text-align: center;
-      img {
-        width: 120 / @root;
-        height: 120 / @root;
-      }
-      .link-title {
-        width: 100%;
+      .link-item {
+        display: inline-block;
+        width: 150 / @root;
         text-align: center;
-        line-height: 80 / @root;
-        font-size: 30 / @root;
+        img {
+          width: 120 / @root;
+          height: 120 / @root;
+        }
+        .link-title {
+          width: 100%;
+          text-align: center;
+          line-height: 80 / @root;
+          font-size: 30 / @root;
 
+        }
       }
     }
-    .link-item:nth-child(2) {
+    a:link, a:hover, a:active, a:visited {
+      color: black;
+      text-decoration: none;
+    }
+    a:nth-child(2) {
       margin-left: 100 /@root;
     }
-    .link-item:nth-child(3) {
+    a:nth-child(3) {
       margin-left: 100 / @root;
     }
   }

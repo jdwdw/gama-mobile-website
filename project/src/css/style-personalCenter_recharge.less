@@ -19,8 +19,7 @@ body {
 .recharge-center {
   box-sizing: border-box;
   margin-top: 20 / @root;
-  padding-left: 30 / @root;
-  padding-right: 30 / @root;
+  padding: 0 30/@root;
   width: 100%;
   background-color: @style-default;
   .goods-name, .current-account {
@@ -29,14 +28,12 @@ body {
     font-size: 32 / @root;
     border-bottom:  1/@root solid #CCCCCC;
     .goods-name-title, .current-account-title {
-      font-weight: bold;
       float: left;
       height: 91 / @root;
       line-height: 91 / @root;
       vertical-align: middle;
     }
     .goods-name-content, .current-account-number {
-      font-weight: bold;
       float: right;
       height: 91 / @root;
       line-height:  91 / @root;
@@ -47,7 +44,6 @@ body {
   .recharge-amount {
     border-bottom: 1/@root solid #CCCCCC;
      .recharge-amount-title {
-       font-weight: bold;
        height: 86 / @root;
        line-height: 86 / @root;
        vertical-align: middle;
@@ -84,7 +80,6 @@ body {
       line-height: 92 / @root;
       width: 100%;
       font-size: 32 / @root;
-      font-weight: bold;
     }
     .pay-method-image {
       width: 282 / @root;
@@ -93,9 +88,8 @@ body {
       padding: 21 / @root;
       color: #069FF8;
       font-size: 32 / @root;
-      font-weight: bold;
       border: 1/@root solid #069FF8;
-      border-radius: 4/@root;
+      .rounded(3/@root);
       i {
         color: #069FF8;
         font-size: 1.4rem;
@@ -111,9 +105,11 @@ body {
     vertical-align: middle;
     text-align: center;
     font-size: 32 / @root;
-    margin-top: 59 / @root;
-    margin-left: auto;
-    margin-right: auto;
+    margin: 59/@root auto 0;
+    .rounded(3/@root);
+    a:link, a:hover, a:active, a:visited {
+      color: @style-default;
+    }
   }
 }
 .block {

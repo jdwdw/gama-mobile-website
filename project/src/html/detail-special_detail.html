@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="UTF-8">
-  <title>充值中心</title>
+  <title>专题详情</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
   <meta name="keywords" content="" />
   <meta name="description" content="" />
@@ -39,8 +39,8 @@
   <div class="game-content-container">
     <% for(var i = 0; i < 6; i++) {%>
       <div class="game-content">
-        <div class="game-content-image">
-          <img src="" alt="">
+        <div class="game-content-image fifteen_radius">
+          <%- img(121, 121, 'block__img') %>
         </div>
         <div class="game-content-message">
           <div class="game-content-message-detail">
@@ -58,7 +58,9 @@
           </div>
         </div>
         <div class="game-start-button">
-          <button type="button" name="button">开始</button>
+          <a href="#">
+            <button type="button" name="button">开始</button>
+          </a>
         </div>
       </div>
     <% } %>

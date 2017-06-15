@@ -30,8 +30,8 @@
   </div>
   <div class="head-and-tool">
     <div class="head-and-tool-head">
-      <div class="head-and-tool-head-image">
-        <%- img(80, 80, 'block__img') %>
+      <div class="head-and-tool-head-image fifty_radius">
+        <%- img(120, 120, 'block__img') %>
       </div>
       <div class="head-and-tool-head-message">
         <div class="head-and-tool-head-message-name">
@@ -133,7 +133,7 @@
     </div>
     </div>
     <div class="personal-center-logout">
-      退出登录
+      <a href="#">退出登录</a>
     </div>
     <div class="personal-back-to-top">
       <a href="#top">点击返回顶部</a>
@@ -144,5 +144,11 @@
     <% include common/footer.html %>
 
 </body>
-
+<script type="text/javascript">
+  const signature = document.querySelector(".signature-button span");
+  signature.onclick = function () {
+    this.innerHTML = "已签到";
+    this.style.backgroundColor = "#CCCCCC";
+  }
+</script>
 </html>

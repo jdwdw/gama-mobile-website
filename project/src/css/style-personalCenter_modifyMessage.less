@@ -21,8 +21,7 @@ body {
   width: 100%;
   height: 917 / @root;
   background-color: @style-default;
-  padding-left: 31 / @root;
-  padding-right: 31 / @root;
+  padding: 0 31/@root;
   margin-top: 22 / @root;
   .modify-head-image {
     border-bottom: 1px solid #CCCCCC;
@@ -46,7 +45,6 @@ body {
       margin-left: 24 / @root;
     }
     span.touxiang {
-      font-weight: bold;
       margin-top: 25 / @root;
       font-size: 32 / @root;
       line-height: 29 / @root;
@@ -65,7 +63,6 @@ body {
     line-height: 96 / @root;
     vertical-align: middle;
     font-size: 32 / @root;
-    font-weight: bold;
     border-bottom: 1px solid #CCCCCC;
     input {
       float: right;
@@ -111,10 +108,7 @@ body {
     }
   }
   .confirm-submit {
-    margin-top: 60 / @root;
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 31 / @root;
+    margin: 60/@root auto 31/@root;
     width: 320 / @root;
     height: 56 / @root;
     text-align: center;
@@ -129,7 +123,7 @@ body {
       color: @style-default;
       background-color: #E22127;
       border: none;
-      border-radius: 4 / @root;
+      .rounded(4/@root);
     }
   }
 }
