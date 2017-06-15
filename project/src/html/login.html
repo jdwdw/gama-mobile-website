@@ -22,6 +22,13 @@
   <!-- 引入公共头部  -->
   <% include common/header.html  %>
    <div class="main">
+     <div class="error" id="error">
+      <div class="error-button f-fl ">
+        <img src="../img/error.png" alt="">
+      </div>
+      <div class="error-connect" id="error-connect">
+      </div>
+     </div>
      <div class="logo"><img src="../img/login_logo.png" alt=""></div>
      <form>
        <div class="main-message">
@@ -31,10 +38,7 @@
            <span >
              <i class="icon icon-shouji"></i>
            </span>
-           <input type="text" placeholder="帐号" class="input"/>
-           <div class="reminder">
-              帐号不存在或者错误
-           </div>
+           <input type="text" placeholder="帐号" class="input" id="userName"/>
          </div>
           </div>
           <div class="clear"></div>
@@ -43,11 +47,19 @@
            <span >
              <i class="icon icon-pwd"></i>
            </span>
-           <input type="text" placeholder="密码" class="input"/>
+           <input type="text" placeholder="密码" class="input" id="passWord"/>
 
          </div>
          </div>
-         <button type="button" name="button" class="button">登录</button>
+         <div class="rememberPassWord">
+           <div class="f-fl radio">
+             <label><input name="Fruit" type="radio" value="" /> </label>
+           </div>
+         <div class="f-fl">
+           记住密码
+         </div>
+         </div>
+         <button type="button" name="button" class="button" onclick="findItem()" id="button">登录</button>
          <div class="tie">
            <div class="f-fl">
              <a href="register.html">快速注册</a>
@@ -61,7 +73,7 @@
      </form>
      <div class="third-party">
 				<div class="accounts">
-					<div class="accounts-title"><span>第三方帐号登录</span></div>
+					<div class="accounts-title"><span>第三方登录</span></div>
 				</div>
 				<div class="icon-image">
 					<ul class="ul-center">
@@ -90,7 +102,23 @@
 </body>
 
 </html>
-
+<script type="text/javascript" src="../js/login.js"></script>
 <script type="text/javascript">
+
+
+
+
+
+// var userName = document.getElementById('userName').value;
+// var passWord= document.getElementById('passWord').value;
+// var button = document.getElementById('button');
+//
+// if(!userName){
+//   button.disabled = true;
+//   button.style.background = '#cccccc';
+// }else{
+//   button.disabled = false;
+//   button.style.background = '#e22127';
+// }
 
 </script>
