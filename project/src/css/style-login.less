@@ -28,6 +28,31 @@
 }
 
 /* login */
+
+#error{
+  width: 520/@root;
+  height: 68/@root;
+  line-height: 1.2rem;
+  background: @style-default;
+  position: fixed;
+  top: 2.2rem;
+  left: 50%;
+  box-shadow: 0px 4px 10px @style-grey;
+  margin-left: -13/2rem ;
+  padding: 16/@root 22/@root;
+  box-sizing: border-box;
+  font-size: 24/@root;
+  display: none;
+}
+.error-button{
+  width: 40/@root;
+  height:  40/@root;
+  margin-right: 22/@root;
+  img{
+    width: 100%;
+  }
+}
+
 .main{
   width: 100%;
   margin-top: 0.55rem;
@@ -45,8 +70,13 @@
     height: auto;
   }
 }
-.user-container{
-    margin-bottom: 0.75rem;
+.rememberPassWord{
+  margin-bottom: 0.75rem;
+  height: 30/@root;
+}
+
+.radio{
+  margin-right: 22/@root;
 }
 .main-message{
   width: 13rem;
@@ -62,6 +92,7 @@
   border: 1px solid @style-brcg;
   border-radius: 2px;
   line-height: 1.725rem;
+  margin-bottom: 0.75rem;
 
   .icon{
     color: @style-grey;
@@ -91,9 +122,10 @@
 
 
 .third-party {
-    padding: 0 3.65rem;
+    // padding: 0 3.65rem;
     width: 13rem;
     margin: 3rem auto 0;
+    box-sizing: border-box;
 }
 
 .accounts {
@@ -116,9 +148,9 @@
 	font-size: 0.6rem;
   text-align: center;
   span{
-    // width: 5rem;
-    // height: 30/@root;
-    background: @style-default
+    padding: 0 20/@root;
+    background: @style-default;
+    color: @style-grey
   }
 }
 
