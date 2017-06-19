@@ -1,0 +1,53 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN" data-rem="375">
+
+<head>
+  <meta charset="UTF-8">
+  <title>tab页面的使用用法</title>
+  <% include common/head.html %>
+    <style media="screen">
+      .j-tab_box .tab_title {
+        overflow: hidden;
+      }
+
+      .j-tab_box .tab_title li {
+        float: left;
+        width: 60px;
+        height: 20px;
+        line-height: 1.2em;
+        text-align: center;
+      }
+
+      .j-tab_box .tab_title li.cur {
+        background-color: #000;
+        color: #fff;
+      }
+    </style>
+</head>
+
+<body>
+  <!-- 引入公共头部  -->
+  <% include common/header.html  %>
+    <div class="main">
+      <!-- tab组件 -->
+      <div id="j-tab_box" class="j-tab_box">
+        <header>
+          <ul class="tab_title">
+            <li class="cur ">tab1</li>
+            <li>tab2</li>
+          </ul>
+          <ul class="tab_con">
+            <li>tab1tab1tab1tab1tab1tab1tab1tab1</li>
+            <li style="display:none">tab2tab2tab2tab2tab2tab2tab2tab2</li>
+          </ul>
+        </header>
+      </div>
+    </div>
+
+
+    <!-- 引入公共地步 -->
+    <% include common/footer.html %>
+
+</body>
+
+</html>
