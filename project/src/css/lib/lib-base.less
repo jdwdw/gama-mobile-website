@@ -39,6 +39,27 @@
 // 使用场景itme下的边框
 @style-itmeBorder :#e6e6e6;
 
+@style-yellow:#ffbb59;
+
+/*  font-size   */
+//各种文字大小
+//文章标题
+@font-size-title:40px;
+//游戏名
+@font-size-gameName:34px;
+//用户名
+@font-size-userName:32px;
+//资讯列表与活动列表标题
+@font-size-liseTitle:30px;
+//资讯详情与活动详情正文
+@font-size-listText:28px;
+//评论文本
+@font-size-commentText:26px;
+//显示时间和其他的提示信息
+@font-size-tip:22px;
+
+
+
 /* function */
 .f-cb:after,.f-cbli li:after{display:block;clear:both;visibility:hidden;height:0;overflow:hidden;content:".";}
 .f-cb,.f-cbli li{zoom:1;}
@@ -132,4 +153,13 @@ body{ background-color: @style-bg; }
     text-align: center;
     word-break:keep-all;/* 不换行 */
     white-space:nowrap;/* 不换行 */
+  }
+
+/* 一般的 padding 左右为30的 list 例子: index-gift_gift.html中的list */
+  .g-gameList{
+    padding:0 30/@root; background: @style-default; width: 100%; box-sizing: border-box; margin-top:30/@root; overflow: hidden;
+    ul{
+      overflow: hidden;
+    }
+
   }
