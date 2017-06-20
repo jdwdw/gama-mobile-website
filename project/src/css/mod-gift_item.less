@@ -1,0 +1,86 @@
+.gift-item{
+  width: 100%; float: left; padding: 30/@root 0; box-sizing: border-box; position: relative;border-bottom: 1px solid @style-itmeBorder;
+  .gameImg{
+    display: inline-block;
+    width: 120/@root;
+    height: 120/@root;
+      img{
+        width: 100%;
+      }
+  }
+  .con{
+    height: 120/@root;
+    display: inline-block;
+    vertical-align: middle;
+    width:430/@root;
+    padding-left: 20/@root;
+    .content{
+      width: 410/@root;
+      .progress{
+        margin-top:20/@root;
+        span{
+          font-size: @font-size-tip;
+          vertical-align: top;
+          color: #53c5b6;
+        }
+      }
+    }
+    p{
+      font-size: @font-size-gameName;
+      line-height: @font-size-gameName;
+      vertical-align: middle;
+      color: @style-black;
+    }
+    .date{
+      margin-top: 20/@root;
+      span{
+        font-size: @font-size-tip;
+        line-height: @font-size-tip;
+        vertical-align: middle;
+        color: @style-brc;
+
+      }
+    }
+
+
+
+  }
+  .item-handle{
+    margin-top: 30/@root;
+    .btnDisactive{
+      background-color:  @style-brc;
+      vertical-align: middle;
+    }
+
+  }
+}
+
+
+
+.graph {
+float:left;
+margin-right:20/@root;
+background-color:#e6e6e6;
+position:relative;
+width:200/@root;
+height: 20/@root;
+padding:0;
+border-radius: 20px;
+}
+
+.graph .bar {
+border-radius: 20px;
+display:block;
+position:relative;
+// background-image:url(images/bargraph.gif);
+background-color: #53c5b6;
+background-position:right center;
+background-repeat:repeat-x;
+border-right:#53c5b6 1px solid;
+text-align:center;
+color:#fff;
+height:20/@root;
+font-family:Arial, Helvetica, sans-serif;
+font-size:12px;
+line-height:1.9em
+}
