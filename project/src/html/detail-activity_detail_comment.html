@@ -2,33 +2,13 @@
 <html lang="zh-CN" data-rem="375">
 
 <head>
-  <meta charset="UTF-8">
+  <% include common/head.html %>
   <title>活动详情</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
-  <meta name="keywords" content="" />
-  <meta name="description" content="" />
-  <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta name="format-detection" content="telephone=no">
-  <meta name="apple-mobile-web-app-status-bar-style" content="black">
-  <meta content="telephone=no" name="format-detection" />
-  <meta content="email=no" name="format-detection" />
-  <meta http-equiv="Cache-Control" content="no-siteapp" />
-  <link rel="shortcut icon" href="/favicon.ico">
-  <!-- 引入字体图标 -->
-    <% include common/iconfont.html %>
-  <link rel="stylesheet" type="text/css" href="../css/style-detail_activityDetailComment.css" />
 </head>
 
 <body>
-  <div class="m-header">
-    <header class="bar bar-nav">
-      <a class="f-fl" href="#">
-        <i class="icon icon-back"> </i>
-      </a>
-      <h1 class="title">活动详情</h1>
-    </header>
-  </div>
-  <div class="activity-content">
+  <% include common/header.html %>
+  <div class="activityDetailComment-activity-content">
     <div class="activity-image">
       <%- img(750, 350, 'block__img') %>
     </div>
@@ -39,7 +19,7 @@
       <span class="start-time">2017.5.27</span>-<span class="end-time">2017.6.1</span>
     </div>
   </div>
-  <div class="nav-bar">
+  <div class="activityDetailComment-nav-bar">
     <div class="nav-bar-game">
       简介
     </div>
@@ -47,20 +27,20 @@
       评论
     </div>
   </div>
-  <div class="comment-box">
+  <div class="activityDetailComment-comment-box">
     <div class="comment-box-textarea">
       <textarea name="name" rows="8" cols="80"></textarea>
     </div>
   </div>
-  <div class="confirm-button">
+  <div class="activityDetailComment-confirm-button">
     <div class="">
       <button type="button" name="confirm">提交</button>
     </div>
   </div>
-  <div class="player-comment">
+  <div class="activityDetailComment-player-comment">
     <span>玩家评论</span>
   </div>
-  <div class="g-gameList">
+  <div class="activityDetailComment-g-gameList">
     <ul>
       <% for(var i = 0; i < 10; i++) {%>
           <li class="item">
@@ -86,9 +66,7 @@
     </ul>
   </div>
 
-  <div class="back-to-top">
-    <a href="#top">点击返回顶部</a>
-  </div>
+  <% include common/m-gotop.html %>
     <!-- 引入公共地步 -->
     <% include common/footer.html %>
 
