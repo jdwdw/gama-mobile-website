@@ -10,7 +10,40 @@ function errorElement(connect){
   },1500)
 }
 
+
+//倒计时
+function time(o) {
+  clearTimeout(t)
+  if (wait == 0) {
+    o.innerHTML = "重新发送";
+    $("#j-verify_bt").removeClass("no")
+  } else {
+    o.innerHTML = "" + wait + "s后重发";
+    wait--;
+    var t = setTimeout(function() {
+      time(o)
+    }, 1000);
+  }
+}
+
 $(function(){
+  // 验证码点击
+  $("#j-verification").click(function(){
+    console.log("触发获取验证码按钮");
+    if($(this).hasClass("no")){
+      errorElement("请输入手机号码");
+    }else{
+      var tel=$("#j-userName").val();
+      console.log(tel);
+      //ajax 发送验证码
+    }
+
+  })
+
+
+
+
+
   //tab切换组件
   $("#j-tab_box .tab_title>li").click(function(){
     console.log("tab click");
@@ -29,6 +62,7 @@ $(function(){
   $("#j-login_btn").click(function(){
     if($(this).hasClass("no")){
       errorElement("请输入账户密码");
+      return false;
     }
     var name =$("#userName").val();
     var passWord =$("#passWord").val();
@@ -47,6 +81,11 @@ $(function(){
   })
 
   //注册页面，切换性别;
-
+ $(".sex").click(function(){
+   var index=$(this).index();
+   $(this).addClass("cur").siblings(".sex").removeClass("cur");
+   $("#j-sex").val(index);
+   console.log($("#j-sex").val());
+ })
 
 })

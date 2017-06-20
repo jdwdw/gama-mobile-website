@@ -18,7 +18,7 @@
               <span>
             <i class="icon icon-shouji"></i>
           </span>
-              <input type="text" placeholder="手机号码" class="input" maxlength="11" id="userName" />
+              <input type="text" placeholder="手机号码" class="input" maxlength="11" id="j-userName" />
             </div>
             <div class="user">
               <span>
@@ -39,7 +39,7 @@
           </span>
                 <input type="text" placeholder="输入验证码" class="input" id="verificationInput" />
               </div>
-              <input type="button" name="button" value="获取验证码" class="button verification-button no" id="verification" onclick="time()"></input>
+              <input type="button" name="button" value="获取验证码" class="button verification-button no" id="j-verification"></input>
             </div>
             <div class="clear"></div>
             <div class="tie gender">
@@ -47,13 +47,14 @@
                 <a href="#">性别:</a>
               </div>
               <div class="f-fr">
-                <div class="sex f-fl man"></div>
-                <div class="sex f-fl woman cur"></div>
+                <div class="sex f-fl man cur"></div>
+                <div class="sex f-fl woman"></div>
               </div>
+              <input type="hidden" name="sex" id="j-sex" value="0">
               <div class="clear"></div>
             </div>
 
-            <button type="button" name="button" class="button no" id="register">立即注册</button>
+            <button type="button" name="button" class="button no" id="j-register">立即注册</button>
           </div>
         </div>
       </form>
@@ -62,7 +63,49 @@
 
     <!-- 引入公共地步 -->
     <% include common/footer.html %>
+      <script type="text/javascript">
+        $(function() {
+          // 输入状态
+          $(".register-main input").bind('input propertychange', function() {
 
+            var userName = $("#j-userName").val();
+            var passWord = $("#passWord").val();
+            var surepassWord = $("#sure-passWord").val();
+            var verificationInput = $("#verificationInput").val();
+
+            if (userName != "") {
+              $("#j-verification").removeClass("no")
+
+              if (verificationInput != "" && passWord != "" && surepassWord != "") {
+                $("#j-register").removeClass("no")
+              } else {
+                $("#j-register").addClass("no")
+              }
+            } else {
+              $("#j-verification").addClass("no")
+              $("#j-register").addClass("no")
+            }
+          })
+
+          // 注册按钮点击
+          $("#j-register").click(function() {
+            if ($(this).hasClass("no")) {
+              errorElement("请输入填写表单");
+              return false;
+            }
+
+            var userName = $("#j-userName").val();
+            var passWord = $("#passWord").val();
+            var surepassWord = $("#sure-passWord").val();
+            var verificationInput = $("#verificationInput").val();
+            var sex = $("#j-sex").val();
+            // ajax发送数据
+            console.log("注册按钮--触发");
+
+          })
+
+        })
+      </script>
 </body>
 
 </html>
