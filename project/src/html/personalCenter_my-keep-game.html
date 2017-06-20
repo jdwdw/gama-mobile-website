@@ -16,35 +16,13 @@
       文章
     </div>
   </div>
-  <div class="myKeepGame-game-content-container">
-    <% for(var i = 0; i < 6; i++) {%>
-      <div class="myKeepGame-game-content">
-        <div class="game-content-image">
-          <%- img(121, 121, 'block__img') %>
-        </div>
-        <div class="game-content-message">
-          <div class="game-content-message-detail">
-            <div class="game-content-name">
-              保卫萝卜
-            </div>
-            <div class="game-content-star">
-              <i class="icon icon-score1"></i>
-              <i class="icon icon-score1"></i>
-              <i class="icon icon-score1"></i>
-              <i class="icon icon-score1"></i>
-              <i class="icon icon-score1"></i>
-            </div>
-            <div class="game-content-type">
-              <span>策略类&nbsp;&nbsp;</span>
-              <span>人气：<span>230116</span></span>
-            </div>
-          </div>
-        </div>
-        <div class="myKeepGame-game-start-button">
-          <button type="button" name="button">开始</button>
-        </div>
-      </div>
-    <% } %>
+  <div class="g-gameList">
+    <ul>
+      <% for(var i = 0; i < 6; i++) {%>
+        <% include common/game-item.html %>
+      <% } %>
+    </ul>
+
   </div>
   <% include common/m-gotop.html %>
     <!-- 引入公共地步 -->
