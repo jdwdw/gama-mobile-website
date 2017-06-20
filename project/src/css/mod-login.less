@@ -1,26 +1,3 @@
-/**
- * @name: tmt-workflow example
- * @description: Examples for tmt-workflow
- * @author: weixin
- */
-
-/* 引入库文件 */
-@import "./lib/lib-reset";
-@import "./lib/lib-mixins";
-@import "./lib/lib-base";
-@import "./lib/lib-ui";
-
-// 引入 REM 解决方案依赖
-// 调用示例 <html data-rem="375">
-@import "./lib/lib-rem";
-
-/* 引入 Less 依赖文件 */
-@import "mod-header";
-@import "mod-footer";
-
-
-
-@root:40rem;
 .ul-center{
   display:table;
   margin-left:auto;
@@ -191,4 +168,117 @@
 
 .icon-image ul li img {
 	width: 100%;
+}
+
+
+/* register */
+.register-main{
+  padding-top:0.75rem;;
+}
+.verification{
+  width: 100%;
+  .input-box{
+    width: 60%;
+    float: left;
+    margin-right: 20/@root;
+    input{
+      width: 70%;
+    }
+  }
+  .verification-button{
+    width: 35%;
+    font-size: 28/@root;
+  }
+}
+.gender{
+  width: 100%;
+  height: auto;
+  margin-top: 0;
+  margin-bottom: 0.75rem;
+  padding: 0 16/@root;
+  box-sizing: border-box;
+  a{
+    color: @style-black
+  }
+}
+#boy,#girl{
+  width: 40/@root;
+  height: 40/@root;
+  background: url(../img/icon_sex_boy.png) no-repeat center;
+  background-size: cover;
+}
+#girl{
+  background: url(../img/icon_sex_girl_pre.png) no-repeat center;
+  background-size: cover;
+  margin-left: 60/@root;
+}
+
+// 切换性别
+.woman{
+  background: url(../img/icon_sex_girl_pre.png) no-repeat center;
+  background-size: cover;
+}
+.man{
+  background: url(../img/icon_sex_boy_pre.png) no-repeat center;
+  background-size: cover;
+}
+
+.red{color:red};
+.loading{
+  width: 13rem;
+  padding: 0.75rem 0 2.5rem 0;
+  box-sizing: border-box;
+  overflow: hidden;
+  text-align: center;
+  margin: 0 auto;
+  ul li{
+    // text-align: center;
+    font-size: 22/@root;
+    float: left;
+  }
+}
+.icon-image{
+  // width:1.5rem;
+  // height: 1.5rem;
+  display: inline-block;
+  margin-bottom: 10/@root;
+  img{
+    width: 100%;
+  }
+}
+.gird{
+  text-align: center;
+  float: left;
+}
+.verification{
+  width: 100%;
+  .input-box{
+    width: 60%;
+    float: left;
+    margin-right: 20/@root;
+    input{
+      width: 70%;
+    }
+  }
+  .verification-button{
+    width: 35%;
+    font-size: 28/@root;
+  }
+}
+
+
+.dot {
+		    display: inline-block;
+		    height: 1em;
+        line-height: 0.5em;
+		    text-align: left;
+		    vertical-align: .25em;
+		    overflow: hidden;
+        font-size: 1.2rem;
+}
+.verify{
+  display: block;
+}
+#sure{
+  display: none;
 }

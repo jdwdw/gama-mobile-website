@@ -4,20 +4,8 @@
 <head>
   <meta charset="UTF-8">
   <title>首页</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
-  <meta name="keywords" content="" />
-  <meta name="description" content="" />
-  <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta name="format-detection" content="telephone=no">
-  <meta name="apple-mobile-web-app-status-bar-style" content="black">
-  <meta content="telephone=no" name="format-detection" />
-  <meta content="email=no" name="format-detection" />
-  <meta http-equiv="Cache-Control" content="no-siteapp" />
-  <link rel="shortcut icon" href="/favicon.ico">
-  <% include common/iconfont.html %>
+  <% include common/head.html %>
     <link href="https://cdn.bootcss.com/Swiper/3.4.2/css/swiper.min.css" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="../css/style-index.css" />
-    <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
 </head>
 
 <body>
@@ -80,7 +68,6 @@
 
         </ul>
         <div class="more">
-          <a class="f-fl" href="#">刷新 <i class="icon icon-more"></i></a>
           <a class="f-fr" href="#">更多 <i class="icon icon-more"></i></a>
         </div>
       </div>
@@ -115,19 +102,9 @@
       <!-- 精品推荐 end  -->
       <!-- Swiper -->
       <div class="g-swiper">
-        <div class="swiper-container swiper-container2">
-          <div class="swiper-wrapper">
-            <% for(var i = 0; i < 3; i++) {%>
-              <div class="swiper-slide">
-                <a href="#">
-                  <%- img(750, 280) %>
-                </a>
-              </div>
-              <% } %>
-          </div>
-          <!-- Add Pagination -->
-          <div class="swiper-pagination swiper-pagination2"></div>
-        </div>
+        <a href="#">
+          <%- img(750, 280) %>
+        </a>
       </div>
 
       <!-- Swiper end -->
@@ -157,26 +134,15 @@
 
         </ul>
         <div class="more">
-          <a class="f-fl" href="#">刷新 <i class="icon icon-more"></i></a>
           <a class="f-fr" href="#">更多 <i class="icon icon-more"></i></a>
         </div>
       </div>
       <!-- 热门游戏 end  -->
       <!-- Swiper -->
       <div class="g-swiper">
-        <div class="swiper-container swiper-container3">
-          <div class="swiper-wrapper">
-            <% for(var i = 0; i < 3; i++) {%>
-              <div class="swiper-slide">
-                <a href="#">
-                  <%- img(750, 280) %>
-                </a>
-              </div>
-              <% } %>
-          </div>
-          <!-- Add Pagination -->
-          <div class="swiper-pagination swiper-pagination3"></div>
-        </div>
+        <a href="#">
+          <%- img(750, 280) %>
+        </a>
       </div>
 
       <!-- Swiper end -->
@@ -206,7 +172,6 @@
 
         </ul>
         <div class="more">
-          <a class="f-fl" href="#">刷新 <i class="icon icon-more"></i></a>
           <a class="f-fr" href="#">更多 <i class="icon icon-more"></i></a>
         </div>
       </div>
@@ -233,7 +198,6 @@
         </div>
 
         <div class="more">
-          <a class="f-fl" href="#">刷新 <i class="icon icon-more"></i></a>
           <a class="f-fr" href="#">更多 <i class="icon icon-more"></i></a>
         </div>
       </div>
@@ -247,20 +211,10 @@
     <!-- 引入公共地步 -->
     <% include common/footer.html %>
 
-
       <script src="https://cdn.bootcss.com/Swiper/3.4.2/js/swiper.jquery.min.js"></script>
       <script>
         var swiper = new Swiper('.swiper-container1', {
           pagination: '.swiper-pagination1',
-          paginationClickable: true
-        });
-
-        var swiper2 = new Swiper('.swiper-container2', {
-          pagination: '.swiper-pagination2',
-          paginationClickable: true
-        });
-        var swiper3 = new Swiper('.swiper-container3', {
-          pagination: '.swiper-pagination3 ',
           paginationClickable: true
         });
       </script>
