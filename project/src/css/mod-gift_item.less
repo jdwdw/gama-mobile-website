@@ -9,37 +9,49 @@
       }
   }
   .con{
+    height: 120/@root;
     display: inline-block;
     vertical-align: middle;
-    line-height: 1.5em;
-    width: 550/@root;
+    width:430/@root;
+    padding-left: 20/@root;
     .content{
-      width: 450/@root;
+      width: 410/@root;
       .progress{
-        margin-top:26/@root;
+        margin-top:20/@root;
+        span{
+          font-size: @font-size-tip;
+          vertical-align: top;
+          color: #53c5b6;
+        }
       }
     }
     p{
-      font-size: 30/@root;
-      line-height: 32/@root;
+      font-size: @font-size-gameName;
+      line-height: @font-size-gameName;
       vertical-align: middle;
       color: @style-black;
     }
-    span{
-      font-size: 22/@root;
-      line-height: 20/@root;
-      vertical-align: middle;
-      color: @style-brc;
-    }
-
-    .item-handle{
-      margin-top: 30/@root;
-      .btnDisactive{
-        background-color:  @style-brc;
+    .date{
+      margin-top: 20/@root;
+      span{
+        font-size: @font-size-tip;
+        line-height: @font-size-tip;
         vertical-align: middle;
-      }
+        color: @style-brc;
 
+      }
     }
+
+
+
+  }
+  .item-handle{
+    margin-top: 30/@root;
+    .btnDisactive{
+      background-color:  @style-brc;
+      vertical-align: middle;
+    }
+
   }
 }
 
@@ -47,13 +59,13 @@
 
 .graph {
 float:left;
-margin:10/@root 5/@root 5/@root;
+margin-right:20/@root;
 background-color:#e6e6e6;
 position:relative;
-width:250/@root;
+width:200/@root;
+height: 20/@root;
 padding:0;
 border-radius: 20px;
-margin-right: 30/@root;
 }
 
 .graph .bar {
@@ -71,9 +83,4 @@ height:20/@root;
 font-family:Arial, Helvetica, sans-serif;
 font-size:12px;
 line-height:1.9em
-}
-
-.graph .bar span {
-position:absolute;
-left:1em
 }

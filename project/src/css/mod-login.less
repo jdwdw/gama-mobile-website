@@ -201,17 +201,27 @@
     color: @style-black
   }
 }
-.sex{
+.man,.woman{
   width: 40/@root;
   height: 40/@root;
-  img{
-    width: 100%;
-  }
+  background: url(../img/icon_sex_boy.png) no-repeat center;
+  background-size: cover;
 }
-#girl{
+.woman{
+  background: url(../img/icon_sex_girl.png) no-repeat center;
+  background-size: cover;
   margin-left: 60/@root;
 }
 
+// 切换性别
+.woman.cur{
+  background: url(../img/icon_sex_girl_pre.png) no-repeat center;
+  background-size: cover;
+}
+.man.cur{
+  background: url(../img/icon_sex_boy_pre.png) no-repeat center;
+  background-size: cover;
+}
 
 .red{color:red};
 .loading{
