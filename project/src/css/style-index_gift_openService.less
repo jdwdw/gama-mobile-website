@@ -15,19 +15,19 @@
 @import "mod-index_nav";
 @import "mod-index_twoTapSubNav";
 @import "mod-footer";
+@import "mod-gift_openService_item";
 
-@style-yellow:#ffbb59;
-@style-green:#0cd29c;
 .g-gameListContent{
   margin-top:30/@root;
 }
 .g-gameList{
-  padding:30/@root 10/@root 0; background: @style-default; width: 100%; box-sizing: border-box; margin-top:0/@root; overflow: hidden;
+  // padding:30/@root 10/@root 0; background: @style-default; width: 100%; box-sizing: border-box; margin-top:0/@root; overflow: hidden;
+  padding-top: 30/@root;
+  margin-top: 0;
   .title{
-    font-size: 30/@root;
-    line-height: 32/@root;
+    font-size: @font-size-listText;
+    line-height: 44/@root;
     vertical-align: middle;
-    margin-left: 30/@root;
     padding-left: 10/@root;
   }
   .titleActive{
@@ -38,61 +38,7 @@
   }
   ul{
     overflow: hidden;
-    li{
-      width: 100%; float: left; padding: 0 0.5rem; box-sizing: border-box; margin-top: 40/@root; position: relative;border-bottom: 1px solid @style-itmeBorder;
-      .gameImg{
-        display: inline-block;
-        width: 120/@root;
-        height: 120/@root;
-        padding-bottom: 20/@root;
-          img{
-            width: 100%;
-          }
-      }
-      .con{
-        display: inline-block;
-        vertical-align: middle;
-        line-height: 1.5em;
-        width: 550/@root;
-        .content{
-          width: 430/@root;
-          .progress{
-            margin-top:26/@root;
-          }
-        }
-        p{
-          font-size: 30/@root;
-          line-height: 32/@root;
-          vertical-align: middle;
-          color: @style-black;
-        }
-        span{
-          font-size: 24/@root;
-          line-height: 20/@root;
-          vertical-align: middle;
-          color: #666666;
-        }
-        .contentText{
-          margin-top: 10/@root;
-        }
-        .date{
-          color: @style-green;
-        }
 
-        .item-handle{
-          margin-top: 30/@root;
-          .btn{
-            background-color:  @style-main;
-            vertical-align: middle;
-          }
-          .btnDisactive{
-            background-color:  @style-brc;
-            vertical-align: middle;
-          }
-
-        }
-      }
-    }
   }
 
 }

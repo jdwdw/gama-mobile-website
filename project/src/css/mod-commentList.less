@@ -1,0 +1,84 @@
+ul.commentList{
+  overflow: hidden;
+  li{
+    width: 100%;
+    padding: 30/@root 0;
+    box-sizing:border-box;
+    position:relative;
+    border-bottom: 1px solid @style-itmeBorder;
+    .gameImg{
+      display: inline-block;
+      width: 100/@root;
+      height: 100/@root;
+        img{
+          width: 100%;
+        }
+    }
+    .con{
+      display: inline-block;
+      vertical-align: middle;
+      line-height: 1.5em;
+      width: 545/@root;
+      margin-left: 20/@root;
+      .contentTitle{
+        font-size: 30/@root;
+        line-height: 60/@root;
+        vertical-align: middle;
+        color: @style-black;
+      }
+      .contentText{
+        font-size: 26/@root;
+        line-height: 46/@root;
+        vertical-align: middle;
+        color: @style-black;
+      }
+      .date-text{
+        // margin-bottom: 30/@root;
+        .date{
+          font-size: 22/@root;
+          line-height: 32/@root;
+          vertical-align: middle;
+          color: @style-brc;
+        }
+        i {
+          float: right;
+        }
+      .icon{
+        width: 40/@root;
+        font-size: 40/@root;
+        color: #999999;
+      }
+      }
+
+      .strategyFlag{
+        border: 1px solid #92cff9 ;
+        height: 20/@root;
+        width: 42/@root;
+        font-size: 22/@root;
+        line-height: 20/@root;
+        vertical-align: middle;
+        color: #92cff9;
+      }
+      .other-comment {
+        background: @style-bg;
+        margin: 20/@root 0;
+        padding: 20/@root 22/@root;
+        box-sizing: border-box;
+        .other-comment-item {
+          margin-bottom: 20/@root;
+          font-size: @font-size-listText;
+          .other-comment-author {
+            color: @style-commentAuthor;
+          }
+        }
+        .other-comment-item:last-child {
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+  li:last-child {
+    margin-bottom: 0;
+    border-bottom: none;
+  }
+}

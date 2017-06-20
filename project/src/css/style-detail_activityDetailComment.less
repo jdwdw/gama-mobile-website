@@ -11,12 +11,14 @@
 /* 引入 Less 依赖文件 */
 @import "mod-header";
 @import "mod-footer";
+@import "mod-commentBox";
+@import "mod-commentList";
 
 @root:40rem;
 body {
   background-color: @style-bg;
 }
-.activity-content {
+.activityDetailComment-activity-content {
   background-color: @style-default;
   width: 100%;
   .activity-image {
@@ -46,28 +48,13 @@ body {
     color: #999999;
   }
 }
-.comment-box {
-  background-color: @style-default;
+.activityDetailComment-comment-box-container {
   width: 100%;
-  padding: 30/@root 30/@root 0;
+  padding: 0 30/@root;
   box-sizing: border-box;
-  .comment-box-textarea {
-    width: 100%;
-    height: 120/@root;
-    textarea {
-      display: inline-block;
-      box-sizing: border-box;
-      padding: 12/@root;
-      .rounded(10/@root);
-      width: 100%;
-      height: 100%;
-      background-color:@style-bg;
-      font-size: 24/@root;
-      color: @style-grey;
-    }
-  }
+  background-color: @style-default;
 }
-.confirm-button {
+.activityDetailComment-confirm-button {
   background-color: @style-default;
   padding: 22/@root 30/@root 0;
   div {
@@ -86,7 +73,7 @@ body {
     }
   }
 }
-.player-comment {
+.activityDetailComment-player-comment {
   width: 100%;
   background-color: @style-default;
   box-sizing: border-box;;
@@ -100,7 +87,7 @@ body {
     padding-left: 14/@root;
   }
 }
-.nav-bar {
+.activityDetailComment-nav-bar {
   padding-top: 50/@root;
   margin: 0 auto;
   width: 100%;
@@ -128,84 +115,10 @@ body {
 }
 
 @style-yellow:#ffbb59;
-.g-gameList{
-  padding:30/@root 30/@root 0; background: @style-default; width: 100%; box-sizing: border-box; overflow: hidden;
-  ul{
-    overflow: hidden;
-    li{
-      width: 100%; float: left; box-sizing: border-box; margin-bottom: 1rem; position: relative;border-bottom: 1px solid @style-itmeBorder;
-      .gameImg{
-        display: inline-block;
-        width: 100/@root;
-        height: 100/@root;
-          img{
-            width: 100%;
-          }
-      }
-      .con{
-        display: inline-block;
-        vertical-align: middle;
-        line-height: 1.5em;
-        width: 535/@root;
-        .contentTitle{
-          font-size: 30/@root;
-          line-height: 60/@root;
-          vertical-align: middle;
-          color: @style-black;
-        }
-        .contentText{
-          font-size: 26/@root;
-          line-height: 46/@root;
-          vertical-align: middle;
-          color: @style-black;
-        }
-        .date-text{
-          margin-bottom: 20/@root;
-          .date{
-            font-size: 22/@root;
-            line-height: 32/@root;
-            vertical-align: middle;
-            color: @style-brc;
-          }
-          i {
-            float: right;
-          }
-        .icon{
-          width: 40/@root;
-          font-size: 40/@root;
-          color: #999999;
-        }
-        }
-
-        .strategyFlag{
-          border: 1px solid #92cff9 ;
-          height: 20/@root;
-          width: 42/@root;
-          font-size: 22/@root;
-          line-height: 20/@root;
-          vertical-align: middle;
-          color: #92cff9;
-        }
-
-      }
-    }
-    li:last-child {
-      margin-bottom: 0;
-      border-bottom: none;
-    }
-  }
-
-}
-.back-to-top {
+.activityDetailComment-g-gameList{
+  padding:30/@root 30/@root 0;
+  background: @style-default;
   width: 100%;
-  height: 102 /@root;
-  line-height: 102 /@root;
-  vertical-align: middle;
-  text-align: center;
-  a:link, a:visited, a:hover, a:active {
-    font-size: 22 / @root;
-    text-decoration: none;
-    color: @style-grey;
-  }
+  box-sizing: border-box;
+  overflow: hidden;
 }
-// 评论列表
