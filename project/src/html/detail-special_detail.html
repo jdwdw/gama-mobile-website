@@ -2,43 +2,23 @@
 <html lang="zh-CN" data-rem="375">
 
 <head>
-  <meta charset="UTF-8">
+  <% include common/head.html %>
   <title>专题详情</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
-  <meta name="keywords" content="" />
-  <meta name="description" content="" />
-  <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta name="format-detection" content="telephone=no">
-  <meta name="apple-mobile-web-app-status-bar-style" content="black">
-  <meta content="telephone=no" name="format-detection" />
-  <meta content="email=no" name="format-detection" />
-  <meta http-equiv="Cache-Control" content="no-siteapp" />
-  <link rel="shortcut icon" href="/favicon.ico">
-  <!-- 引入字体图标 -->
-    <% include common/iconfont.html %>
-  <link rel="stylesheet" type="text/css" href="../css/style-detail_specialDetail.css" />
 </head>
 
 <body>
-  <div class="m-header">
-    <header class="bar bar-nav">
-      <a class="f-fl" href="#">
-        <i class="icon icon-back"> </i>
-      </a>
-      <h1 class="title">专题详情</h1>
-    </header>
-  </div>
-  <div class="game-collection">
+  <% include common/header.html %>
+  <div class="specialDetailDetail-game-collection">
     <%- img(750, 240, 'block__img') %>
   </div>
-  <div class="game-introduction-container">
+  <div class="specialDetailDetail-game-introduction-container">
     <div class="game-introduction">
       《御天传奇H5》是一款由腾讯正版授权，蝴蝶互动倾力打造并发行以三国时期为背景的ARPG游戏产品.真实还原三国古战场的血腥征战，下线后自动挂机，升级刷装备，上线后自动pk，还能自动完成任务，简直是懒人必备啊！
     </div>
   </div>
-  <div class="game-content-container">
+  <div class="specialDetailDetail-game-content-container">
     <% for(var i = 0; i < 6; i++) {%>
-      <div class="game-content">
+      <div class="specialDetailDetail-game-content">
         <div class="game-content-image fifteen_radius">
           <%- img(120, 120, 'block__img') %>
         </div>
@@ -60,7 +40,7 @@
             </div>
           </div>
         </div>
-        <div class="game-start-button">
+        <div class="specialDetailDetail-game-start-button">
           <a href="#">
             <button type="button" name="button">开始</button>
           </a>
@@ -68,9 +48,7 @@
       </div>
     <% } %>
   </div>
-  <div class="back-to-top">
-    <a href="#top">点击返回顶部</a>
-  </div>
+  <% include common/m-gotop.html %>
     <!-- 引入公共地步 -->
     <% include common/footer.html %>
 

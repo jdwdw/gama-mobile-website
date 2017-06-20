@@ -2,33 +2,13 @@
 <html lang="zh-CN" data-rem="375">
 
 <head>
-  <meta charset="UTF-8">
+  <% include common/head.html %>
   <title>个人中心</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
-  <meta name="keywords" content="" />
-  <meta name="description" content="" />
-  <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta name="format-detection" content="telephone=no">
-  <meta name="apple-mobile-web-app-status-bar-style" content="black">
-  <meta content="telephone=no" name="format-detection" />
-  <meta content="email=no" name="format-detection" />
-  <meta http-equiv="Cache-Control" content="no-siteapp" />
-  <link rel="shortcut icon" href="/favicon.ico">
-  <!-- 引入字体图标 -->
-    <% include common/iconfont.html %>
-  <link rel="stylesheet" type="text/css" href="../css/style-personalCenter_personal.css" />
 </head>
 
 <body>
-  <div class="m-header">
-    <header class="bar bar-nav">
-      <a class="f-fl" href="#">
-        <i class="icon icon-back"> </i>
-      </a>
-      <h1 class="title">个人中心</h1>
-    </header>
-  </div>
-  <div class="head-and-tool">
+  <% include common/header.html %>
+  <div class="personal-head-and-tool">
     <div class="head-and-tool-head">
       <div class="head-and-tool-head-image fifty_radius">
         <%- img(120, 120, 'block__img') %>
@@ -81,7 +61,7 @@
       </div>
     </div>
   </div>
-  <div class="signature">
+  <div class="presonal-signature">
     <div class="signature-photo">
       <i class="icon icon-meiriqiandao"> </i>
     </div>
@@ -97,7 +77,7 @@
       <span>签到</span>
     </div>
   </div>
-  <div class="message-password-consult">
+  <div class="personal-message-password-consult">
     <div class="message-password-consult-item">
       <div class="message-password-consult-image">
         <i class="icon icon-message"> </i>
@@ -135,9 +115,7 @@
     <div class="personal-center-logout">
       <a href="#">退出登录</a>
     </div>
-    <div class="personal-back-to-top">
-      <a href="#top">点击返回顶部</a>
-    </div>
+    <% include common/m-gotop.html %>
   </div>
 
     <!-- 引入公共地步 -->

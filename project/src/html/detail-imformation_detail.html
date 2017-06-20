@@ -2,21 +2,8 @@
 <html lang="zh-CN" data-rem="375">
 
 <head>
-  <meta charset="UTF-8">
+  <% include common/head.html %>
   <title>资讯详情</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
-  <meta name="keywords" content="" />
-  <meta name="description" content="" />
-  <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta name="format-detection" content="telephone=no">
-  <meta name="apple-mobile-web-app-status-bar-style" content="black">
-  <meta content="telephone=no" name="format-detection" />
-  <meta content="email=no" name="format-detection" />
-  <meta http-equiv="Cache-Control" content="no-siteapp" />
-  <link rel="shortcut icon" href="/favicon.ico">
-  <!-- 引入字体图标 -->
-    <% include common/iconfont.html %>
-  <link rel="stylesheet" type="text/css" href="../css/style-detail_informationDetail.css" />
 </head>
 
 <body>
@@ -31,8 +18,8 @@
       </a>
     </header>
   </div>
-  <div class="game-content-container">
-      <div class="game-content">
+  <div class="informationDetail-game-content-container">
+      <div class="informationDetail-game-content">
         <div class="game-content-image fifteen_radius">
           <%- img(120, 120, 'block__img') %>
         </div>
@@ -51,12 +38,12 @@
             </div>
           </div>
         </div>
-        <div class="game-start-button">
+        <div class="informationDetail-game-start-button">
           <a href="#"><button type="button" name="button">开始</button></a>
         </div>
       </div>
   </div>
-  <div class="information-paper">
+  <div class="informationDetail-information-paper">
     <div class="information-paper-title">
       老司机带你玩转《保卫萝卜》
     </div>
@@ -78,10 +65,10 @@
 
   Q：如何能够升级的更快？
   A:小编想吐槽一下这个升级也太快了吧！两天不到就到了300+级。但是，这不能阻止小编想要升到更高级。技巧没有什么啦，但是有途径哦！比如可以冲值月卡，月卡的福利就是升级加速。升级嗖嗖的。还有就是经验丹，但是这个是不卖的，系统赠送的。毕竟用经验丹也算开挂了。大家还是要多关注一下活动公告哦。
-      </p>    
+      </p>
     </div>
   </div>
-  <div class="realatived-paper">
+  <div class="informationDetail-realatived-paper">
     <div class="relatived-paper-head">
       <span>相关文章</span>
     </div>
@@ -101,7 +88,7 @@
           </li>
     </ul>
   </div>
-  <div class="realatived-game">
+  <div class="informationDetail-realatived-game">
     <div class="relatived-game-head">
       <span>相关游戏</span>
     </div>
@@ -133,9 +120,7 @@
     </div>
   </div>
 
-  <div class="back-to-top">
-    <a href="#top">点击返回顶部</a>
-  </div>
+  <% include common/m-gotop.html %>
     <!-- 引入公共地步 -->
     <% include common/footer.html %>
 

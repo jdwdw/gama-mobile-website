@@ -2,33 +2,13 @@
 <html lang="zh-CN" data-rem="375">
 
 <head>
-  <meta charset="UTF-8">
+  <% include common/head.html %>
   <title>活动详情</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
-  <meta name="keywords" content="" />
-  <meta name="description" content="" />
-  <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta name="format-detection" content="telephone=no">
-  <meta name="apple-mobile-web-app-status-bar-style" content="black">
-  <meta content="telephone=no" name="format-detection" />
-  <meta content="email=no" name="format-detection" />
-  <meta http-equiv="Cache-Control" content="no-siteapp" />
-  <link rel="shortcut icon" href="/favicon.ico">
-  <!-- 引入字体图标 -->
-    <% include common/iconfont.html %>
-  <link rel="stylesheet" type="text/css" href="../css/style-detail_acitvityDetailIntroduction.css" />
 </head>
 
 <body>
-  <div class="m-header">
-    <header class="bar bar-nav">
-      <a class="f-fl" href="#">
-        <i class="icon icon-back"> </i>
-      </a>
-      <h1 class="title">活动详情</h1>
-    </header>
-  </div>
-  <div class="activity-content">
+  <% include common/header.html %>
+  <div class="activityDetailIntro-activity-content">
     <div class="activity-image">
       <%- img(750, 350, 'block__img') %>
     </div>
@@ -39,7 +19,7 @@
       <span class="start-time">2017.5.27</span>-<span class="end-time">2017.6.1</span>
     </div>
   </div>
-  <div class="nav-bar">
+  <div class="activityDetailIntro-nav-bar">
     <div class="nav-bar-game">
       <a href="#">简介</a>
     </div>
@@ -47,7 +27,7 @@
       <a href="#">评论</a>
     </div>
   </div>
-  <div class="activity-introduction-container">
+  <div class="activityDetailIntro-activity-introduction-container">
     <div class="activity-introduction">
       活动一：吃粽子
   活动内容：
@@ -65,13 +45,11 @@
   98元：粽子代金券、天神抽奖券、元宝红包、魔力卷轴、元宝红包 。
     </div>
   </div>
-  <div class="confirm-button">
+  <div class="activityDetailIntro-confirm-button">
     <a href="#"><button type="button" name="button">我要评论</button></a>
   </div>
 
-  <div class="back-to-top">
-    <a href="#top">点击返回顶部</a>
-  </div>
+  <% include common/m-gotop.html %>
     <!-- 引入公共地步 -->
     <% include common/footer.html %>
 

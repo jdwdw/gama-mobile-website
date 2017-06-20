@@ -2,35 +2,15 @@
 <html lang="zh-CN" data-rem="375">
 
 <head>
-  <meta charset="UTF-8">
+  <% include common/head.html %>
   <title>我的卡箱</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
-  <meta name="keywords" content="" />
-  <meta name="description" content="" />
-  <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta name="format-detection" content="telephone=no">
-  <meta name="apple-mobile-web-app-status-bar-style" content="black">
-  <meta content="telephone=no" name="format-detection" />
-  <meta content="email=no" name="format-detection" />
-  <meta http-equiv="Cache-Control" content="no-siteapp" />
-  <link rel="shortcut icon" href="/favicon.ico">
-  <!-- 引入字体图标 -->
-    <% include common/iconfont.html %>
-  <link rel="stylesheet" type="text/css" href="../css/style-personalCenter_mycard.css" />
 </head>
 
 <body>
-  <div class="m-header">
-    <header class="bar bar-nav">
-      <a class="f-fl" href="#">
-        <i class="icon icon-back"> </i>
-      </a>
-      <h1 class="title">我的卡箱</h1>
-    </header>
-  </div>
-  <div class="game-content-container">
+  <% include common/header.html %>
+  <div class="mycard-game-content-container">
     <% for(var i = 0; i < 4; i++) {%>
-      <div class="game-content">
+      <div class="mycard-game-content">
         <div class="game-content-image">
           <img src="" alt="">
         </div>
@@ -45,7 +25,7 @@
             </div>
           </div>
         </div>
-        <div class="game-start-button">
+        <div class="mycard-game-copy-button">
           <a href="#"><button type="button" name="button">复制</button></a>
         </div>
       </div>
