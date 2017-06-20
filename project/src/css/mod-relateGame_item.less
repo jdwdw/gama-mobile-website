@@ -1,0 +1,31 @@
+.relatived-game-link {
+  margin-top:30/@root;
+  width: 100%;
+  box-sizing: border-box;
+  a {
+    display: inline-block;
+    .link-item {
+      display: inline-block;
+      width: 220 / @root;
+      text-align: center;
+      img {
+        width: 120 / @root;
+        height: 120 / @root;
+        margin-bottom: 20/@root;
+      }
+      .link-title {
+        width: 100%;
+        text-align: center;
+        line-height: @font-size-gameName;
+        font-size: @font-size-gameName;
+        .text-overflow();
+        margin-bottom: 30/@root;
+      }
+    }
+  }
+  a:link, a:hover, a:active, a:visited {
+    color: black;
+    text-decoration: none;
+  }
+
+}

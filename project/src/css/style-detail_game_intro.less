@@ -18,20 +18,14 @@
 @import "mod-header";
 @import "mod-detail_nav";
 @import "mod-footer";
+@import "mod-relateGame_item";
 
-@style-yellow:#ffbb59;
-@style-green:#0cd29c;
 .g-gameList{
-  padding:25/@root 10/@root;
-  background: @style-default;
-  width: 100%;
-  box-sizing: border-box;
-  overflow: hidden;
-
+  margin-top: 0;
+  padding-top: 30/@root;
     .gameItem{
       width: 100%;
       float: left;
-      padding: 0 0.5rem;
       box-sizing: border-box;
       position: relative;
       .gameImg{
@@ -90,7 +84,6 @@
       font-size: 30/@root;
       line-height: 32/@root;
       vertical-align: middle;
-      margin-left: 30/@root;
       padding-left: 10/@root;
 
     }
@@ -139,7 +132,6 @@
     .strategy-item{
       width: 100%;
       float: left;
-      padding: 0 0.5rem;
       box-sizing: border-box;
       margin-top: 30/@root;
       position: relative;
@@ -184,43 +176,6 @@
       }
     }
 
-    .relatived-game-link {
-      margin-top:30/@root;
-      width: 100%;
-      height: 197 / @root;
-      box-sizing: border-box;
-      padding: 0 0.5rem;
-      a {
-        display: inline-block;
-        .link-item {
-          display: inline-block;
-          width: 150 / @root;
-          text-align: center;
-          img {
-            width: 120 / @root;
-            height: 120 / @root;
-          }
-          .link-title {
-            width: 100%;
-            text-align: center;
-            line-height: 80 / @root;
-            font-size: 30 / @root;
-
-          }
-        }
-      }
-      a:nth-child(2) {
-        margin-left: 100 /@root;
-      }
-      a:nth-child(3) {
-        margin-left: 100 / @root;
-      }
-      a:link, a:hover, a:active, a:visited {
-        color: black;
-        text-decoration: none;
-      }
-
-    }
 
 }
 

@@ -1,0 +1,58 @@
+.game_item{
+  width: 100%; float: left; padding: 30/@root 0; box-sizing: border-box; position: relative;border-bottom: 1px solid @style-itmeBorder;
+  .gameImg{
+    display: inline-block;
+    width: 120/@root;
+    height: 120/@root;
+      img{
+        width: 100%;
+      }
+  }
+  .con{
+    display: inline-block;
+    vertical-align: middle;
+    height: 120/@root;
+    width: 430/@root;
+    padding-left: 20/@root;
+    .content{
+      width: 430/@root;
+    }
+    p{
+      font-size: @font-size-gameName;
+      line-height: @font-size-gameName;
+      vertical-align: middle;
+      color: @style-black;
+    }
+    span{
+      font-size: @font-size-tip;
+      line-height: @font-size-tip;
+      vertical-align: middle;
+      color: @style-brc;
+    }
+    .margin-right30{
+      margin-right: 30/@root;
+    }
+    .star{
+      margin: 15/@root 0;
+      .icon{
+        width: 28/@root;
+        height: 28/@root;
+        color:  @style-brc;
+        font-size: 28/@root;
+        line-height: 28/@root;
+        vertical-align: middle;
+      }
+      .iconActive{
+        color:  @style-yellow;
+      }
+    }
+  }
+  .item-handle{
+    margin-top: 30/@root;
+    .btn{
+      background-color:  @style-main;
+      vertical-align: middle;
+    }
+
+  }
+}
