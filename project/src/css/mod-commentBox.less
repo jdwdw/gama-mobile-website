@@ -1,0 +1,42 @@
+.comment-box {
+  background-color: @style-default;
+  width: 100%;
+  padding: 30/@root 0;
+  box-sizing: border-box;
+  .comment-box-textarea {
+    width: 100%;
+    height: 120/@root;
+    textarea {
+      display: inline-block;
+      box-sizing: border-box;
+      padding: 20/@root;
+      .rounded(10/@root);
+      width: 100%;
+      height: 100%;
+      background-color:@style-bg;
+      font-size: 24/@root;
+      color: @style-grey;
+    }
+  }
+  .star_and_confirmButton {
+    margin-top: 20/@root;
+    .star {
+      .icon-score1 {
+        color: @style-yellow;
+        font-size: 48/@root;
+        display: inline-block;
+        margin-right: 5/@root;
+      }
+    }
+    button {
+      float: right;
+      display: inline-block;
+      width: 100 / @root;
+      height: 48 / @root;
+      background-color: #13E1A0;
+      color: @style-default;
+      border: none;
+      .rounded(3/@root);
+    }
+  }
+}

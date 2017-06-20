@@ -11,6 +11,7 @@
 /* 引入 Less 依赖文件 */
 @import "mod-header";
 @import "mod-footer";
+@import "mod-commentBox";
 
 @root:40rem;
 body {
@@ -46,26 +47,11 @@ body {
     color: #999999;
   }
 }
-.activityDetailComment-comment-box {
-  background-color: @style-default;
+.activityDetailComment-comment-box-container {
   width: 100%;
-  padding: 30/@root 30/@root 0;
+  padding: 0 30/@root;
   box-sizing: border-box;
-  .comment-box-textarea {
-    width: 100%;
-    height: 120/@root;
-    textarea {
-      display: inline-block;
-      box-sizing: border-box;
-      padding: 12/@root;
-      .rounded(10/@root);
-      width: 100%;
-      height: 100%;
-      background-color:@style-bg;
-      font-size: 24/@root;
-      color: @style-grey;
-    }
-  }
+  background-color: @style-default;
 }
 .activityDetailComment-confirm-button {
   background-color: @style-default;
