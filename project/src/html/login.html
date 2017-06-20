@@ -11,13 +11,6 @@
   <!-- 引入公共头部  -->
   <% include common/header.html  %>
     <div class="main">
-      <div class="error" id="error">
-        <div class="error-button f-fl ">
-          <img src="../img/error.png" alt="">
-        </div>
-        <div class="error-connect" id="error-connect">
-        </div>
-      </div>
       <div class="logo"><img src="../img/login_logo.png" alt=""></div>
       <form>
         <div class="main-message">
@@ -41,14 +34,14 @@
               </div>
             </div>
             <div class="rememberPassWord">
-              <div class="f-fl radio" id="radio" onclick="radiochang()">
-                <label><input name="Fruit" type="radio" value="" checked='checked'/> </label>
+              <div class="f-fl radio" id="radio">
+                <label><input name="Fruit" type="hidden" value="0" /> </label>
               </div>
               <div class="f-fl">
                 记住密码
               </div>
             </div>
-            <button type="button" name="button" class="button" onclick="findItem()" id="button">登录</button>
+            <button type="button" name="button" class="button no" id="j-login_btn">登录</button>
             <div class="tie">
               <div class="f-fl">
                 <a href="register.html">快速注册</a>
