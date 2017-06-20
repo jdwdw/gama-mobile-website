@@ -34,29 +34,7 @@
     <span>玩家评论</span>
   </div>
   <div class="activityDetailComment-g-gameList">
-    <ul>
-      <% for(var i = 0; i < 10; i++) {%>
-          <li class="item">
-            <a href="#">
-              <div class="gameImg f-fl fifty_radius">
-                <%- img(100, 100) %>
-              </div>
-              <div class="con f-fr">
-                <div class="f-fl">
-                  <p class="contentTitle">DEMO</p>
-                  <p class="contentText">只要998，吕布貂蝉带回家-御天传奇良心福利攻略dddddddddd</p>
-                  <div class="date-text">
-                    <span class="date">2017.4.22</span>
-                    <i class="icon icon-pinglun"></i>
-                  </div>
-
-                </div>
-              </div>
-            </a>
-          </li>
-
-      <% } %>
-    </ul>
+    <% include common/commentList.html %>
   </div>
 
   <% include common/m-gotop.html %>
