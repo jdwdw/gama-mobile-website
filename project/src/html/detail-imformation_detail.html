@@ -6,7 +6,7 @@
   <title>资讯详情</title>
 </head>
 
-<body>
+<body class="informationDetailBody">
   <div class="m-header">
     <header class="bar bar-nav">
       <a class="f-fl" href="#">
@@ -18,30 +18,10 @@
       </a>
     </header>
   </div>
-  <div class="informationDetail-game-content-container">
-      <div class="informationDetail-game-content">
-        <div class="game-content-image fifteen_radius">
-          <%- img(120, 120, 'block__img') %>
-        </div>
-        <div class="game-content-message">
-          <div class="game-content-message-detail">
-            <div class="game-content-name">
-              保卫萝卜
-            </div>
-            <div class="game-content-star">
-              <i class="icon icon-score1"></i>
-              <i class="icon icon-score1"></i>
-            </div>
-            <div class="game-content-type">
-              <span>策略类&nbsp;&nbsp;</span>
-              <span>人气：<span>230116</span></span>
-            </div>
-          </div>
-        </div>
-        <div class="informationDetail-game-start-button">
-          <a href="#"><button type="button" name="button">开始</button></a>
-        </div>
-      </div>
+  <div class="informationDetail-game-content-container g-gameList">
+    <ul>
+        <% include common/game-item.html %>
+    </ul>
   </div>
   <div class="informationDetail-information-paper">
     <div class="information-paper-title">
@@ -72,52 +52,17 @@
     <div class="relatived-paper-head">
       <span>相关文章</span>
     </div>
-    <ul>
-          <li class="item">
-            <a href="#">
-              <div class="gameImg f-fr fifteen_radius">
-                <%- img(160, 140, 'block__img') %>
-              </div>
-              <div class="con f-fl">
-                <div class="f-fl">
-                  <p>只要998，吕布貂蝉带回家-《御天传奇》良心福利攻略&nbsp;&nbsp;<span class="strategyFlag">攻略</span></p>
-                  <span class="date">2017.4.22</span>
-                </div>
-              </div>
-            </a>
-          </li>
-    </ul>
+    <div >
+      <ul>
+        <% include common/news-item.html %>
+      </ul>
+    </div>
   </div>
   <div class="informationDetail-realatived-game">
     <div class="relatived-game-head">
       <span>相关游戏</span>
     </div>
-    <div class="relatived-game-link">
-      <a href="#">
-        <div class="link-item fifteen_radius">
-          <%- img(120, 120, 'block__img') %>
-          <div class="link-title">
-            乱弹诸神
-          </div>
-        </div>
-      </a>
-      <a href="#">
-        <div class="link-item fifteen_radius">
-          <%- img(120, 120, 'block__img') %>
-          <div class="link-title">
-            皇室战争
-          </div>
-        </div>
-      </a>
-      <a href="#">
-        <div class="link-item fifteen_radius">
-          <%- img(120, 120, 'block__img') %>
-          <div class="link-title">
-            仙剑奇侠传
-          </div>
-        </div>
-      </a>
-    </div>
+    <% include common/relateGame-item.html %>
   </div>
 
   <% include common/m-gotop.html %>

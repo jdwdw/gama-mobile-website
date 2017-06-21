@@ -11,10 +11,14 @@
 /* 引入 Less 依赖文件 */
 @import "mod-header";
 @import "mod-footer";
+@import "mod-game_item";
 
 @root:40rem;
 body {
   background-color: @style-bg;
+}
+.special-detail-container {
+  margin-top: 0;
 }
 .specialDetailDetail-game-collection {
   width: 750 / @root;
@@ -37,69 +41,5 @@ body {
     border-bottom: 1/@root solid #CCCCCC;
     font-size: 26 / @root;
     line-height: 44 / @root;
-  }
-}
-.specialDetailDetail-game-content-container {
-  width: 100%;
-  padding: 0 30/@root;
-  box-sizing: border-box;
-  background-color: @style-default;
-}
-.specialDetailDetail-game-content {
-  box-sizing: border-box;
-  padding: 30/@root 0;
-  width: 100%;
-  height: 180 / @root;
-  background-color: @style-default;
-  border-bottom: 1/@root solid #CCCCCC;
-  .game-content-image {
-    float: left;
-    width: 120 / @root;
-    height: 120 / @root;
-    img {
-      width: 100%;
-      height: 100%;
-    }
-  }
-  .game-content-message {
-    float: left;
-    height: 121 / @root;
-    padding-left: 24 / @root;
-    .game-content-name {
-      line-height: 34 / @root;
-      font-size: 32 / @root;
-    }
-    .game-content-star {
-      margin-top: 10 / @root;
-      i {
-        font-size: 0.75rem;
-        color: #FFBB59;
-        width: 30 / @root;
-      }
-    }
-    .game-content-type {
-      margin-top: 10 / @root;
-      font-size: 22 / @root;
-      color: @style-grey;
-    }
-  }
-}
-.specialDetailDetail-game-content:last-child {
-  border-bottom: none;
-}
-.specialDetailDetail-game-start-button {
-  float: right;
-  width: 100 / @root;
-  height: 100%;
-  line-height: 121 / @root;
-  text-align: center;
-  vertical-align: middle;
-  button {
-    width: 100%;
-    height: 50 / @root;
-    background-color: #E22127;
-    border: none;
-    .rounded(4/@root);
-    color: @style-default;
   }
 }

@@ -11,10 +11,18 @@
 /* 引入 Less 依赖文件 */
 @import "mod-header";
 @import "mod-footer";
+@import "mod-game_item";
+@import "mod-news_item";
+@import "mod-relateGame_item";
 
 @root:40rem;
 body {
   background-color: @style-bg;
+}
+.informationDetailBody {
+  .g-gameList {
+    border-bottom: none;
+  }
 }
 .informationDetail-game-content-container {
   margin-top: 20/@root;
@@ -22,64 +30,10 @@ body {
   padding: 0 30/@root;
   box-sizing: border-box;
   background-color: @style-default;
-}
-.informationDetail-game-content {
-  box-sizing: border-box;
-  padding: 30/@root 0;
-  width: 100%;
-  height: 180 / @root;
-  background-color: @style-default;
-  border-bottom: 1/@root solid #CCCCCC;
-  .game-content-image {
-    float: left;
-    width: 120 / @root;
-    height: 120 / @root;
-    img {
-      width: 100%;
-      height: 100%;
+  ul {
+    li:last-child {
+      border-bottom: 0;
     }
-  }
-  .game-content-message {
-    float: left;
-    height: 121 / @root;
-    padding-left: 24 / @root;
-    .game-content-name {
-      line-height: 34 / @root;
-      font-size: 32 / @root;
-      color: #333333;
-    }
-    .game-content-star {
-      margin-top: 10 / @root;
-      i {
-        font-size: 0.75rem;
-        color: #FFBB59;
-        width: 30 / @root;
-      }
-    }
-    .game-content-type {
-      margin-top: 10 / @root;
-      font-size: 22 / @root;
-      color: @style-grey;
-    }
-  }
-}
-.informationDetail-game-content:last-child {
-  border-bottom: none;
-}
-.informationDetail-game-start-button {
-  float: right;
-  width: 100 / @root;
-  height: 100%;
-  line-height: 121 / @root;
-  text-align: center;
-  vertical-align: middle;
-  button {
-    width: 100%;
-    height: 50 / @root;
-    background-color: #E22127;
-    border: none;
-    .rounded(4/@root);
-    color: @style-default;
   }
 }
 .informationDetail-information-paper {
@@ -144,53 +98,6 @@ body {
   ul{
     overflow: hidden;
     padding-top: 20 / @root;
-    li{
-      width: 100%;
-      float: left;
-      box-sizing: border-box;
-      position: relative;
-      border-bottom: 1px solid @style-itmeBorder;
-      .gameImg{
-        display: inline-block;
-        width: 160/@root;
-        height: 140/@root;
-        padding-bottom: 20/@root;
-        margin-bottom: 30/@root;
-          img{
-            width: 100%;
-            height: 100%;
-          }
-      }
-      .con{
-        display: inline-block;
-        vertical-align: middle;
-        line-height: 1.5em;
-        width: 500/@root;
-        p{
-          font-size: 30/@root;
-          line-height: 40/@root;
-          vertical-align: middle;
-          color: @style-black;
-          margin-bottom: 40/@root;
-        }
-        .date{
-          font-size: 22/@root;
-          line-height: 20/@root;
-          vertical-align: middle;
-          color: @style-brc;
-        }
-        .strategyFlag{
-          border: 1px solid #92cff9 ;
-          height: 20/@root;
-          width: 42/@root;
-          font-size: 22/@root;
-          line-height: 20/@root;
-          vertical-align: middle;
-          color: #92cff9;
-        }
-
-      }
-    }
   }
 }
 .informationDetail-realatived-game {
@@ -211,38 +118,6 @@ body {
     }
   }
   .relatived-game-link {
-    width: 100%;
-    height: 197 / @root;
-    box-sizing: border-box;
-    padding-top: 30 / @root;
-    a {
-      display: inline-block;
-      .link-item {
-        display: inline-block;
-        width: 150 / @root;
-        text-align: center;
-        img {
-          width: 120 / @root;
-          height: 120 / @root;
-        }
-        .link-title {
-          width: 100%;
-          text-align: center;
-          line-height: 80 / @root;
-          font-size: 30 / @root;
-
-        }
-      }
-    }
-    a:link, a:hover, a:active, a:visited {
-      color: black;
-      text-decoration: none;
-    }
-    a:nth-child(2) {
-      margin-left: 100 /@root;
-    }
-    a:nth-child(3) {
-      margin-left: 100 / @root;
-    }
+    padding-top: 30/@root;
   }
 }

@@ -16,37 +16,13 @@
       《御天传奇H5》是一款由腾讯正版授权，蝴蝶互动倾力打造并发行以三国时期为背景的ARPG游戏产品.真实还原三国古战场的血腥征战，下线后自动挂机，升级刷装备，上线后自动pk，还能自动完成任务，简直是懒人必备啊！
     </div>
   </div>
-  <div class="specialDetailDetail-game-content-container">
-    <% for(var i = 0; i < 6; i++) {%>
-      <div class="specialDetailDetail-game-content">
-        <div class="game-content-image fifteen_radius">
-          <%- img(120, 120, 'block__img') %>
-        </div>
-        <div class="game-content-message">
-          <div class="game-content-message-detail">
-            <div class="game-content-name">
-              保卫萝卜
-            </div>
-            <div class="game-content-star">
-              <i data-id="0" class="icon icon-score1"></i>
-              <i data-id="1" class="icon icon-score1"></i>
-              <i data-id="2" class="icon icon-score1"></i>
-              <i data-id="3" class="icon icon-score1"></i>
-              <i data-id="4" class="icon icon-score1"></i>
-            </div>
-            <div class="game-content-type">
-              <span>策略类&nbsp;&nbsp;</span>
-              <span>人气：<span>230116</span></span>
-            </div>
-          </div>
-        </div>
-        <div class="specialDetailDetail-game-start-button">
-          <a href="#">
-            <button type="button" name="button">开始</button>
-          </a>
-        </div>
-      </div>
-    <% } %>
+  <div class="g-gameList special-detail-container">
+    <ul>
+      <% for(var i = 0; i < 6; i++) {%>
+        <% include common/game-item.html %>
+      <% } %>
+    </ul>
+
   </div>
   <% include common/m-gotop.html %>
     <!-- 引入公共地步 -->
