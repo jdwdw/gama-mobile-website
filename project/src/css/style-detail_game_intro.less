@@ -20,6 +20,20 @@
 @import "mod-footer";
 @import "mod-relateGame_item";
 
+.m-page {
+  .g-gameList {
+    border-bottom: 0;
+  }
+  .relatived-game-link {
+    border-bottom: 1px solid @style-brc;
+  }
+}
+.detail-game-introduction {
+  #game-detail-content {
+    padding-bottom: 30/@root;
+    border-bottom: 1px solid @style-brc;
+  }
+}
 .g-gameList{
   margin-top: 0;
   padding-top: 30/@root;
@@ -100,6 +114,8 @@
       vertical-align: middle;
       color: @style-black;
       margin-top: 30/@root;
+      // padding-bottom: 30/@root;
+      // border-bottom: 1px solid @style-brc;
     }
 
     .contentTextCenter{
@@ -135,6 +151,7 @@
       box-sizing: border-box;
       margin-top: 30/@root;
       position: relative;
+      border-bottom: 1px solid @style-brc;
       .gameImg{
         display: inline-block;
         width: 160/@root;

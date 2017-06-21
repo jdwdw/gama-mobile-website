@@ -45,10 +45,20 @@
   98元：粽子代金券、天神抽奖券、元宝红包、魔力卷轴、元宝红包 。
     </div>
   </div>
-  <div class="activityDetailIntro-confirm-button">
-    <a href="#"><button type="button" name="button">我要评论</button></a>
+  <div class="activityDetailComment-player-comment">
+    <span>玩家评论</span>
   </div>
+  <div class="activityDetailComment-comment-box-container">
+      <% include common/comment-box.html %>
+  </div>
+  <div class="activityDetailComment-g-gameList">
+    <ul class="commentList">
+      <% for(var i = 0; i < 10; i++) {%>
+        <% include common/commentList.html %>
+      <% } %>
+    </ul>
 
+  </div>
   <% include common/m-gotop.html %>
     <!-- 引入公共地步 -->
     <% include common/footer.html %>
