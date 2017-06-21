@@ -9,7 +9,7 @@
 <body>
   <% include common/header.html %>
   <div class="personal-head-and-tool">
-    <div class="head-and-tool-head">
+    <div class="head-and-tool-head" data-url="http://baidu.com">
       <div class="head-and-tool-head-image fifty_radius">
         <%- img(120, 120, 'block__img') %>
       </div>
@@ -26,7 +26,7 @@
       </div>
     </div>
     <div class="head-and-tool-tool">
-      <div class="tool-item">
+      <div class="tool-item" data-url="http://baidu.com">
         <div class="tool-item-image">
           <i class="icon icon-Gbizhongxin"> </i>
         </div>
@@ -37,7 +37,7 @@
           233
         </div>
       </div>
-      <div class="tool-item">
+      <div class="tool-item" data-url="http://baidu.com">
         <div class="tool-item-image">
           <i class="icon icon-wodeshoucang"> </i>
         </div>
@@ -48,7 +48,7 @@
           16
         </div>
       </div>
-      <div class="tool-item">
+      <div class="tool-item" data-url="http://baidu.com">
         <div class="tool-item-image">
           <i class="icon icon-wodekaxiang"> </i>
         </div>
@@ -78,7 +78,7 @@
     </div>
   </div>
   <div class="personal-message-password-consult">
-    <div class="message-password-consult-item">
+    <div class="message-password-consult-item" data-url="http://baidu.com">
       <div class="message-password-consult-image">
         <i class="icon icon-message"> </i>
       </div>
@@ -89,7 +89,7 @@
         <i class="icon icon-next"> </i>
       </div>
     </div>
-    <div class="message-password-consult-item">
+    <div class="message-password-consult-item" data-url="http://baidu.com">
       <div class="message-password-consult-image">
         <i class="icon icon-pwd"> </i>
       </div>
@@ -100,7 +100,7 @@
         <i class="icon icon-next"> </i>
       </div>
     </div>
-    <div class="message-password-consult-item">
+    <div class="message-password-consult-item" data-url="http://baidu.com">
       <div class="message-password-consult-image">
         <i class="icon icon-lianxikefu"> </i>
       </div>
@@ -127,6 +127,28 @@
   signature.onclick = function () {
     this.innerHTML = "已签到";
     this.style.backgroundColor = "#CCCCCC";
+  }
+  const modifyPersonalMessage = document.querySelector(".head-and-tool-head");
+  // modifyPersonalMessage.onclick = function () {
+  //   const url = this.dataset.url;
+  //   console.log(url);
+  //   window.location.href=url;
+  // }
+  function jump(htmlTarget) {
+    htmlTarget.onclick = function () {
+      const url = this.dataset.url;
+      console.log(url);
+      window.location.href=url;
+    }
+  }
+  jump(modifyPersonalMessage);
+  const toolItem = document.querySelectorAll(".tool-item");
+  for (let i = 0; i < toolItem.length; i++) {
+    jump(toolItem[i]);
+  }
+  const message_password_consult_item = document.querySelectorAll('.message-password-consult-item');
+  for (let i = 0; i < message_password_consult_item.length; i++) {
+    jump(message_password_consult_item[i]);
   }
 </script>
 </html>
