@@ -22,7 +22,11 @@
 </body>
 <script type="text/javascript">
   $(function() {
+    var index = 0;
     $(window).scroll(function() {
+      if(index > 5) {
+        return false;
+      }
       console.log("scroll");
       var $this = $(this),
         viewH = $(window).height(), //可见高度
@@ -38,6 +42,7 @@
             </div>`;
           html = html + html + html + html + html;
           $(".detailSpecialList-game-list-container").append(html);
+          index++;
         }
 
     })
