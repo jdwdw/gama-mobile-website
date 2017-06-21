@@ -5,32 +5,27 @@
  */
 
 /* 引入库文件 */
-@import "./lib/lib-reset";
-@import "./lib/lib-mixins";
-@import "./lib/lib-base";
-@import "./lib/lib-ui";
 
-// 引入 REM 解决方案依赖
-// 调用示例 <html data-rem="375">
-@import "./lib/lib-rem";
-
-/* 引入 Less 依赖文件 */
-@import "mod-index_header";
-@import "mod-index_nav";
-@import "mod-index_gameSubNav";
-@import "mod-footer";
-
-@style-yellow:#ffbb59;
 .g-activity_list{
-  padding:30/@root 10/@root 0;background: @style-default; width: 100%; box-sizing: border-box; margin-top:30/@root; overflow: hidden;
+  padding:0 30/@root 0;
+  background: @style-default;
+  width: 100%;
+  box-sizing: border-box;
+  margin-top:30/@root;
+  overflow: hidden;
+  border-bottom: 1px solid @style-itmeBorder;
   ul{
     overflow: hidden;
     li{
-      width: 100%; float: left; padding: 0 0.5rem; box-sizing: border-box; position: relative;border-bottom: 1px solid @style-itmeBorder;
+      width: 100%;
+      float: left;
+      box-sizing: border-box;
+      position: relative;
+      border-bottom: 1px solid @style-itmeBorder;
+      padding-top: 30/@root;
       .gameImg{
         width: 100%;
-        padding-bottom: 20/@root;
-        padding-top: 30/@root;
+        padding-bottom: 10/@root;
           img{
             width: 100%;
           }
@@ -64,6 +59,9 @@
 
         }
       }
+    }
+    li:last-child{
+      border-bottom:none;
     }
   }
 

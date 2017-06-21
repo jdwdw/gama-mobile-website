@@ -4,18 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <title>首页</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
-  <meta name="keywords" content="" />
-  <meta name="description" content="" />
-  <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta name="format-detection" content="telephone=no">
-  <meta name="apple-mobile-web-app-status-bar-style" content="black">
-  <meta content="telephone=no" name="format-detection" />
-  <meta content="email=no" name="format-detection" />
-  <meta http-equiv="Cache-Control" content="no-siteapp" />
-  <link rel="shortcut icon" href="/favicon.ico">
-  <% include common/iconfont.html %>
-    <link rel="stylesheet" type="text/css" href="../css/style-index_activity.css" />
+  <% include common/head.html %>
 </head>
 
 <body>
@@ -59,7 +48,9 @@
         </ul>
       </div>
       <!-- 活动列表 end  -->
-
+      <!-- 点击返回顶部 -->
+      <% include common/m-gotop.html %>
+  </div>
       <!-- 引入公共地步 -->
       <% include common/footer.html %>
 
