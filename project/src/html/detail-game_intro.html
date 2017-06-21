@@ -18,7 +18,7 @@
     </header>
   </div>
 
-    <div class="m-page">
+    <div class="m-page detail-game-intro">
 
       <!-- 游戏列表区域  -->
       <div class="g-gameList g-gameList-margin-top g-gameList-paddingTop-30">
@@ -148,7 +148,11 @@
 </body>
 <script type="text/javascript">
   $(function() {
+    var index = 0;
     $(window).scroll(function() {
+      if (index > 5) {
+        return false
+      };
       console.log("scroll");
       var $this = $(this),
         viewH = $(window).height(), //可见高度
@@ -184,6 +188,7 @@
             </li>`;
           html = html + html + html + html + html;
           $(".commentList").append(html);
+          index++;
         }
 
     })
