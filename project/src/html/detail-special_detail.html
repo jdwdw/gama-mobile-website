@@ -17,7 +17,7 @@
     </div>
   </div>
   <div class="g-gameList special-detail-container">
-    <ul>
+    <ul id="special_detail_information">
       <% for(var i = 0; i < 6; i++) {%>
         <% include common/game-item.html %>
       <% } %>
@@ -29,5 +29,46 @@
     <% include common/footer.html %>
 
 </body>
+<script type="text/javascript">
+  $(function() {
+    $(window).scroll(function() {
+      console.log("scroll");
+      var $this = $(this),
+        viewH = $(window).height(), //可见高度
+        contentH = $("body").get(0).scrollHeight, //内容高度
+        scrollTop = $(window).scrollTop(); //滚动高度
+        if (scrollTop / (contentH - viewH) >= 0.95 ) { //到达底部100px时,加载新内容
 
+          // 这里加载数据.. 下边模拟数据加载
+          console.log("这里加载数据");
+          var html =
+            `<li class="game_item">
+              <a href="#">
+                <div class="gameImg f-fl fifteen_radius">
+                  <%- img(120, 120) %>
+                </div>
+                <div class="con f-fl">
+                  <div class="content f-fl">
+                    <p>保卫萝卜2</p>
+                    <div class="star">
+                      <% for(var index = 0; index < 4; index++) {%>
+                        <i class="icon iconActive icon-score1"></i>
+                      <% } %>
+                      <i class="icon icon-score1"></i>
+                    </div>
+                    <span class="margin-right30">策略类</span><span>人气:&nbsp;230116</span>
+                  </div>
+                </div>
+                <div class="item-handle f-fr">
+                  <a href="#" class="item-btn">开始</a>
+                </div>
+              </a>
+            </li>`;
+          html = html + html + html + html + html;
+          $("#special_detail_information").append(html);
+        }
+
+    })
+  })
+</script>
 </html>
