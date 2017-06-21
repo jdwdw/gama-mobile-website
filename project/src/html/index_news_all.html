@@ -27,38 +27,39 @@
       <!-- 导航区域 end  -->
 
       <!-- 游戏二级导航区域  -->
-      <div class="g-gameSubNav">
-        <ul class="g-gameSubNav_box">
-          <li>
-            <a href="#" class="cur">
-              <div class="name">全部</div>
-            </a>
-          </li>
-          <li>
-            <a href="#">
-              <div class="name">动态</div>
-            </a>
-          </li>
-          <li>
-            <a href="#">
-              <div class="name">攻略</div>
-            </a>
-          </li>
-        </ul>
-      </div>
+        <% include common/g-threeTapNav.html %>
       <!-- 二级导航区域 end  -->
 
       <!-- 游戏列表区域  -->
-      <div id="wrapper">
-        <div id="scroller" class="g-gameList">
-          <ul>
-            <% for(var i = 0; i < 10; i++) {%>
-              <% include common/news-item.html %>
-
+      <ul class="tab_con">
+        <li>
+          <div class="g-gameList">
+            <ul>
+              <% for(var i = 0; i < 10; i++) {%>
+                <% include common/news-item.html %>
+                <% } %>
+            </ul>
+          </div>
+        </li>
+        <li style="display:none">
+          <div class="g-gameList">
+            <ul>
+              <% for(var i = 0; i < 10; i++) {%>
+                <% include common/news-item.html %>
+                <% } %>
+            </ul>
+          </div>
+        </li>
+        <li style="display:none">
+          <div class="g-gameList">
+            <ul>
+              <% for(var i = 0; i < 10; i++) {%>
+                <% include common/news-item.html %>
               <% } %>
-          </ul>
-        </div>
-      </div>
+            </ul>
+          </div>
+        </li>
+      </ul>
       <!-- 游戏列表区域 end  -->
 
       <!-- 点击返回顶部 -->
