@@ -11,7 +11,7 @@
   <% include common/g-twoTapNav.html %>
   <ul class="tab_con my_keep_list">
     <li>
-      <div class="g-gameList">
+      <div class="g-gameList personal_gameList">
         <ul class="cur-ul">
           <% for(var i = 0; i < 6; i++) {%>
             <% include common/game-item.html %>
@@ -39,7 +39,11 @@
 </body>
 <script type="text/javascript">
   $(function() {
+    var index = 0; //控制器
     $(window).scroll(function() {
+      if (index > 5) {
+        return false
+      };
       console.log("scroll");
       var $this = $(this),
         viewH = $(window).height(), //可见高度
@@ -65,6 +69,7 @@
           </li>`;
           html = html + html + html + html + html;
           $(".g-gameList .cur-ul").append(html)
+            index++;
         }
 
     })
