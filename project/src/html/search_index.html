@@ -4,39 +4,28 @@
 <head>
   <meta charset="UTF-8">
   <title>首页</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
-  <meta name="keywords" content="" />
-  <meta name="description" content="" />
-  <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta name="format-detection" content="telephone=no">
-  <meta name="apple-mobile-web-app-status-bar-style" content="black">
-  <meta content="telephone=no" name="format-detection" />
-  <meta content="email=no" name="format-detection" />
-  <meta http-equiv="Cache-Control" content="no-siteapp" />
-  <link rel="shortcut icon" href="/favicon.ico">
-  <% include common/iconfont.html %>
-    <link rel="stylesheet" type="text/css" href="../css/style-search_index.css" />
+  <% include common/head.html %>
 </head>
 
 <body>
   <!-- 引入公共头部  -->
   <% include common/search_header.html %>
-    <div class="m-page">
+    <div class="m-page search-index">
       <!-- 游戏列表区域  -->
       <div class="g-gameListContent">
         <div class="g-gameList g-gameList-padding-bottom">
-          <div class="title titleActive">
+          <div class="search-title titleDisactive">
             热门搜索
           </div>
           <div class="content">
-            <div class="item">三生三世十里桃花</div>
+            <div class="search-index-item">三生三世十里桃花</div>
             <% for(var i = 0; i < 4; i++) {%>
-              <div class="item">十里桃花</div>
+              <div class="search-index-item">十里桃花</div>
             <% } %>
           </div>
         </div>
         <div class="g-gameList">
-          <div class="title titleDisactive">
+          <div class="search-title titleDisactive">
             搜索历史
           </div>
           <div class="contentHistory">
