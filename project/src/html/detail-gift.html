@@ -2,20 +2,6 @@
 <html lang="zh-CN" data-rem="375">
 
 <head>
-  <!-- <meta charset="UTF-8">
-  <title>首页</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
-  <meta name="keywords" content="" />
-  <meta name="description" content="" />
-  <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta name="format-detection" content="telephone=no">
-  <meta name="apple-mobile-web-app-status-bar-style" content="black">
-  <meta content="telephone=no" name="format-detection" />
-  <meta content="email=no" name="format-detection" />
-  <meta http-equiv="Cache-Control" content="no-siteapp" />
-  <link rel="shortcut icon" href="/favicon.ico">
-  <% include common/iconfont.html %>
-    <link rel="stylesheet" type="text/css" href="../css/style-detail_gift.css" /> -->
   <% include common/head.html %>
   <title>礼包详情</title>
 </head>
@@ -38,27 +24,9 @@
 
       <!-- 游戏列表区域  -->
       <div class="g-gameList g-gameList-margin-top">
-          <div class="item">
-            <a href="#">
-              <div class="gameImg f-fl fifteen_radius">
-                <%- img(120, 120) %>
-              </div>
-              <div class="con f-fr">
-                <div class="content f-fl">
-                  <p>[保卫萝卜]新手礼包7</p>
-                  <div class="progress">
-                    <div class="progressBar">
-                      <div class="graph"><strong class="bar" style="width:50%;"></strong></div>
-                    </div>
-                    <span>剩余:</span>&nbsp;<span>50%</span>
-                </div>
-                </div>
-                <div class="item-handle f-fr">
-                  <a href="#" class="item-btn btn-start">领取</a>
-                </div>
-              </div>
-            </a>
-          </div>
+          <ul>
+            <% include common/gift-item.html %>
+          </ul>
       </div>
 
 
@@ -81,51 +49,9 @@
             游戏动态
           </div>
           <ul>
-            <% for(var i = 0; i < 2; i++) {%>
-                <li class="item">
-                  <a href="#">
-                    <div class="gameImg f-fl fifteen_radius">
-                      <%- img(120, 120) %>
-                    </div>
-                    <div class="con f-fr">
-                      <div class="content f-fl">
-                        <p>[保卫萝卜]新手礼包7</p>
-                        <div class="progress">
-                          <div class="progressBar">
-                            <div class="graph"><strong class="bar" style="width:50%;"></strong></div>
-                          </div>
-                          <span>剩余:</span>&nbsp;<span>50%</span>
-                      </div>
-                      </div>
-                      <div class="item-handle f-fr">
-                        <a href="#" class="item-btn btn-start">领取</a>
-                      </div>
-                    </div>
-                  </a>
-                </li>
-
+            <% for(var i = 0; i < 3; i++) {%>
+              <% include common/gift-item.html %>
             <% } %>
-            <li class="item">
-              <a href="#">
-                <div class="gameImg f-fl fifteen_radius">
-                  <%- img(120, 120) %>
-                </div>
-                <div class="con f-fr">
-                  <div class="content f-fl">
-                    <p>[保卫萝卜]新手礼包7</p>
-                    <div class="progress">
-                      <div class="progressBar">
-                        <div class="graph"><strong class="bar" style="width:50%;"></strong></div>
-                      </div>
-                      <span>剩余:</span>&nbsp;<span>50%</span>
-                  </div>
-                  </div>
-                  <div class="item-handle f-fr">
-                    <a href="#" class="item-btn btn-start btnDisactive">已领取</a>
-                  </div>
-                </div>
-              </a>
-            </li>
           </ul>
       </div>
     <!-- 游戏说明区域 end  -->
