@@ -34,7 +34,12 @@
     <span>玩家评论</span>
   </div>
   <div class="activityDetailComment-g-gameList">
-    <% include common/commentList.html %>
+    <ul class="commentList">
+      <% for(var i = 0; i < 10; i++) {%>
+        <% include common/commentList.html %>
+      <% } %>
+    </ul>
+
   </div>
 
   <% include common/m-gotop.html %>
