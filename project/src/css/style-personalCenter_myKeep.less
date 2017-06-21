@@ -11,13 +11,12 @@
 /* 引入 Less 依赖文件 */
 @import "mod-header";
 @import "mod-footer";
-@import "mod-news_item";
+@import "mod-game_item";
 
-@root:40rem;
 body {
   background-color: @style-bg;
 }
-.myKeepPaper-nav-bar {
+.myKeepGame-nav-bar {
   margin: 20/@root auto;
   width: 690 / @root;
   height: 68 / @root;
@@ -31,6 +30,7 @@ body {
     vertical-align: middle;
     font-size: 30 / @root;
     box-sizing: border-box;
+    // border-bottom: 3/@root solid red;
   }
   .nav-bar-paper {
     float: left;
@@ -40,7 +40,6 @@ body {
     vertical-align: middle;
     font-size: 30 / @root;
     box-sizing: border-box;
-    // border-bottom: 3/@root solid red;
   }
   .cur {
     position: relative;
@@ -51,5 +50,26 @@ body {
     display: inline-block;
     position: absolute;
     border-bottom: 4/@root solid @style-main;
+  }
+}
+
+.back-to-top {
+  width: 100%;
+  height: 102 /@root;
+  line-height: 102 /@root;
+  vertical-align: middle;
+  text-align: center;
+  a:link, a:visited, a:hover, a:active {
+    font-size: 22 / @root;
+    text-decoration: none;
+    color: @style-grey;
+  }
+}
+
+.g-gameList{
+  ul {
+    li:last-child {
+      border-bottom: none;
+    }
   }
 }
