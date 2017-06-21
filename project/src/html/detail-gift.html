@@ -68,7 +68,11 @@
 </body>
 <script type="text/javascript">
   $(function() {
+    var index = 0; //控制器
     $(window).scroll(function() {
+      if (index > 5) {
+        return false
+      };
       console.log("scroll");
       var $this = $(this),
         viewH = $(window).height(), //可见高度
@@ -103,6 +107,7 @@
             </li>`;
           html = html + html + html + html + html;
           $("#game-active-information").append(html);
+          index++;
         }
 
     })
