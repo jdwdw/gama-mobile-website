@@ -47,11 +47,13 @@ $(function(){
   //tab切换组件
   $("#j-tab_box .tab_title>li").click(function(){
     console.log("tab click");
-    console.log($(this).siblings("li"));
     var index=$(this).index();
     // $(this).addClass("cur").siblings("li").removeClass("cur");
     $(this).find("div").first().addClass("cur");
     $(this).siblings("li").find("div").removeClass("cur");
+    $(".tab_con>li").find("g-gameList ul").addClass("cur-ul");
+    $(".tab_con>li").hide().eq(index).find(".g-gameList ul").addClass("cur-ul")
+    $(".tab_con>li").hide().eq(index).siblings("li").find(".g-gameList ul").removeClass("cur-ul");
     $(".tab_con>li").hide().eq(index).show();
   })
 
