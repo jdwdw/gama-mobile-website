@@ -1,0 +1,135 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN" data-rem="375">
+
+<head>
+  <meta charset="UTF-8">
+  <title>首页</title>
+    <% include common/head.html %>
+</head>
+
+<body>
+  <!-- 引入公共头部  -->
+  <% include common/index_header.html %>
+    <div class="m-page">
+      <!-- 导航区域  -->
+      <div class="g-nav">
+        <ul class="g-nav_box">
+          <li><a href="#"><i class="icon icon-home"> </i><div class="name">首页</div></a></li>
+          <li><a href="#" class="cur"><i class="icon icon-online-game1"> </i><div class="name">网游</div></a></li>
+          <li><a href="#"><i class="icon icon-game"> </i><div class="name">单机</div></a></li>
+          <li><a href="#"><i class="icon icon-activity"> </i><div class="name">活动</div></a></li>
+          <li><a href="#"><i class="icon icon-news"> </i><div class="name">资讯</div></a></li>
+          <li><a href="#"><i class="icon icon-gift"> </i><div class="name">礼包</div></a></li>
+        </ul>
+      </div>
+      <!-- 导航区域 end  -->
+
+      <!-- 游戏二级导航区域  -->
+        <% include common/g-threeTapNav.html %>
+      <!-- 二级导航区域 end  -->
+
+      <!-- 游戏列表区域  -->
+      <ul class="tab_con index-game-gameList">
+        <li>
+          <div class="g-gameList">
+            <ul class="cur-ul">
+              <% for(var i = 0; i < 10; i++) {%>
+                <% include common/game-item.html %>
+                <% } %>
+            </ul>
+          </div>
+        </li>
+        <li style="display:none">
+          <div class="g-gameList">
+            <ul>
+              <% for(var i = 0; i < 6; i++) {%>
+                <% include common/game-item.html %>
+                <% } %>
+            </ul>
+          </div>
+        </li>
+        <li style="display:none">
+          <div class="g-gameClassifyTable">
+            <ul>
+              <% for(var i = 0; i < 17; i++) {%>
+                <li class="item">
+                  <a href="#">
+                    <i class="icon icon-tiyulei1 icon-green f-fl"></i>
+                    <div class="con f-fl">
+                      <div>
+                        <p>体育类</p>
+                        <span>共20款</span>
+                      </div>
+                    </div>
+                  </a>
+                </li>
+                <% } %>
+            </ul>
+          </div>
+        </li>
+      </ul>
+      <!-- 游戏列表区域 end  -->
+
+      <!-- 点击返回顶部 -->
+      <% include common/m-gotop.html %>
+
+    </div>
+
+    <!-- 引入公共地步 -->
+    <% include common/footer.html %>
+
+    <script type="text/javascript">
+      $(function() {
+        var index = 0; //控制器
+        $(window).scroll(function() {
+          if (index > 5) {
+            return false
+          };
+          console.log("scroll");
+          var $this = $(this),
+            viewH = $(window).height(), //可见高度
+            contentH = $("body").get(0).scrollHeight, //内容高度
+            scrollTop = $(window).scrollTop(); //滚动高度
+            if($(".g-gameClassifyTable")[0].parentNode.style.display!=="none"){
+              console.log("ssssss");
+              return;
+            }
+            if (scrollTop / (contentH - viewH) >= 0.95 ) { //到达底部100px时,加载新内容
+
+              // 这里加载数据.. 下边模拟数据加载
+              console.log("这里加载数据");
+              var html =
+                `<li class="game_item">
+                  <a href="#">
+                    <div class="gameImg f-fl fifteen_radius">
+                      <%- img(120, 120) %>
+                    </div>
+                    <div class="con f-fl">
+                      <div class="content f-fl">
+                        <p>保卫萝卜2</p>
+                        <div class="star">
+                          <% for(var index = 0; index < 4; index++) {%>
+                            <i class="icon iconActive icon-score1"></i>
+                          <% } %>
+                          <i class="icon icon-score1"></i>
+                        </div>
+                        <span class="margin-right30">策略类</span><span>人气:&nbsp;230116</span>
+                      </div>
+                    </div>
+                    <div class="item-handle f-fr">
+                      <a href="#" class="item-btn">开始</a>
+                    </div>
+                  </a>
+                </li>`;
+              html = html + html + html + html + html;
+              $(".g-gameList .cur-ul").append(html)
+              index++;
+            }
+
+        })
+      })
+    </script>
+
+</body>
+
+</html>
