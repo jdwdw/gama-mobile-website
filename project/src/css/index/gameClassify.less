@@ -22,6 +22,7 @@
       .icon{
         position: relative;
         top: 30/@root;
+        left:20/@root;
         width: 80/@root;
         height: 80/@root;
         font-size: 80/@root;
@@ -44,15 +45,16 @@
       .con{
         vertical-align: middle;
         line-height: 1.5em;
-        margin-left: 20/@root;
-        margin-top: 20/@root;
-        margin-bottom: 20/@root;
+        margin: 20/@root 0 20/@root 100/@root;
+        .gameClassifyTableContent{
+          margin-left: 20/@root;
+        }
         p{
           font-size: 30/@root;
           line-height: 28/@root;
           vertical-align: middle;
           color: @style-black;
-          margin-bottom: 20/@root;
+          margin-bottom: 10/@root;
         }
         span{
           font-size: 22/@root;
@@ -62,6 +64,13 @@
         }
 
       }
+
+    }
+    li:nth-child(odd){
+      float:left;
+    }
+    li:nth-child(even){
+      float:right;
     }
   }
 
