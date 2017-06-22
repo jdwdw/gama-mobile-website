@@ -1,16 +1,16 @@
 /* 引入库文件 */
-@import "./lib/lib-reset";
-@import "./lib/lib-mixins";
-@import "./lib/lib-base";
-@import "./lib/lib-ui";
+@import "../lib/lib-reset";
+@import "../lib/lib-mixins";
+@import "../lib/lib-base";
+@import "../lib/lib-ui";
 
 // 引入 REM 解决方案依赖
 // 调用示例 <html data-rem="375">
-@import "./lib/lib-rem";
+@import "../lib/lib-rem";
 
 /* 引入 Less 依赖文件 */
-@import "mod-header";
-@import "mod-footer";
+@import "../mod-header";
+@import "../mod-footer";
 
 @root:40rem;
 body {
@@ -85,6 +85,9 @@ body {
       }
     }
     .g-center-message-selector {
+      box-sizing: border-box;
+      padding-left: 30/@root;
+      width: 240/@root;
       position: absolute;
       left: 446 / @root;
       top: 51 / @root;
@@ -95,10 +98,28 @@ body {
       div {
         width: 240 / @root;
         height: 70 / @root;
-        text-align: center;
+        // text-align: center;
         line-height: 70 / @root;
         vertical-align: middle;
         font-size: 28 / @root;
+        position: relative;
+        // .radio {
+        //   display: inline-block;
+        //   position: relative;
+        //   width: 10/@root;
+        //   height: 10/@root;
+        //   border: 2/@root solid red;
+        //   border-radius: 50%;
+        //   top: 20/@root;
+        //   padding: 5/@root;
+        //   .radio-content {
+        //     width: 80%;
+        //     height: 80%;
+        //     display: inline-block;
+        //     background-color: black;
+        //     border-radius: 50%;
+        //   }
+        // }
       }
     }
   }

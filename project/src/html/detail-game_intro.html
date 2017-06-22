@@ -14,37 +14,17 @@
         <i class="icon icon-back"> </i>
       </a>
       <h1 class="title">保卫萝卜</h1>
-      <i class="icon icon-shoucang f-fr"></i>
+      <a href="#" class="f-fr">
+          <i class="icon icon-shoucang"></i>
+      </a>
     </header>
   </div>
 
-    <div class="m-page">
+    <div class="m-page detail-game-intro">
 
       <!-- 游戏列表区域  -->
-      <div class="g-gameList g-gameList-margin-top g-gameList-paddingTop-30">
-        <div class="gameItem">
-          <a href="#">
-            <div class="gameImg f-fl fifteen_radius">
-              <%- img(120, 120) %>
-            </div>
-            <div class="con f-fr">
-              <div class="content f-fl">
-                <p>保卫萝卜2</p>
-                <div class="star">
-                  <% for(var index = 0; index < 4; index++) {%>
-                    <i class="icon iconActive icon-score1"></i>
-                  <% } %>
-                  <i class="icon icon-score1"></i>
-                </div>
-                <span>策略类</span>&nbsp;&nbsp;&nbsp;&nbsp;<span>人气:&nbsp;230116</span>
-              </div>
-              <div class="item-handle f-fr">
-                <a href="#" class="item-btn btn-start">开始</a>
-              </div>
-            </div>
-          </a>
-        </div>
-
+      <div class="g-gameList g-gameList-margin-top" id="game-intro-startgame">
+        <% include common/game-item.html %>
       </div>
       <!-- 游戏列表区域 end  -->
       <div class="g-gameList game-picture">
@@ -65,16 +45,6 @@
       </div>
     <!-- banner1 end -->
 
-    <!-- 游戏二级导航区域  -->
-      <!-- <div class="g-gameList">
-        <div class="g-twoSubNav">
-          <ul class="g-twoTapSubNav_box nav-bar">
-            <li><a href="#" class="cur"><div class="name">简介</div></a></li>
-            <li><a href="#"><div class="name">评论</div></a></li>
-          </ul>
-        </div>
-      </div> -->
-    <!-- 游戏二级导航区域 end  -->
 
 
     <!-- 游戏说明区域  -->
@@ -86,32 +56,6 @@
               据阿桑德拉和弗拉恢复了哈罗德和法律的哈市妇联哈喽电话费拉黑立法会拉黑法拉赫莱佛哈喽电话费拉黑礼服
             </p>
       </div>
-    <!-- 游戏说明区域 end  -->
-
-    <!-- 游戏说明区域  -->
-      <!-- <div class="g-gameList g-gameList-border-bottom-line">
-          <div class="contenTitle titleDisactive">
-            游戏标签
-          </div>
-          <div class="content">
-            <div class="item">三生三世十里桃花</div>
-            <% for(var i = 0; i < 4; i++) {%>
-              <div class="item">十里桃花</div>
-            <% } %>
-          </div>
-      </div> -->
-    <!-- 游戏说明区域 end  -->
-
-
-    <!-- 游戏说明区域  -->
-      <!-- <div class="g-gameList g-gameList-border-bottom-line">
-          <div class="contenTitle titleDisactive">
-            游戏动态
-          </div>
-            <p class="contentTextCenter">
-              暂无游戏动态
-            </p>
-      </div> -->
     <!-- 游戏说明区域 end  -->
 
     <!-- 游戏说明区域  -->
@@ -143,23 +87,10 @@
       </div>
     <!-- 游戏说明区域 end  -->
     <!-- 游戏说明区域  -->
-      <div class="g-gameList">
+      <div class="g-gameList" id="detail-game_intro_gameList">
           <div class="contenTitle titleDisactive">
             最新专题
           </div>
-          <!-- <div class="g-swiper-wrapper g-gameList-margin-top">
-
-            <div class="m-swiper-wrapper">
-              <% for(var i = 0; i < 6; i++) {%>
-                <div class="m-swiper-slide">
-                  <a href="#">
-                    <%- img(420, 220) %>
-                  </a>
-                </div>
-                <% } %>
-
-            </div>
-          </div> -->
           <% include common/comment-box.html %>
           <ul class="commentList">
             <% for(var i = 0; i < 10; i++) {%>
@@ -195,5 +126,52 @@
           </script>
 
 </body>
+<script type="text/javascript">
+  $(function() {
+    var index = 0;
+    $(window).scroll(function() {
+      if (index > 5) {
+        return false
+      };
+      console.log("scroll");
+      var $this = $(this),
+        viewH = $(window).height(), //可见高度
+        contentH = $("body").get(0).scrollHeight, //内容高度
+        scrollTop = $(window).scrollTop(); //滚动高度
+        if (scrollTop / (contentH - viewH) >= 0.95 ) { //到达底部100px时,加载新内容
 
+          // 这里加载数据.. 下边模拟数据加载
+          console.log("这里加载数据");
+          var html =
+            `<li class="item">
+              <div class="item-box">
+                <span class="gameImg fifty_radius f-fl">
+                  <%- img(100, 100) %>
+                </span>
+                <span class="con">
+                  <div class="">
+                    <p class="commentAuthor">DEMO</p>
+                    <p class="commentContent">只要998，吕布貂蝉带回家-御天传奇良心福利攻略dddddddddd</p>
+                    <div class="other-comment">
+                      <div class="other-comment-item">
+                        <span class="other-comment-author">@Jack Spaluo：</span>
+                        <span class="ohter-comment-content">这游戏有毒哇</span>
+                      </div>
+                    </div>
+                    <div class="date-text">
+                      <span class="date">2017.4.22</span>
+                      <i class="icon icon-pinglun"></i>
+                    </div>
+                  </div>
+                </div>
+              </span>
+            </li>`;
+          html = html + html + html + html + html;
+          $(".commentList").append(html);
+          index++;
+        }
+
+    })
+  })
+</script>
 </html>

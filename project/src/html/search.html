@@ -1,0 +1,96 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN" data-rem="375">
+
+<head>
+  <meta charset="UTF-8">
+  <title>首页</title>
+    <% include common/head.html %>
+</head>
+
+<body>
+  <!-- 引入公共头部  -->
+  <% include common/search_header.html %>
+    <div class="m-page">
+
+      <!-- 游戏二级导航区域  -->
+        <% include common/g-threeTapNav.html %>
+      <!-- 二级导航区域 end  -->
+
+      <!-- 游戏列表区域  -->
+      <ul class="tab_con mod-search">
+        <li>
+          <div class="g-gameList">
+            <ul class="cur-ul">
+              <% for(var i = 0; i < 10; i++) {%>
+                <% include common/game-item.html %>
+                <% } %>
+            </ul>
+          </div>
+        </li>
+        <li style="display:none">
+          <div class="g-gameList">
+            <ul>
+              <% for(var i = 0; i < 6; i++) {%>
+                <% include common/gift-item.html %>
+                <% } %>
+            </ul>
+          </div>
+        </li>
+        <li style="display:none">
+          <div class="g-gameList">
+            <ul>
+              <% for(var i = 0; i < 6; i++) {%>
+                <% include common/news-item.html %>
+                <% } %>
+            </ul>
+          </div>
+        </li>
+      </ul>
+
+      <!-- 游戏列表区域 end  -->
+
+      <!-- 点击返回顶部 -->
+      <% include common/m-gotop.html %>
+    </div>
+
+    <!-- 引入公共地步 -->
+    <% include common/footer.html %>
+
+
+    <script type="text/javascript">
+      $(function() {
+        $(window).scroll(function() {
+          console.log("scroll");
+          var $this = $(this),
+            viewH = $(window).height(), //可见高度
+            contentH = $("body").get(0).scrollHeight, //内容高度
+            scrollTop = $(window).scrollTop(); //滚动高度
+            if (scrollTop / (contentH - viewH) >= 0.95 ) { //到达底部100px时,加载新内容
+
+              // 这里加载数据.. 下边模拟数据加载
+              console.log("这里加载数据");
+              var html =
+                `<li class="news-item">
+                <a href="#">
+                  <div class="gameImg f-fr">
+                    <%- img(160, 140) %>
+                  </div>
+                  <div class="con f-fl">
+                    <div class="f-fl">
+                      <p>只要998，吕布貂蝉带回家-《御天传奇》良心福利攻略&nbsp;&nbsp;<span class="strategyFlag">攻略</span></p>
+                      <span class="date">2017.4.22</span>
+                    </div>
+                  </div>
+                </a>
+              </li>`;
+              html = html + html + html + html + html;
+              $(".g-gameList .cur-ul").append(html)
+            }
+
+        })
+      })
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,93 @@
+/**
+ * @name: tmt-workflow example
+ * @description: Examples for tmt-workflow
+ * @author: weixin
+ */
+
+/* 引入库文件 */
+@import "../lib/lib-reset";
+@import "../lib/lib-mixins";
+@import "../lib/lib-base";
+@import "../lib/lib-ui";
+
+// 引入 REM 解决方案依赖
+// 调用示例 <html data-rem="375">
+@import "../lib/lib-rem";
+
+/* 引入 Less 依赖文件 */
+@import "../mod-header";
+@import "../mod-detail_nav";
+@import "../mod-footer";
+
+@style-yellow:#ffbb59;
+@style-green:#0cd29c;
+.g-gameList{
+
+    .contenTitle{
+      font-size: 30/@root;
+      line-height: 32/@root;
+      vertical-align: middle;
+      padding-left: 10/@root;
+
+    }
+    .titleActive{
+      border-left:3px solid @style-green;
+    }
+    .titleDisactive{
+      border-left:3px solid #e22127;
+    }
+    .contentText{
+      padding: 30/@root 30/@root;
+      font-size: 26/@root;
+      line-height: 44/@root;
+      vertical-align: middle;
+      color: @style-black;
+    }
+
+    .contentTextCenter{
+      padding: 0 30/@root;
+      font-size: 24/@root;
+      line-height: 44/@root;
+      vertical-align: middle;
+      text-align: center;
+      color: @style-brc;
+      margin-top: 30/@root;
+    }
+
+    .content{
+      overflow: hidden;
+      .item{
+        margin-left: 30/@root;
+        float: left;
+        padding: 0 0.5rem;
+        box-sizing: border-box;
+        margin-top: 30/@root;
+        position: relative;
+        border: 1px solid @style-itmeBorder;
+        color: @style-brc;
+        font-size: 26/@root;
+        line-height: 46/@root;
+        vertical-align: middle;
+      }
+    }
+
+}
+
+
+.g-gameList-margin-top{
+  margin-top:30/@root;
+}
+#game-active-information {
+  li:last-child {
+      border-bottom: none;
+  }
+}
+.g-gameList-border-bottom-line{
+  border-bottom: 1px solid @style-itmeBorder;
+}
+.detail-gift .g-gameList:first-child {
+  padding-top: 0;
+  .gift-item {
+    border-bottom: none;
+  }
+}

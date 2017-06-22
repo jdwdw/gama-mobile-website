@@ -1,0 +1,30 @@
+/* 引入库文件 */
+@import "../lib/lib-reset";
+@import "../lib/lib-mixins";
+@import "../lib/lib-base";
+@import "../lib/lib-ui";
+
+// 引入 REM 解决方案依赖
+// 调用示例 <html data-rem="375">
+@import "../lib/lib-rem";
+
+/* 引入 Less 依赖文件 */
+@import "../mod-header";
+@import "../mod-footer";
+@import "../mod-game_item";
+
+body {
+  background-color: @style-bg;
+}
+.my_keep_list {
+  margin-top: 30/@root;
+}
+
+.personal_gameList:first-child {
+  padding-top: 0;
+  ul {
+    li:last-child {
+      border-bottom: none;
+    }
+  }
+}
