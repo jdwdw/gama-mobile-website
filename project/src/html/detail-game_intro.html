@@ -14,37 +14,17 @@
         <i class="icon icon-back"> </i>
       </a>
       <h1 class="title">保卫萝卜</h1>
-      <i class="icon icon-shoucang f-fr"></i>
+      <a href="#" class="f-fr">
+          <i class="icon icon-shoucang"></i>
+      </a>
     </header>
   </div>
 
     <div class="m-page detail-game-intro">
 
       <!-- 游戏列表区域  -->
-      <div class="g-gameList g-gameList-margin-top g-gameList-paddingTop-30">
-        <div class="gameItem">
-          <a href="#">
-            <div class="gameImg f-fl fifteen_radius">
-              <%- img(120, 120) %>
-            </div>
-            <div class="con f-fr">
-              <div class="content f-fl">
-                <p>保卫萝卜2</p>
-                <div class="star">
-                  <% for(var index = 0; index < 4; index++) {%>
-                    <i class="icon iconActive icon-score1"></i>
-                  <% } %>
-                  <i class="icon icon-score1"></i>
-                </div>
-                <span>策略类</span>&nbsp;&nbsp;&nbsp;&nbsp;<span>人气:&nbsp;230116</span>
-              </div>
-              <div class="item-handle f-fr">
-                <a href="#" class="item-btn btn-start">开始</a>
-              </div>
-            </div>
-          </a>
-        </div>
-
+      <div class="g-gameList g-gameList-margin-top" id="game-intro-startgame">
+        <% include common/game-item.html %>
       </div>
       <!-- 游戏列表区域 end  -->
       <div class="g-gameList game-picture">
