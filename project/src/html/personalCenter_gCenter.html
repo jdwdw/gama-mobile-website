@@ -24,16 +24,19 @@
       </span>
       <div class="g-center-message-selector">
         <div class="show-all">
-          <input type="radio"  name="" value="">
-          <label for="">查看全部</label>
+          <!-- <span class="radio">
+            <span class="radio-content"></span>
+          </span> -->
+          <input type="radio" id="showAll"  name="selector" value="">
+          <label for="showAll">查看全部</label>
         </div>
         <div class="show-recharge">
-          <input type="radio"  name="" value="">
-          <label for="">只看充值</label>
+          <input type="radio" id="showRecharge"  name="selector" value="">
+          <label for="showRecharge">只看充值</label>
         </div>
         <div class="show-consume">
-          <input type="radio"  name="" value="">
-          <label for="">只看消费</label>
+          <input type="radio" id="showConsume" name="selector" value="">
+          <label for="showConsume">只看消费</label>
         </div>
       </div>
     </div>
@@ -88,7 +91,9 @@
     selector.style.display = 'none';
     showAll.style.color = "black"
     showRecharge.style.color = "black"
+
     showConsume.style.color = "black"
+
     this.style.color = "#E22127";
   }
   showRecharge.onclick = function () {
@@ -100,8 +105,10 @@
     }
     selector.style.display = 'none';
     showAll.style.color = "black"
+
     showRecharge.style.color = "black"
     showConsume.style.color = "black"
+
     this.style.color = "#E22127";
   }
   showConsume.onclick = function () {
@@ -113,7 +120,9 @@
     }
     selector.style.display = 'none';
     showAll.style.color = "black"
+
     showRecharge.style.color = "black"
+
     showConsume.style.color = "black"
     this.style.color = "#E22127";
   }

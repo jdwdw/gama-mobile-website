@@ -85,13 +85,16 @@ body {
       }
     }
     .g-center-message-selector {
+      box-sizing: border-box;
+      padding-left: 30/@root;
+      width: 240/@root;
       position: absolute;
       left: 446 / @root;
       top: 51 / @root;
       background-color: @style-default;
       z-index: 99;
       box-shadow: 0 0 5/@root @style-grey;
-      display: none;
+      // display: none;
       div {
         width: 240 / @root;
         height: 70 / @root;
@@ -99,6 +102,24 @@ body {
         line-height: 70 / @root;
         vertical-align: middle;
         font-size: 28 / @root;
+        position: relative;
+        // .radio {
+        //   display: inline-block;
+        //   position: relative;
+        //   width: 10/@root;
+        //   height: 10/@root;
+        //   border: 2/@root solid red;
+        //   border-radius: 50%;
+        //   top: 20/@root;
+        //   padding: 5/@root;
+        //   .radio-content {
+        //     width: 80%;
+        //     height: 80%;
+        //     display: inline-block;
+        //     background-color: black;
+        //     border-radius: 50%;
+        //   }
+        // }
       }
     }
   }
