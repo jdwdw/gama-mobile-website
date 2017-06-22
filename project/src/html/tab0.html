@@ -1,0 +1,62 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN" data-rem="375">
+
+<head>
+  <meta charset="UTF-8">
+  <title>tab页面的使用用法</title>
+  <% include common/head.html %>
+    <style media="screen">
+      .list {
+        overflow: hidden;
+        padding: 0 0.25rem;
+      }
+
+      .list li {
+        width: 50%;
+        float: left;
+        height: 5rem;
+        padding: 0.5rem;
+        box-sizing: border-box;
+      }
+
+      .list li div {
+        background-color: #ccc;
+        width: 100%;
+        height: 100%;
+      }
+    </style>
+</head>
+
+<body>
+  <!-- 引入公共头部  -->
+  <% include common/header.html  %>
+    <div class="main">
+      <ul class="list">
+        <li>
+          <div></div>
+        </li>
+        <li>
+          <div></div>
+        </li>
+        <li>
+          <div></div>
+        </li>
+        <li>
+          <div></div>
+        </li>
+        <li>
+          <div></div>
+        </li>
+        <li>
+          <div></div>
+        </li>
+      </ul>
+      <div>
+
+
+        <!-- 引入公共地步 -->
+        <% include common/footer.html %>
+
+</body>
+
+</html>
