@@ -24,19 +24,13 @@
       </span>
       <div class="g-center-message-selector">
         <div class="show-all">
-          <!-- <span class="radio">
-            <span class="radio-content"></span>
-          </span> -->
-          <input type="radio" id="showAll"  name="selector" value="">
-          <label for="showAll">查看全部</label>
+          <i class="icon icon-xuanxiang"></i>查看全部
         </div>
         <div class="show-recharge">
-          <input type="radio" id="showRecharge"  name="selector" value="">
-          <label for="showRecharge">只看充值</label>
+          <i class="icon icon-xuanxiang"></i>只看充值
         </div>
         <div class="show-consume">
-          <input type="radio" id="showConsume" name="selector" value="">
-          <label for="showConsume">只看消费</label>
+          <i class="icon icon-xuanxiang"></i>只看消费
         </div>
       </div>
     </div>
@@ -80,6 +74,9 @@
   const showAll = document.querySelector(".show-all");
   const showRecharge = document.querySelector(".show-recharge");
   const showConsume = document.querySelector(".show-consume");
+  const showAllIcon = document.querySelector(".show-all .icon");
+  const showRechargeIcon = document.querySelector(".show-recharge .icon");
+  const showConsumeIcon = document.querySelector(".show-consume .icon");
   console.log(arrow);
   arrow.onclick = function () {
     selector.style.display = 'block';
@@ -89,12 +86,23 @@
       message[i].style.display = "block";
     }
     selector.style.display = 'none';
+    //
     showAll.style.color = "black"
+    showAllIcon.classList.add("icon-xuanxiang_pre");
+    showAllIcon.classList.remove("icon-xuanxiang");
+    //
     showRecharge.style.color = "black"
-
+    showRecharge.classList.remove("current-select");
+    showRechargeIcon.classList.remove("icon-xuanxiang_pre");
+    showRechargeIcon.classList.add("icon-xuanxiang");
+    //
     showConsume.style.color = "black"
-
+    showConsume.classList.remove("current-select");
+    showConsumeIcon.classList.remove("icon-xuanxiang_pre");
+    showConsumeIcon.classList.add("icon-xuanxiang");
+    //
     this.style.color = "#E22127";
+    this.classList.add("current-select");
   }
   showRecharge.onclick = function () {
     for (let i = 0; i < message.length; i++) {
@@ -104,12 +112,23 @@
       recharge[i].style.display = "block";
     }
     selector.style.display = 'none';
+    //
     showAll.style.color = "black"
-
+    showAll.classList.remove("current-select");
+    showAllIcon.classList.remove("icon-xuanxiang_pre");
+    showAllIcon.classList.add("icon-xuanxiang");
+    //
     showRecharge.style.color = "black"
+    showRechargeIcon.classList.add("icon-xuanxiang_pre");
+    showRechargeIcon.classList.remove("icon-xuanxiang");
+    //
     showConsume.style.color = "black"
-
+    showConsume.classList.remove("current-select");
+    showConsumeIcon.classList.remove("icon-xuanxiang_pre");
+    showConsumeIcon.classList.add("icon-xuanxiang");
+    //
     this.style.color = "#E22127";
+    this.classList.add("current-select");
   }
   showConsume.onclick = function () {
     for (let i = 0; i < message.length; i++) {
@@ -119,12 +138,23 @@
       consume[i].style.display = "block";
     }
     selector.style.display = 'none';
+    //
     showAll.style.color = "black"
-
+    showAll.classList.remove("current-select");
+    showAllIcon.classList.remove("icon-xuanxiang_pre");
+    showAllIcon.classList.add("icon-xuanxiang");
+    //
     showRecharge.style.color = "black"
-
+    showRecharge.classList.remove("current-select");
+    showRechargeIcon.classList.remove("icon-xuanxiang_pre");
+    showRechargeIcon.classList.add("icon-xuanxiang");
+    //
     showConsume.style.color = "black"
+    //
     this.style.color = "#E22127";
+    this.classList.add("current-select");
+    showConsumeIcon.classList.add("icon-xuanxiang_pre");
+    showConsumeIcon.classList.remove("icon-xuanxiang");
   }
 
 </script>
