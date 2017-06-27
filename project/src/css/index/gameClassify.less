@@ -6,45 +6,25 @@
 
 /* 引入库文件 */
 
-@style-yellow:#f6cf1b;
-@style-green:#15e0c1;
-@style-blue:#18aaf5;
-@style-orange:#f9822b;
-@style-red:#fa5864;
-@style-bluishViolet:#5490fd;
 .g-gameClassifyTable{
   padding:10/@root 10/@root ; background: @style-default; width: 100%; box-sizing: border-box; margin-top:30/@root; overflow: hidden;
   border-bottom: 1px solid @style-itmeBorder;
   ul{
     overflow: hidden;
     li{
-      height: 140/@root;width: 50%; float: left; box-sizing: border-box; position: relative;padding: 20/@root;
+      height: 160/@root;width: 50%; float: left; box-sizing: border-box; position: relative;padding: 20/@root;
       .gameClassifyContent{
         border: 1px solid @style-itmeBorder;
         height: 100%;
       }
-      .icon{
-        position: relative;
-        top: 30/@root;
-        left:20/@root;
+      .gameImg{
+        display: inline-block;
         width: 80/@root;
         height: 80/@root;
-        font-size: 80/@root;
-      }
-      .icon-green{
-        color: @style-green;
-      }
-      .icon-yellow{
-        color: @style-yellow;
-      }
-      .icon-blue{
-        color: @style-blue;
-      }
-      .icon-orange{
-        color:@style-orange;
-      }
-      .icon-bluishViolet{
-        color: @style-bluishViolet;
+        margin: 20/@root;
+          img{
+            width: 100%;
+          }
       }
       .con{
         vertical-align: middle;
@@ -55,18 +35,10 @@
         }
         p{
           font-size: 30/@root;
-          line-height: 28/@root;
+          line-height: 80/@root;
           vertical-align: middle;
           color: @style-black;
-          margin-bottom: 10/@root;
         }
-        span{
-          font-size: 22/@root;
-          line-height: 20/@root;
-          vertical-align: middle;
-          color: @style-brc;
-        }
-
       }
 
     }

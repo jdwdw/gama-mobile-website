@@ -185,7 +185,7 @@
 
         <div class="g-swiper-wrapper">
 
-          <div class="m-swiper-wrapper">
+          <div class="m-swiper-wrapper" id="j-zhuanti">
             <% for(var i = 0; i < 6; i++) {%>
               <div class="m-swiper-slide">
                 <a href="#">
@@ -213,10 +213,18 @@
 
       <script src="https://cdn.bootcss.com/Swiper/3.4.2/js/swiper.jquery.min.js"></script>
       <script>
-        var swiper = new Swiper('.swiper-container1', {
-          pagination: '.swiper-pagination1',
-          paginationClickable: true
-        });
+        $(function() {
+          var swiper = new Swiper('.swiper-container1', {
+            pagination: '.swiper-pagination1',
+            paginationClickable: true
+          });
+
+          var num = $("#j-zhuanti .m-swiper-slide").length;
+          var width = $("#j-zhuanti .m-swiper-slide").outerWidth(true);
+
+          $("#j-zhuanti").width(width * num)
+
+        })
       </script>
 </body>
 
