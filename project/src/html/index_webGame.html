@@ -33,7 +33,7 @@
         <li>
           <div class="g-gameList">
             <ul class="cur-ul">
-              <% for(var i = 0; i < 10; i++) {%>
+              <% for(var i = 0; i < 5; i++) {%>
                 <% include common/game-item.html %>
                 <% } %>
             </ul>
@@ -55,11 +55,12 @@
                 <li class="item f-fl">
                   <div class="gameClassifyContent">
                     <a href="#">
-                      <i class="icon icon-tiyulei1 icon-green f-fl"></i>
+                      <div class="gameImg f-fl">
+                        <%- img(80, 80) %>
+                      </div>
                       <div class="con">
                         <div class="gameClassifyTableContent">
                           <p>体育类</p>
-                          <span>共20款</span>
                         </div>
                       </div>
                     </a>
