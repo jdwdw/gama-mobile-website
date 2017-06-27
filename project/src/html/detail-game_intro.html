@@ -31,7 +31,7 @@
       <!-- banner1 -->
         <div class="g-swiper-wrapper">
 
-          <div class="m-swiper-wrapper">
+          <div class="m-swiper-wrapper" id="detail-game_intro_swiper">
             <% for(var i = 0; i < 6; i++) {%>
               <div class="m-swiper-slide">
                 <a href="#">
@@ -237,6 +237,11 @@ function showCommentOthers(event) {
         }
 
     })
+
+    var num = $("#detail-game_intro_swiper .m-swiper-slide").length;
+    var width = $("#detail-game_intro_swiper .m-swiper-slide").outerWidth(true);
+
+    $("#detail-game_intro_swiper").width(width * num)
   })
 </script>
 </html>
