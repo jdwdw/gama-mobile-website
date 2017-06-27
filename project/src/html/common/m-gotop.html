@@ -3,7 +3,7 @@
 </div>
 <script type="text/javascript">
   $(function() {
-    $(".m-gotop").click(function() {
+    document.querySelector(".m-gotop").addEventListener('touchend',function() {
       var speed = 200; //滑动的速度
       $('body,html').animate({
         scrollTop: 0

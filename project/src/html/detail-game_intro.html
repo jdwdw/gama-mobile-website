@@ -91,7 +91,7 @@
           <div class="contenTitle titleDisactive">
             最新专题
           </div>
-          <% include common/comment-box.html %>
+          <% include common/commentBoxNoStar.html %>
           <ul class="commentList">
             <% for(var i = 0; i < 10; i++) {%>
               <% include common/commentList.html %>
@@ -127,8 +127,65 @@
 
 </body>
 <script type="text/javascript">
+const commentButtons = document.querySelectorAll('.icon-pinglun');
+// 兼容ios
+for (let commentButtonsIndex = 0; commentButtonsIndex < commentButtons.length; commentButtonsIndex++) {
+  commentButtons[commentButtonsIndex].addEventListener('touchend',showCommentOthers);
+}
+function showCommentOthers(event) {
+  // 获取当前点击的ul
+  const AncestorList = event.target.parentNode.parentNode.parentNode.parentNode.parentNode;
+  AncestorList.classList.add('comment-current');
+  //获取节点
+  const CurrentCommentOthersArea = document.querySelector('.comment-current .comment-other-textarea');
+  const CurrentInput = document.querySelector('.comment-current .comment-other-textarea textarea');
+  const CurrentButton = document.querySelector('.comment-current .comment-other-textarea button');
+  const responseToPerson = document.querySelector('.comment-current .commentAuthor').innerHTML;
+  // 改变部分样式并展示出来。
+  CurrentInput.value = `回复${responseToPerson}：`;
+  console.log(CurrentInput);
+  CurrentInput.focus();
+  CurrentInput.click();
+  function ButtonEvent(event) {
+    //重置类名和样式。
+    CurrentInput.value = '';
+    CurrentCommentOthersArea.style.display = 'none';
+    AncestorList.classList.remove('comment-current');
+    const hasPadding = document.querySelector('.padding-division');
+    // 提交的时候移除监听。
+    CurrentButton.removeEventListener('touchend', ButtonEvent);
+    window.removeEventListener('touchend', hideCommentOthers);
+  }
+  // 对butto进行监听。
+  CurrentButton.addEventListener('touchend',ButtonEvent);
+  // 显示评论区域。
+  CurrentCommentOthersArea.style.display = 'block';
+  // 这个函数用于，点击屏幕其他部分的时候，将评论取隐藏。
+  function hideCommentOthers(event) {
+    const target = event.target;
+    // 确认点击的对象是什么
+    if(event.target !== CurrentInput && event.target !== CurrentButton) {
+      console.log('remove');
+      // 重置类名和样式。
+      CurrentInput.value = '';
+      CurrentCommentOthersArea.style.display = 'none';
+      AncestorList.classList.remove('comment-current');
+      // 移除监听。
+      CurrentButton.removeEventListener('touchend', ButtonEvent);
+      window.removeEventListener('touchend', hideCommentOthers);
+
+    }
+  }
+  // 异步加入监听，监听window对象，如果点击的不是评论框或者button则移除dom节点，并移除
+  // 监听。
+  setTimeout(function () {
+    console.log('add');
+    // useCapture设置为ture，否则会冒泡截断执行事件，导致window事件后后触发，会消除样式。
+    window.addEventListener('touchend', hideCommentOthers,true);
+  })
+}
   $(function() {
-    var index = 0;
+    var index = 0; //控制器
     $(window).scroll(function() {
       if (index > 5) {
         return false
@@ -160,14 +217,22 @@
                     </div>
                     <div class="date-text">
                       <span class="date">2017.4.22</span>
-                      <i class="icon icon-pinglun"></i>
+                      <i class="icon icon-pinglun" onclick="showCommentOthers(event)"></i>
                     </div>
                   </div>
-                </div>
-              </span>
+                </span>
+              </div>
+              <div class="comment-other-textarea">
+                <textarea name="name" ></textarea>
+                <button type="button" name="confirm">提交</button>
+              </div>
             </li>`;
           html = html + html + html + html + html;
           $(".commentList").append(html);
+          const commentButtons = document.querySelectorAll('.icon-pinglun');
+          for (let commentButtonsIndex = 0; commentButtonsIndex < commentButtons.length; commentButtonsIndex++) {
+            commentButtons[commentButtonsIndex].addEventListener('touchend',showCommentOthers);
+          }
           index++;
         }
 

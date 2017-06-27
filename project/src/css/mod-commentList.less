@@ -1,5 +1,10 @@
 ul.commentList{
   overflow: hidden;
+  .padding-division {
+    height: 103/@root;
+    width: 100%;
+    background-color: @style-default;
+  }
   li{
     width: 100%;
     padding: 30/@root 0;
@@ -67,6 +72,7 @@ ul.commentList{
         .other-comment-item {
           margin-bottom: 20/@root;
           font-size: @font-size-listText;
+          line-height: 1.15rem;
           .other-comment-author {
             color: @style-commentAuthor;
           }
@@ -76,6 +82,45 @@ ul.commentList{
         }
       }
     }
+    .comment-other-textarea {
+      display: none;
+      width: 100%;
+      // position: absolute;
+      height: 83/@root;
+      line-height: 83/@root;
+      box-sizing: border-box;
+      padding-top: 20/@root;
+      // z-index: 99;
+      // top: 100%;
+      text-align: right;
+      vertical-align: middle;
+      textarea {
+        float: left;
+        display: inline-block;
+        box-sizing: border-box;
+        padding: 20/@root;
+        .rounded(10/@root);
+        width: 570/@root;
+        height: 100%;
+        background-color:@style-bg;
+        font-size: @font-textarea;
+        color: @style-grey;
+        overflow-y:hidden;
+        z-index: 99;
+      }
+      button {
+        float: right;
+        display: inline-block;
+        width: 100 / @root;
+        height: 48 / @root;
+        margin-top: 10/@root;
+        background-color: @style-active;
+        color: @style-default;
+        border: none;
+        .rounded(3/@root);
+      }
+    }
+
   }
   li:last-child {
     margin-bottom: 0;
