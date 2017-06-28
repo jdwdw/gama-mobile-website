@@ -57,11 +57,6 @@
 
 </body>
 <script type="text/javascript">
-const commentButtons = document.querySelectorAll('.icon-pinglun');
-// 兼容ios
-for (let commentButtonsIndex = 0; commentButtonsIndex < commentButtons.length; commentButtonsIndex++) {
-  commentButtons[commentButtonsIndex].addEventListener('touchend',showCommentOthers);
-}
 function showCommentOthers(event) {
   // 获取当前点击的ul
   const AncestorList = event.target.parentNode.parentNode.parentNode.parentNode.parentNode;
@@ -73,9 +68,6 @@ function showCommentOthers(event) {
   const responseToPerson = document.querySelector('.comment-current .commentAuthor').innerHTML;
   // 改变部分样式并展示出来。
   CurrentInput.value = `回复${responseToPerson}：`;
-  console.log(CurrentInput);
-  CurrentInput.focus();
-  CurrentInput.click();
   function ButtonEvent(event) {
     //重置类名和样式。
     CurrentInput.value = '';
@@ -95,7 +87,7 @@ function showCommentOthers(event) {
     const target = event.target;
     // 确认点击的对象是什么
     if(event.target !== CurrentInput && event.target !== CurrentButton) {
-      console.log('remove');
+      // console.log('remove');
       // 重置类名和样式。
       CurrentInput.value = '';
       CurrentCommentOthersArea.style.display = 'none';
@@ -109,7 +101,7 @@ function showCommentOthers(event) {
   // 异步加入监听，监听window对象，如果点击的不是评论框或者button则移除dom节点，并移除
   // 监听。
   setTimeout(function () {
-    console.log('add');
+    // console.log('add');
     // useCapture设置为ture，否则会冒泡截断执行事件，导致window事件后后触发，会消除样式。
     window.addEventListener('touchend', hideCommentOthers,true);
   })
@@ -159,10 +151,6 @@ function showCommentOthers(event) {
             </li>`;
           html = html + html + html + html + html;
           $(".commentList").append(html);
-          const commentButtons = document.querySelectorAll('.icon-pinglun');
-          for (let commentButtonsIndex = 0; commentButtonsIndex < commentButtons.length; commentButtonsIndex++) {
-            commentButtons[commentButtonsIndex].addEventListener('touchend',showCommentOthers);
-          }
           index++;
         }
 
