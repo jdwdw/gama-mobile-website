@@ -11,28 +11,22 @@ $(function() {
         // 这里加载数据.. 下边模拟数据加载
         console.log("这里加载数据");
         var html =
-          `<li class="game_item">
-            <a href="#">
-              <div class="gameImg f-fl fifteen_radius">
-                <img src="http://temp.im/120x120" class="">
-              </div>
+          `<li class="collect_item">
+              <a href="#">
+                <div class="gameImg f-fl fifteen_radius">
+                  <img src="http://temp.im/120x120" class="">
+                </div>
+              </a>
               <div class="con f-fl">
                 <div class="content f-fl">
-                  <p>保卫萝卜2</p>
-                  <div class="star">
-                    <i class="icon icon-score1"></i>
-                    <i class="icon icon-score1"></i>
-                    <i class="icon icon-score1"></i>
-                    <i class="icon icon-score1"></i>
-                    <i class="icon icon-score1"></i>
-                  </div>
-                  <span class="margin-right30">策略类</span><span>人气:&nbsp;230116</span>
+                  <p class="name">保卫萝卜2</p>
+                  <p class="amount">9999999999fsdfsdfsdfsdfsdfsdfsdfsdfsdfffffefasefasfasefesafaesfe</p>
+                  <!-- <input  value="232323232323232" class="hiddeninput" /> -->
                 </div>
               </div>
               <div class="item-handle f-fr">
-                <a href="#" class="item-btn">开始</a>
+                <div class="item-btn" >复制</div>
               </div>
-            </a>
           </li>`;
         html = html + html + html + html + html;
         $(".g-gameList ul").append(html)
