@@ -17,7 +17,7 @@
 		"includeHtml": true
 	},
 	"livereload": {
-		"available": true,
+		"available": false,
 		//开启自动刷新
 		"port": 8080,
 		"startPath": "html/TmTIndex.html"
