@@ -3,7 +3,7 @@
 
 <head>
   <% include common/head.html %>
-  <title>首页</title>
+    <title>首页</title>
 </head>
 
 <body>
@@ -20,95 +20,92 @@
     </header>
   </div>
 
-    <div class="m-page detail-game-intro">
+  <div class="m-page detail-game-intro">
 
-      <!-- 游戏列表区域  -->
-      <div class="g-gameList g-gameList-margin-top" id="game-intro-startgame">
-        <% include common/game-item.html %>
-      </div>
-      <!-- 游戏列表区域 end  -->
-      <div class="g-gameList game-picture">
+    <!-- 游戏列表区域  -->
+    <div class="g-gameList g-gameList-margin-top" id="game-intro-startgame">
+      <% include common/game-item.html %>
+    </div>
+    <!-- 游戏列表区域 end  -->
+    <div class="g-gameList game-picture">
       <!-- banner1 -->
-        <div class="g-swiper-wrapper">
+      <div class="g-swiper-wrapper">
 
-          <div class="m-swiper-wrapper" id="detail-game_intro_swiper">
-            <% for(var i = 0; i < 6; i++) {%>
-              <div class="m-swiper-slide">
-                <a href="#">
-                  <%- img(308, 516) %>
-                </a>
-              </div>
-              <% } %>
+        <div class="m-swiper-wrapper" id="detail-game_intro_swiper">
+          <% for(var i = 0; i < 6; i++) {%>
+            <div class="m-swiper-slide">
+              <a href="#">
+                <%- img(308, 516) %>
+              </a>
+            </div>
+            <% } %>
 
-          </div>
         </div>
       </div>
+    </div>
     <!-- banner1 end -->
 
-
-
     <!-- 游戏说明区域  -->
-      <div class="g-gameList g-gameList-border-bottom-line detail-game-introduction">
-          <div class="contenTitle titleDisactive">
-            游戏说明
-          </div>
-            <p class="contentText" id="game-detail-content">
-              据阿桑德拉和弗拉恢复了哈罗德和法律的哈市妇联哈喽电话费拉黑立法会拉黑法拉赫莱佛哈喽电话费拉黑礼服
-            </p>
+    <div class="g-gameList g-gameList-border-bottom-line detail-game-introduction">
+      <div class="contenTitle titleDisactive">
+        游戏说明
       </div>
-    <!-- 游戏说明区域 end  -->
-
-    <!-- 游戏说明区域  -->
-      <div class="g-gameList g-gameList-border-bottom-line">
-          <div class="contenTitle titleDisactive">
-            游戏攻略
-          </div>
-          <div class="strategy-item">
-            <a href="#">
-              <div class="gameImg f-fr">
-                <%- img(160, 140) %>
-              </div>
-              <div class="con f-fl">
-                <div class="f-fl">
-                  <p>只要998，吕布貂蝉带回家-《御天传奇》良心福利攻略&nbsp;&nbsp;<span class="strategyFlag">攻略</span></p>
-                  <span class="date">2017.4.22</span>
-                </div>
-              </div>
-            </a>
-          </div>
-      </div>
-    <!-- 游戏说明区域 end  -->
-    <!-- 游戏说明区域  -->
-      <div class="g-gameList g-gameList-border-bottom-line">
-          <div class="contenTitle titleDisactive">
-            相关游戏
-          </div>
-          <% include common/relateGame-item.html %>
-      </div>
-    <!-- 游戏说明区域 end  -->
-    <!-- 游戏说明区域  -->
-      <div class="g-gameList" id="detail-game_intro_gameList">
-          <div class="contenTitle titleDisactive">
-            最新专题
-          </div>
-          <% include common/commentBoxNoStar.html %>
-          <ul class="commentList">
-            <% for(var i = 0; i < 10; i++) {%>
-              <% include common/commentList.html %>
-            <% } %>
-          </ul>
-      </div>
-    <!-- 游戏说明区域 end  -->
+      <p class="contentText" id="game-detail-content">
+        据阿桑德拉和弗拉恢复了哈罗德和法律的哈市妇联哈喽电话费拉黑立法会拉黑法拉赫莱佛哈喽电话费拉黑礼服
+      </p>
     </div>
+    <!-- 游戏说明区域 end  -->
 
-    <!-- 点击返回顶部 -->
-    <% include common/m-gotop.html %>
+    <!-- 游戏说明区域  -->
+    <div class="g-gameList g-gameList-border-bottom-line">
+      <div class="contenTitle titleDisactive">
+        游戏攻略
+      </div>
+      <div class="strategy-item">
+        <a href="#">
+          <div class="gameImg f-fr">
+            <%- img(160, 140) %>
+          </div>
+          <div class="con f-fl">
+            <div class="f-fl">
+              <p>只要998，吕布貂蝉带回家-《御天传奇》良心福利攻略&nbsp;&nbsp;<span class="strategyFlag">攻略</span></p>
+              <span class="date">2017.4.22</span>
+            </div>
+          </div>
+        </a>
+      </div>
+    </div>
+    <!-- 游戏说明区域 end  -->
+    <!-- 游戏说明区域  -->
+    <div class="g-gameList g-gameList-border-bottom-line">
+      <div class="contenTitle titleDisactive">
+        相关游戏
+      </div>
+      <% include common/relateGame-item.html %>
+    </div>
+    <!-- 游戏说明区域 end  -->
+    <!-- 游戏说明区域  -->
+    <div class="g-gameList" id="detail-game_intro_gameList">
+      <div class="contenTitle titleDisactive">
+        最新专题
+      </div>
+      <% include common/commentBoxNoStar.html %>
+        <ul class="commentList">
+          <% for(var i = 0; i < 10; i++) {%>
+            <% include common/commentList.html %>
+              <% } %>
+        </ul>
+    </div>
+    <!-- 游戏说明区域 end  -->
+  </div>
+
+  <!-- 点击返回顶部 -->
+  <% include common/m-gotop.html %>
 
     <!-- 引入公共地步 -->
     <% include common/footer.html %>
-
-
-<script src="https://cdn.bootcss.com/Swiper/3.4.2/js/swiper.jquery.min.js"></script>
-<script src="../js/detail-gameintro.js" charset="utf-8" ></script>
+      <script src="https://cdn.bootcss.com/Swiper/3.4.2/js/swiper.jquery.min.js"></script>
+      <script src="../js/detail-gameintro.js" charset="utf-8"></script>
 </body>
+
 </html>
