@@ -72,6 +72,13 @@
 
           if (userName != "") {
             $("#j-verification").removeClass("no")
+            $("#j-picture").click(function(){
+              console.log('获取图片验证码');
+              if($("#j-userName").val() !=""){
+                var tel=$("#j-userName").val();
+                console.log(tel);
+              }
+            })
 
             if (verificationInput != "" && passWord != "" && surepassWord != "") {
               $("#j-register").removeClass("no")
@@ -91,6 +98,7 @@
             errorElement("请输入填写表单");
             return false;
           }
+
 
           var userName = $("#j-userName").val();
           var passWord = $("#passWord").val();

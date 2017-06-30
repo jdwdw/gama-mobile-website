@@ -38,11 +38,15 @@ $(function(){
       //ajax 发送验证码
     }
   })
-$(function(){
-  $("#j-picture").click(function(){
-    console.log('获取图片验证码');
-  })
-})
+// $(function(){
+//   $("#j-picture").click(function(){
+//     console.log('获取图片验证码');
+//     if($("#j-userName").val() !=""){
+//       var tel=$("#j-userName").val();
+//       console.log(tel);
+//     }
+//   })
+// })
 
 
   //tab切换组件
