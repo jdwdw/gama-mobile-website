@@ -35,12 +35,14 @@
           <div class="verification">
             <div class="user input-box">
               <span>
-          <i class="icon icon-code"></i>
-        </span>
+                <i class="icon icon-code"></i>
+             </span>
               <input type="text" placeholder="输入答案" class="input" id="verificationInput" />
             </div>
-            <input type="button" name="button" class="button verification-button no picture" id="j-picture"></input>
+            <!-- <input type="button" name="button" class="button verification-button no picture " id="j-picture"></input> -->
+          <div class="zimu" id="j-picture"><img src="../img/zimu.png" alt=""></div>
           </div>
+          <div class="clear"></div>
           <div class="verification">
             <div class="user input-box">
               <span>
@@ -79,6 +81,7 @@
           } else {
             $("#j-verification").addClass("no")
             $("#j-register").addClass("no")
+
           }
         })
 
