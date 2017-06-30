@@ -1,34 +1,22 @@
 'use strict';
-var swiper = new Swiper('.swiper-container1', {
-  pagination: '.swiper-pagination1',
-  paginationClickable: true
-});
-
-var swiper2 = new Swiper('.swiper-container2', {
-  pagination: '.swiper-pagination2',
-  paginationClickable: true
-});
-var swiper3 = new Swiper('.swiper-container3', {
-  pagination: '.swiper-pagination3 ',
-  paginationClickable: true
-});
 function showCommentOthers(event) {
   // 获取当前点击的ul
-  var AncestorList = event.target.parentNode.parentNode.parentNode.parentNode.parentNode;
+  const AncestorList = event.target.parentNode.parentNode.parentNode.parentNode.parentNode;
   AncestorList.classList.add('comment-current');
   //获取节点
-  var CurrentCommentOthersArea = document.querySelector('.comment-current .comment-other-textarea');
-  var CurrentInput = document.querySelector('.comment-current .comment-other-textarea textarea');
-  var CurrentButton = document.querySelector('.comment-current .comment-other-textarea button');
-  var responseToPerson = document.querySelector('.comment-current .commentAuthor').innerHTML;
+  const CurrentCommentOthersArea = document.querySelector('.comment-current .comment-other-textarea');
+  const CurrentInput = document.querySelector('.comment-current .comment-other-textarea textarea');
+  const CurrentButton = document.querySelector('.comment-current .comment-other-textarea button');
+  const responseToPerson = document.querySelector('.comment-current .commentAuthor').innerHTML;
   // 改变部分样式并展示出来。
   CurrentInput.value = `回复${responseToPerson}：`;
   function ButtonEvent(event) {
     //重置类名和样式。
     CurrentInput.value = '';
+    CurrentInput.focus();
     CurrentCommentOthersArea.style.display = 'none';
     AncestorList.classList.remove('comment-current');
-    var hasPadding = document.querySelector('.padding-division');
+    const hasPadding = document.querySelector('.padding-division');
     // 提交的时候移除监听。
     CurrentButton.removeEventListener('touchend', ButtonEvent);
     window.removeEventListener('touchend', hideCommentOthers);
@@ -39,7 +27,7 @@ function showCommentOthers(event) {
   CurrentCommentOthersArea.style.display = 'block';
   // 这个函数用于，点击屏幕其他部分的时候，将评论取隐藏。
   function hideCommentOthers(event) {
-    var target = event.target;
+    const target = event.target;
     // 确认点击的对象是什么
     if(event.target !== CurrentInput && event.target !== CurrentButton) {
       // console.log('remove');
@@ -110,9 +98,4 @@ function showCommentOthers(event) {
         }
 
     })
-
-    var num = $("#detail-game_intro_swiper .m-swiper-slide").length;
-    var width = $("#detail-game_intro_swiper .m-swiper-slide").outerWidth(true);
-
-    $("#detail-game_intro_swiper").width(width * num)
   })

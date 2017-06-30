@@ -4,46 +4,45 @@
 <head>
   <meta charset="UTF-8">
   <title>首页</title>
-    <% include common/head.html %>
+  <% include common/head.html %>
 </head>
 
 <body>
   <!-- 引入公共头部  -->
-  <% include common/search_header.html %>
-    <div class="m-page">
+  <div class="m-header">
+    <header class="bar bar-nav">
+      <a class="f-fl" href="#">
+        <i class="icon icon-back"> </i>
+      </a>
+      <h1 class="title">我的消息</h1>
+    </header>
+  </div>
+    <div class="m-page message">
 
-      <!-- 游戏二级导航区域  -->
-        <% include common/g-threeTapNav.html %>
+      <!-- 礼包二级导航区域  -->
+        <% include common/g-twoTapNav.html %>
       <!-- 二级导航区域 end  -->
 
       <!-- 游戏列表区域  -->
-      <ul class="tab_con mod-search">
+      <ul class="tab_con index-gift">
         <li>
           <div class="g-gameList">
-            <ul class="cur-ul">
-              <% for(var i = 0; i < 10; i++) {%>
-                <% include common/game-item.html %>
+            <ul class="commentList cur-ul">
+              <% for(var i = 0; i < 6; i++) {%>
+                <% include common/commentList.html %>
                 <% } %>
             </ul>
           </div>
         </li>
         <li style="display:none">
           <div class="g-gameList">
-            <ul>
-              <% for(var i = 0; i < 6; i++) {%>
-                <% include common/gift-item.html %>
+            <ul class="commentList">
+              <% for(var i = 0; i < 5; i++) {%>
+                <% include common/commentList.html %>
                 <% } %>
             </ul>
           </div>
-        </li>
-        <li style="display:none">
-          <div class="g-gameList">
-            <ul>
-              <% for(var i = 0; i < 6; i++) {%>
-                <% include common/news-item.html %>
-                <% } %>
-            </ul>
-          </div>
+
         </li>
       </ul>
 
@@ -51,14 +50,12 @@
 
       <!-- 点击返回顶部 -->
       <% include common/m-gotop.html %>
+
     </div>
 
     <!-- 引入公共地步 -->
     <% include common/footer.html %>
-
-    <script src="../js/search.js" charset="utf-8" ></script>
-
-
+    <script src="../js/message.js" charset="utf-8" ></script>
 </body>
 
 </html>

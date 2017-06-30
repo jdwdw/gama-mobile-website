@@ -1,4 +1,4 @@
-.mod-gift_openService_item{
+.collect_item{
   width: 100%; float: left; padding: 30/@root 0; box-sizing: border-box; position: relative;border-bottom: 1px solid @style-itmeBorder;
   .gameImg{
     display: inline-block;
@@ -16,40 +16,36 @@
     padding-left: 20/@root;
     .content{
       width: 430/@root;
-      .progress{
-        margin-top:26/@root;
-      }
     }
-    p{
+    .name{
+      margin-top: 20/@root;
       padding-top: 0.1rem;
       font-size: @font-size-gameName;
       line-height: @font-size-gameName;
       vertical-align: middle;
       color: @style-black;
     }
-    .text-overflow-ignore {
-      overflow: hidden;
-      text-overflow: ellipsis;
-      white-space: nowrap;
-    }
-    span{
-      font-size: @font-size-tip;
-      line-height: @font-size-tip;
+    // .text-overflow-ignore {
+    //   overflow: hidden;
+    //   text-overflow: ellipsis;
+    //   white-space: nowrap;
+    // }
+    .amount{
+      margin-top:10/@root;
+      font-size: @font-size-commentText;
+      line-height: 44/@root;
       vertical-align: middle;
       color: #666666;
+      word-wrap:break-word; 
     }
-    .openService_itemContentText{
-      margin-top: 20/@root;
+    .margin-right30{
+      margin-right: 30/@root;
     }
-    .date{
-      color: @style-green;
-    }
-
   }
   .item-handle{
     margin-top: 30/@root;
-    .btnDisactive{
-      background-color:  @style-brc;
+    .btn{
+      background-color:  @style-main;
       vertical-align: middle;
     }
 

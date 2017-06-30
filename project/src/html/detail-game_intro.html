@@ -104,71 +104,8 @@
 
     <!-- 引入公共地步 -->
     <% include common/footer.html %>
-      <script type="text/javascript">
-        'use strict';
-        $(function() {
-          var index = 0; //控制器
-          $(window).scroll(function() {
-            if (index > 5) {
-              return false
-            };
-            console.log("scroll");
-            var $this = $(this),
-              viewH = $(window).height(), //可见高度
-              contentH = $("body").get(0).scrollHeight, //内容高度
-              scrollTop = $(window).scrollTop(); //滚动高度
-            if (scrollTop / (contentH - viewH) >= 0.95) { //到达底部100px时,加载新内容
-
-              // 这里加载数据.. 下边模拟数据加载
-              console.log("这里加载数据");
-              var html = "111"
-              // `<li class="item">
-              //     <div class="item-box">
-              //       <span class="gameImg fifty_radius f-fl">
-              //         <%- img(100, 100) %>
-              //       </span>
-              //       <span class="con">
-              //         <div class="">
-              //           <p class="commentAuthor">DEMO</p>
-              //           <p class="commentContent">只要998，吕布貂蝉带回家-御天传奇良心福利攻略dddddddddd</p>
-              //           <div class="other-comment">
-              //             <div class="other-comment-item">
-              //               <span class="other-comment-author">@Jack Spaluo：</span>
-              //               <span class="ohter-comment-content">这游戏有毒哇</span>
-              //             </div>
-              //           </div>
-              //           <div class="date-text">
-              //             <span class="date">2017.4.22</span>
-              //             <i class="icon icon-pinglun j-showComment"></i>
-              //           </div>
-              //         </div>
-              //       </span>
-              //     </div>
-              //     <div class="comment-other-textarea">
-              //       <textarea name="name" ></textarea>
-              //       <button type="button" name="confirm">提交</button>
-              //     </div>
-              //   </li>`;
-              html = html + html + html + html + html;
-              $(".commentList").append(html);
-              index++;
-            }
-
-          })
-
-          $(document).on("click", ".j-showComment", function(e) {
-            console.log("显示评论框");
-            //alert("ok")
-            $(".comment-other-textarea").hide();
-            $(this).parents("li").find(".comment-other-textarea").show();
-            //
-          })
-
-        })
-      </script>
-
+      <script src="https://cdn.bootcss.com/Swiper/3.4.2/js/swiper.jquery.min.js"></script>
+      <script src="../js/detail-gameintro.js" charset="utf-8"></script>
 </body>
-
-<!-- <script src="../js/detail-gameintro.js" charset="utf-8" ></script> -->
 
 </html>

@@ -1,0 +1,30 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN" data-rem="375">
+
+<head>
+  <% include common/head.html %>
+  <title>我的卡箱</title>
+</head>
+
+<body>
+  <% include common/header.html %>
+  <div class="m-page personalCenter-mycard">
+    <div class="g-gameList">
+      <ul>
+        <% for(var i = 0; i < 6; i++) {%>
+          <% include common/game-item.html %>
+        <% } %>
+      </ul>
+
+
+    </div>
+
+          <!-- 点击返回顶部 -->
+          <% include common/m-gotop.html %>
+  </div>
+    <!-- 引入公共地步 -->
+    <% include common/footer.html %>
+<script src="../js/personalCenter-mykeep.js" charset="utf-8"></script>
+</body>
+
+</html>
