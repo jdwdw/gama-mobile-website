@@ -37,11 +37,12 @@ $(function(){
       console.log(tel);
       //ajax 发送验证码
     }
-
   })
-
-
-
+$(function(){
+  $("#j-picture").click(function(){
+    console.log('获取图片验证码');
+  })
+})
 
 
   //tab切换组件
