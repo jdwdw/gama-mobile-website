@@ -5,13 +5,13 @@ male.onclick = function () {
   const contains = male.classList.contains('active')
   if(!contains) {
     male.classList.add('active');
-    female.classList.remove('active');
+    female.classList.remove('active_girl');
   }
 }
 female.onclick = function () {
-  const contains = female.classList.contains('active')
+  const contains = female.classList.contains('active_girl')
   if(!contains) {
-    female.classList.add('active');
+    female.classList.add('active_girl');
     male.classList.remove('active');
   }
 }
