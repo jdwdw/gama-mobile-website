@@ -23,220 +23,207 @@
 .detail-game-intro {
   .g-gameList {
     border-bottom: 0;
+    &:first-child {
+      padding-top: 0;
+    }
   }
   .relatived-game-link {
     border-bottom: 1px solid @style-brc;
   }
-}
-.game-picture {
-  padding-left: 0;
-  padding-right: 0;
-}
-.detail-game-introduction {
-  #game-detail-content {
-    padding-bottom: 30/@root;
-    border-bottom: 1px solid @style-brc;
+
+  .game-picture {
+    padding-left: 0;
+    padding-right: 0;
   }
-}
-#detail-game_intro_gameList {
-  border-bottom: 1px solid @style-brc;
-}
-#game-intro-startgame {
-  padding-top:0;
-  li:last-child {
-    border-bottom: none;
+  .game-intro-startgame {
+    padding-top: 0;
   }
-}
-.game-intro-startgame {
-  padding-top: 0;
-}
-.g-gameList{
-  margin-top: 0;
-  padding-top: 30/@root;
-    .gameItem{
-      width: 100%;
-      float: left;
-      box-sizing: border-box;
-      position: relative;
-      .gameImg{
-        display: inline-block;
-        width: 120/@root;
-        height: 120/@root;
-          img{
-            width: 100%;
+  .g-gameList{
+    margin-top: 0;
+    padding-top: 30/@root;
+      .gameItem{
+        width: 100%;
+        float: left;
+        box-sizing: border-box;
+        position: relative;
+        .gameImg{
+          display: inline-block;
+          width: 120/@root;
+          height: 120/@root;
+            img{
+              width: 100%;
+            }
+        }
+        .con{
+          display: inline-block;
+          vertical-align: middle;
+          line-height: 1.5em;
+          width: 550/@root;
+          .content{
+            width: 430/@root;
           }
-      }
-      .con{
-        display: inline-block;
-        vertical-align: middle;
-        line-height: 1.5em;
-        width: 550/@root;
-        .content{
-          width: 430/@root;
-        }
-        p{
-          margin-top: 10/@root;
-          font-size: 32/@root;
-          line-height: 30/@root;
-          vertical-align: middle;
-          color: @style-black;
-        }
-        span{
-          font-size: 22/@root;
-          line-height: 20/@root;
-          vertical-align: middle;
-          color: @style-brc;
-        }
-        .star{
-          margin-top: 15/@root;
-          .icon{
-            width: 30/@root;
-            color:  @style-brc;
-            font-size: 30/@root;
+          p{
+            margin-top: 10/@root;
+            font-size: 32/@root;
             line-height: 30/@root;
             vertical-align: middle;
+            color: @style-black;
           }
-          .iconActive{
-            color:  @style-yellow;
+          span{
+            font-size: 22/@root;
+            line-height: 20/@root;
+            vertical-align: middle;
+            color: @style-brc;
+          }
+          .star{
+            margin-top: 15/@root;
+            .icon{
+              width: 30/@root;
+              color:  @style-brc;
+              font-size: 30/@root;
+              line-height: 30/@root;
+              vertical-align: middle;
+            }
+            .iconActive{
+              color:  @style-yellow;
+            }
+          }
+
+
+          .item-handle{
+            margin-top: 30/@root;
+
           }
         }
 
+      }
 
-        .item-handle{
+      .contenTitle{
+        font-size: 30/@root;
+        line-height: 32/@root;
+        vertical-align: middle;
+        padding-left: 10/@root;
+
+      }
+      .titleActive{
+        border-left:3px solid @style-green;
+      }
+      .titleDisactive{
+        border-left:3px solid #e22127;
+      }
+      .contentText{
+        font-size: 26/@root;
+        line-height: 44/@root;
+        vertical-align: middle;
+        color: @style-black;
+        margin-top: 30/@root;
+        img {
+          max-width: 100%;
+        }
+        // padding-bottom: 30/@root;
+        // border-bottom: 1px solid @style-brc;
+      }
+
+      .contentTextCenter{
+        padding: 0 30/@root;
+        font-size: 24/@root;
+        line-height: 44/@root;
+        vertical-align: middle;
+        text-align: center;
+        color: @style-brc;
+        margin-top: 30/@root;
+      }
+
+      .content{
+        overflow: hidden;
+        .item{
+          margin-left: 30/@root;
+          float: left;
+          padding: 0 0.5rem;
+          box-sizing: border-box;
           margin-top: 30/@root;
-
+          position: relative;
+          background-color: @style-brc;
+          color: @style-default;
+          font-size: 26/@root;
+          line-height: 46/@root;
+          vertical-align: middle;
         }
       }
 
-    }
-
-    .contenTitle{
-      font-size: 30/@root;
-      line-height: 32/@root;
-      vertical-align: middle;
-      padding-left: 10/@root;
-
-    }
-    .titleActive{
-      border-left:3px solid @style-green;
-    }
-    .titleDisactive{
-      border-left:3px solid #e22127;
-    }
-    .contentText{
-      padding: 0 30/@root;
-      font-size: 26/@root;
-      line-height: 44/@root;
-      vertical-align: middle;
-      color: @style-black;
-      margin-top: 30/@root;
-      img {
-        max-width: 100%;
-      }
-      // padding-bottom: 30/@root;
-      // border-bottom: 1px solid @style-brc;
-    }
-
-    .contentTextCenter{
-      padding: 0 30/@root;
-      font-size: 24/@root;
-      line-height: 44/@root;
-      vertical-align: middle;
-      text-align: center;
-      color: @style-brc;
-      margin-top: 30/@root;
-    }
-
-    .content{
-      overflow: hidden;
-      .item{
-        margin-left: 30/@root;
+      .strategy-item{
+        width: 100%;
         float: left;
-        padding: 0 0.5rem;
         box-sizing: border-box;
         margin-top: 30/@root;
         position: relative;
-        background-color: @style-brc;
-        color: @style-default;
-        font-size: 26/@root;
-        line-height: 46/@root;
-        vertical-align: middle;
-      }
-    }
-
-    .strategy-item{
-      width: 100%;
-      float: left;
-      box-sizing: border-box;
-      margin-top: 30/@root;
-      position: relative;
-      border-bottom: 1px solid @style-brc;
-      .gameImg{
-        display: inline-block;
-        width: 160/@root;
-        height: 140/@root;
-        padding-bottom: 20/@root;
-        margin-bottom: 30/@root;
-          img{
-            width: 100%;
+        border-bottom: 1px solid @style-brc;
+        .gameImg{
+          display: inline-block;
+          width: 160/@root;
+          height: 140/@root;
+          margin-bottom: 30/@root;
+            img{
+              width: 100%;
+            }
+        }
+        .con{
+          display: inline-block;
+          vertical-align: middle;
+          line-height: 1.5em;
+          width: 510/@root;
+          p{
+            font-size: 30/@root;
+            line-height: 40/@root;
+            vertical-align: middle;
+            color: @style-black;
+            margin-bottom: 40/@root;
           }
+          .date{
+            font-size: 22/@root;
+            line-height: 20/@root;
+            vertical-align: middle;
+            color: @style-brc;
+          }
+          .strategyFlag{
+            border: 1px solid #92cff9 ;
+            height: 20/@root;
+            width: 42/@root;
+            font-size: 22/@root;
+            line-height: 20/@root;
+            vertical-align: middle;
+            color: #92cff9;
+          }
+
+        }
       }
-      .con{
-        display: inline-block;
-        vertical-align: middle;
-        line-height: 1.5em;
-        width: 510/@root;
-        p{
-          font-size: 30/@root;
-          line-height: 40/@root;
-          vertical-align: middle;
-          color: @style-black;
-          margin-bottom: 40/@root;
-        }
-        .date{
-          font-size: 22/@root;
-          line-height: 20/@root;
-          vertical-align: middle;
-          color: @style-brc;
-        }
-        .strategyFlag{
-          border: 1px solid #92cff9 ;
-          height: 20/@root;
-          width: 42/@root;
-          font-size: 22/@root;
-          line-height: 20/@root;
-          vertical-align: middle;
-          color: #92cff9;
-        }
-
-      }
-    }
 
 
-}
-
-
-.g-gameList-margin-top{
-  margin-top:30/@root;
-}
-.g-gameList-border-bottom-line{
-  // border-bottom: 1px solid @style-itmeBorder;
-}
-
-.g-gameList-paddingTop-30{
-  padding-top: 30/@root;
-}
-
-.g-swiper-wrapper{
-  padding: 0 30/@root;
-  overflow-x: scroll;
-  .m-swiper-wrapper{
-   overflow: hidden; width:11.5*6rem;
-    background-color: #fff;
- }
-  .m-swiper-slide{ float: left; width: 308/@root; margin-right:30/@root;
-  img{
-    width: 100%;
   }
+
+
+  .g-gameList-margin-top{
+    margin-top:30/@root;
+  }
+  .g-gameList-border-bottom-line{
+    // border-bottom: 1px solid @style-itmeBorder;
+  }
+
+  .g-gameList-paddingTop-30{
+    padding-top: 30/@root;
+  }
+
+  .g-swiper-wrapper{
+    padding: 0 30/@root;
+    overflow-x: scroll;
+    .m-swiper-wrapper{
+     overflow: hidden; width:11.5*6rem;
+      background-color: #fff;
+   }
+    .m-swiper-slide{ float: left; width: 308/@root; margin-right:30/@root;
+    img{
+      width: 100%;
+    }
+    }
   }
 }
