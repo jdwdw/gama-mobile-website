@@ -91,9 +91,9 @@ $(function(){
   })
 
   //注册页面，切换性别;
- $(".sex").click(function(){
+ $(".icon").click(function(){
    var index=$(this).index();
-   $(this).addClass("cur").siblings(".sex").removeClass("cur");
+   $(this).addClass("cur").parent().siblings(".sex").children(".icon").removeClass("cur");
    $("#j-sex").val(index);
    console.log($("#j-sex").val());
  })

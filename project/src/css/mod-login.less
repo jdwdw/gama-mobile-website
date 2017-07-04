@@ -2,6 +2,7 @@
   display:table;
   margin-left:auto;
   margin-right:auto;
+
 }
 
 /* login */
@@ -122,8 +123,18 @@
     color:@style-main;
   }
 }
-
-
+.contactIcon{
+  font-size: 90/@root;
+}
+.icon-qq{
+  color: #43aef9;
+}
+.icon-weixin{
+  color: #10b43b;
+}
+.icon-weobo{
+  color: #f72940;
+}
 .third-party {
     // padding: 0 3.65rem;
     width: 13rem;
@@ -167,6 +178,10 @@
 	color:@style-black;
 	float: left;
 	text-align: center;
+
+}
+.first{
+  text-align: left;
 }
 
 .icon-image ul {
@@ -217,23 +232,21 @@
 .man,.woman{
   width: 40/@root;
   height: 40/@root;
-  background: url(../img/icon_sex_boy.png) no-repeat center;
-  background-size: cover;
+  // background: url(../img/icon_sex_boy.png) no-repeat center;
+  // background-size: cover;
 }
 .woman{
-  background: url(../img/icon_sex_girl.png) no-repeat center;
-  background-size: cover;
+  // background: url(../img/icon_sex_girl.png) no-repeat center;
+  // background-size: cover;
   margin-left: 60/@root;
 }
 
 // 切换性别
 .woman.cur{
-  background: url(../img/icon_sex_girl_pre.png) no-repeat center;
-  background-size: cover;
+ color: #ff3c6e !important;
 }
 .man.cur{
-  background: url(../img/icon_sex_boy_pre.png) no-repeat center;
-  background-size: cover;
+  color: #15a4f6 !important;
 }
 
 .red{color:red};
@@ -252,9 +265,6 @@
   }
 }
 .icon-image{
-  // width:1.5rem;
-  // height: 1.5rem;
-  display: inline-block;
   margin-bottom: 10/@root;
   img{
     width: 100%;
