@@ -1,7 +1,17 @@
 .ul-center{
-  display:table;
-  margin-left:auto;
-  margin-right:auto;
+      width: 100%;
+      display: inline-block;
+      text-align: center;
+}
+.qq{
+  float: left;
+}
+.weibo{
+  float: right !important;
+}
+.equally{
+  display: inline-block;
+  float: none !important;
 }
 
 /* login */
@@ -122,8 +132,18 @@
     color:@style-main;
   }
 }
-
-
+.contactIcon{
+  font-size: 90/@root;
+}
+.icon-qq{
+  color: #43aef9;
+}
+.icon-weixin{
+  color: #10b43b;
+}
+.icon-weobo{
+  color: #f72940;
+}
 .third-party {
     // padding: 0 3.65rem;
     width: 13rem;
@@ -160,6 +180,8 @@
 .weixin{
   margin-left: 100/@root;
   margin-right: 100/@root;
+  float: none !important;
+  display: inline-block;
 }
 .icon-image ul li {
   width: 18%;
@@ -168,10 +190,15 @@
 	float: left;
 	text-align: center;
 }
-
-.icon-image ul {
-	width: 100%;
+.first{
+  text-align: left;
 }
+
+// .icon-image ul {
+// 	width: 100%;
+//   display: inline-block;
+//   text-align: center;
+// }
 
 .icon-image ul li img {
 	width: 100%;
@@ -217,23 +244,19 @@
 .man,.woman{
   width: 40/@root;
   height: 40/@root;
-  background: url(../img/icon_sex_boy.png) no-repeat center;
-  background-size: cover;
+  // background: url(../img/icon_sex_boy.png) no-repeat center;
+  // background-size: cover;
 }
 .woman{
-  background: url(../img/icon_sex_girl.png) no-repeat center;
-  background-size: cover;
-  margin-left: 60/@root;
+  margin-left: 50/@root;
 }
 
 // 切换性别
 .woman.cur{
-  background: url(../img/icon_sex_girl_pre.png) no-repeat center;
-  background-size: cover;
+ color: #ff3c6e !important;
 }
 .man.cur{
-  background: url(../img/icon_sex_boy_pre.png) no-repeat center;
-  background-size: cover;
+  color: #15a4f6 !important;
 }
 
 .red{color:red};
@@ -245,20 +268,20 @@
   overflow: hidden;
   text-align: center;
   margin: 0 auto;
-  ul li{
-    // text-align: center;
-    font-size: 22/@root;
-    float: left;
+  ul{
+    padding: 0 42/@root;
+    box-sizing: border-box;
+    li{
+      // text-align: center;
+      font-size: 22/@root;
+      float: left;
+    }
   }
 }
 .icon-image{
-  // width:1.5rem;
-  // height: 1.5rem;
-  display: inline-block;
   margin-bottom: 10/@root;
-  img{
-    width: 100%;
-  }
+  width: 100%;
+ display: inline-block;
 }
 .gird{
   text-align: center;
