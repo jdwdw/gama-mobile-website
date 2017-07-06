@@ -32,21 +32,36 @@
   margin-bottom: 0 !important;
 }
 .contact{
-  ul li{
-    width: 330/@root;
-    // height: 228/@root;
-    padding: 30/@root 0 30/@root 36/@root;
-    box-sizing: border-box;
-    border: 1px solid @style-brcg;
-    float: left;
-    h2{
-      color: #FF7500;
-      margin-bottom: 30/@root;
-    }
-    div{
-      margin-bottom: 0;
-    }
+  width: 100%;
+  background: @style-default;
+  margin-bottom: 130/@root;
+  ul{
+    overflow: hidden;
+    padding: 0 15/@root ;
+    li{
+     width: 50%;
+     // height: 228/@root;
+     padding: 0 15/@root 30/@root 15/@root;
+     box-sizing: border-box;
+
+     float: left;
+     .connectContainer{
+       width: 100%;
+       height: 100%;
+       border: 1px solid @style-brcg;
+       padding: 30/@root 0 30/@root 36/@root;
+       box-sizing: border-box;
+     }
+     h2{
+       color: #FF7500;
+       margin-bottom: 30/@root;
+     }
+     div{
+       margin-bottom: 0;
+     }
+   }
   }
+
  .name{
   color: @style-black;
   margin-bottom: 30/@root;
@@ -54,8 +69,5 @@
 }
 .contactInformation{
   color: @style-grey;
-}
-.marginRight{
-  margin-right: 30/@root;
-  margin-bottom: 30/@root;
+  margin-bottom: 20/@root !important;
 }
