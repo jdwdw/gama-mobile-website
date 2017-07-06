@@ -1,8 +1,17 @@
 .ul-center{
-  display:table;
-  margin-left:auto;
-  margin-right:auto;
-
+      width: 100%;
+      display: inline-block;
+      text-align: center;
+}
+.qq{
+  float: left;
+}
+.weibo{
+  float: right !important;
+}
+.equally{
+  display: inline-block;
+  float: none !important;
 }
 
 /* login */
@@ -171,6 +180,8 @@
 .weixin{
   margin-left: 100/@root;
   margin-right: 100/@root;
+  float: none !important;
+  display: inline-block;
 }
 .icon-image ul li {
   width: 18%;
@@ -178,15 +189,16 @@
 	color:@style-black;
 	float: left;
 	text-align: center;
-
 }
 .first{
   text-align: left;
 }
 
-.icon-image ul {
-	width: 100%;
-}
+// .icon-image ul {
+// 	width: 100%;
+//   display: inline-block;
+//   text-align: center;
+// }
 
 .icon-image ul li img {
 	width: 100%;
@@ -236,8 +248,6 @@
   // background-size: cover;
 }
 .woman{
-  // background: url(../img/icon_sex_girl.png) no-repeat center;
-  // background-size: cover;
   margin-left: 50/@root;
 }
 
@@ -258,17 +268,20 @@
   overflow: hidden;
   text-align: center;
   margin: 0 auto;
-  ul li{
-    // text-align: center;
-    font-size: 22/@root;
-    float: left;
+  ul{
+    padding: 0 42/@root;
+    box-sizing: border-box;
+    li{
+      // text-align: center;
+      font-size: 22/@root;
+      float: left;
+    }
   }
 }
 .icon-image{
   margin-bottom: 10/@root;
-  img{
-    width: 100%;
-  }
+  width: 100%;
+ display: inline-block;
 }
 .gird{
   text-align: center;
